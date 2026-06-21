@@ -1,0 +1,98 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Warehouse Shelving Unit",
+      "price": 129.99,
+      "sku": "WSU-001",
+      "stock": 42,
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Barcode Scanner Pro",
+      "price": 89,
+      "sku": "BSP-002",
+      "stock": 17,
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "name": "Pallet Jack 2.5T",
+      "price": 349.5,
+      "sku": "PJ-003",
+      "stock": 6,
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "name": "Stackable Storage Bin",
+      "price": 14.25,
+      "sku": "SSB-004",
+      "stock": 230,
+      "categoryId": 1
+    },
+    {
+      "id": 5,
+      "name": "Label Printer ZX-200",
+      "price": 199.99,
+      "sku": "LPZ-005",
+      "stock": 12,
+      "categoryId": 2
+    },
+    {
+      "id": 6,
+      "name": "Safety Gloves (12pk)",
+      "price": 22.75,
+      "sku": "SG-006",
+      "stock": 88,
+      "categoryId": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Storage & Shelving",
+      "slug": "storage-shelving"
+    },
+    {
+      "id": 2,
+      "name": "Scanning & Printing",
+      "slug": "scanning-printing"
+    },
+    {
+      "id": 3,
+      "name": "Safety & PPE",
+      "slug": "safety-ppe"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "reference": "SO-1001",
+      "customer": "Demo Buyer",
+      "total": 129.99,
+      "status": "fulfilled"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "title": "Pallet Jack 2.5T is low on stock",
+      "category": "low-stock",
+      "read": false
+    },
+    {
+      "id": 2,
+      "title": "Label Printer ZX-200 is low on stock",
+      "category": "low-stock",
+      "read": false
+    },
+    {
+      "id": 3,
+      "title": "Weekly inventory report is ready",
+      "category": "report",
+      "read": true
+    }
+  ]
+}
