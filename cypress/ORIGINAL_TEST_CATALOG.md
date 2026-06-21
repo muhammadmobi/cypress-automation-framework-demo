@@ -1,0 +1,2797 @@
+# Original Source — Test Catalog (pick list)
+
+> Hierarchical inventory of **stockwise-cypress-tests** (`cypress/e2e/`).
+> Modules → spec files → individual test cases. Tick the boxes (or tell me the
+> module / spec / case names) for what to **pick** into this demo and what to
+> **skip**. I'll then port the picked items, adapted to the bundled ShopWise
+> target (no StockWise URLs/credentials).
+>
+> **Totals: 190 spec files / 2572 test cases.**
+
+Legend: `- [ ]` = not picked · tick `- [x]` to pick.
+
+## (root) `(23 specs / 433 cases)`
+
+- [ ] **00-ensureAttrsOptional.cy.js** — 1 cases `00-ensureAttrsOptional.cy.js`
+  - [ ] patches all required=true attributes to optional (excluding system fields)
+- [ ] **00-loginPageTest.cy.js** — 15 cases `00-loginPageTest.cy.js`
+  - [ ] SW-AUTH-TC01: Verify page heading
+  - [ ] SW-AUTH-TC02: Verify email field label
+  - [ ] SW-AUTH-TC03: Verify password field label
+  - [ ] SW-AUTH-TC04: Verify sign in button caption
+  - [ ] SW-AUTH-TC05: Verify email field required error message
+  - [ ] SW-AUTH-TC06: Verify password field required error message
+  - [ ] SW-AUTH-TC07: Verify error message on invalid email
+  - [ ] SW-AUTH-TC08: Verify error message on invalid password
+  - [ ] SW-AUTH-TC09: Verify show password when toggle clicked
+  - [ ] SW-AUTH-TC10: Verify hide password when toggle clicked again
+  - [ ] SW-AUTH-TC11: Verify successful admin login
+  - [ ] SW-AUTH-TC12: Verify admin profile panel shows Admin role
+  - [ ] SW-AUTH-TC13: Verify logout redirects to login page
+  - [ ] SW-AUTH-TC14: Verify successful user login
+  - [ ] SW-AUTH-TC15: Verify user profile panel shows User role
+- [ ] **01-navigationTest.cy.js** — 70 cases `01-navigationTest.cy.js`
+  - [ ] SW-NAV-TC01: Verify dashboard page
+  - [ ] SW-NAV-TC02: Verify navigation to Inventory page
+  - [ ] SW-NAV-TC03: Verify navigation to Incoming Inventory page
+  - [ ] SW-NAV-TC04: Verify navigation to Purchase Orders page
+  - [ ] SW-NAV-TC05: Verify navigation to Work Orders page
+  - [ ] SW-NAV-TC06: Verify navigation to Inventory Actions page
+  - [ ] SW-NAV-TC07: Verify expansion of Asset Id menu
+  - [ ] SW-NAV-TC08: Verify navigation to Generate Asset ID page
+  - [ ] SW-NAV-TC09: Verify navigation to Asset Id Disassembly page
+  - [ ] SW-NAV-TC10: Verify navigation to Asset Id Assembly page
+  - [ ] SW-NAV-TC11: Verify navigation to Asset Id Search Lifecycle page
+  - [ ] SW-NAV-TC12: Verify navigation to Inventory Audit page
+  - [ ] SW-NAV-TC13: Verify navigation to Printers page
+  - [ ] SW-NAV-TC14: Verify expansion of Warehouse Management menu
+  - [ ] SW-NAV-TC15: Verify navigation to Warehouse Locations page
+  - [ ] SW-NAV-TC16: Verify navigation to Warehouse Containers page
+  - [ ] SW-NAV-TC17: Verify navigation to Warehouse Recycle Bin page
+  - [ ] SW-NAV-TC18: Verify expansion of Reports menu
+  - [ ] SW-NAV-TC19: Verify navigation to Purchase Order Report page
+  - [ ] SW-NAV-TC20: Verify navigation to Cost Report page
+  - [ ] SW-NAV-TC21: Verify navigation to Sales Report page
+  - [ ] SW-NAV-TC22: Verify navigation to Custom Reports page
+  - [ ] SW-NAV-TC23: Verify navigation to Inventory Report page
+  - [ ] SW-NAV-TC24: Verify navigation to Asset Lifecycle Report page
+  - [ ] SW-NAV-TC25: Verify navigation to Inventory Aging Report page
+  - [ ] SW-NAV-TC26: Verify navigation to Warehouse Location Report page
+  - [ ] SW-NAV-TC27: Verify expansion of Configuration menu
+  - [ ] SW-NAV-TC28: Verify navigation to Attributes page
+  - [ ] SW-NAV-TC29: Verify navigation to Categories page
+  - [ ] SW-NAV-TC30: Verify navigation to Scan Config page
+  - [ ] SW-NAV-TC31: Verify navigation to General Config page
+  - [ ] SW-NAV-TC32: Verify navigation to BrainBox Configuration page
+  - [ ] SW-NAV-TC33: Verify navigation to Mapping Templates page
+  - [ ] SW-NAV-TC34: Verify Account Wise link opens in a new tab
+  - [ ] SW-NAV-TC35: Verify sidebar collapses when toggle is clicked
+  - [ ] SW-NAV-TC36: Verify Dashboard link works in collapsed menu
+  - [ ] SW-NAV-TC37: Verify Inventory link works in collapsed menu
+  - [ ] SW-NAV-TC38: Verify Incoming Inventory link works in collapsed menu
+  - [ ] SW-NAV-TC39: Verify Purchase Orders link works in collapsed menu
+  - [ ] SW-NAV-TC40: Verify Work Orders link works in collapsed menu
+  - [ ] SW-NAV-TC41: Verify Inventory Actions link works in collapsed menu
+  - [ ] SW-NAV-TC42: Verify Asset Id menu expands in collapsed menu
+  - [ ] SW-NAV-TC43: Verify Generate Asset ID link works in collapsed menu
+  - [ ] SW-NAV-TC44: Verify Asset Id Disassembly link works in collapsed menu
+  - [ ] SW-NAV-TC45: Verify Asset Id Assembly link works in collapsed menu
+  - [ ] SW-NAV-TC46: Verify Asset Id Search Lifecycle link works in collapsed menu
+  - [ ] SW-NAV-TC47: Verify Inventory Audit link works in collapsed menu
+  - [ ] SW-NAV-TC48: Verify Printers link works in collapsed menu
+  - [ ] SW-NAV-TC49: Verify Warehouse Management menu expands in collapsed menu
+  - [ ] SW-NAV-TC50: Verify Warehouse Locations link works in collapsed menu
+  - [ ] SW-NAV-TC51: Verify Warehouse Containers link works in collapsed menu
+  - [ ] SW-NAV-TC52: Verify Warehouse Recycle Bin link works in collapsed menu
+  - [ ] SW-NAV-TC53: Verify Reports menu expands in collapsed menu
+  - [ ] SW-NAV-TC54: Verify Purchase Order Report link works in collapsed menu
+  - [ ] SW-NAV-TC55: Verify Cost Report link works in collapsed menu
+  - [ ] SW-NAV-TC56: Verify Sales Report link works in collapsed menu
+  - [ ] SW-NAV-TC57: Verify Custom Reports link works in collapsed menu
+  - [ ] SW-NAV-TC58: Verify Inventory Report link works in collapsed menu
+  - [ ] SW-NAV-TC59: Verify Asset Lifecycle Report link works in collapsed menu
+  - [ ] SW-NAV-TC60: Verify Inventory Aging Report link works in collapsed menu
+  - [ ] SW-NAV-TC61: Verify Warehouse Location Report link works in collapsed menu
+  - [ ] SW-NAV-TC62: Verify Configuration menu expands in collapsed menu
+  - [ ] SW-NAV-TC63: Verify Attributes link works in collapsed menu
+  - [ ] SW-NAV-TC64: Verify Categories link works in collapsed menu
+  - [ ] SW-NAV-TC65: Verify Scan Config link works in collapsed menu
+  - [ ] SW-NAV-TC66: Verify General Config link works in collapsed menu
+  - [ ] SW-NAV-TC67: Verify BrainBox Configuration link works in collapsed menu
+  - [ ] SW-NAV-TC68: Verify Mapping Templates link works in collapsed menu
+  - [ ] SW-NAV-TC69: Verify Account Wise icon opens new tab in collapsed menu
+  - [ ] SW-NAV-TC70: Verify sidebar expands when toggle is clicked again
+- [ ] **03-catagoryCRUDTest.cy.js** — 2 cases `03-catagoryCRUDTest.cy.js`
+  - [ ] CRUD Product Category
+  - [ ] CRUD Item Category
+- [ ] **04-catagoryAttribCRUDTest.cy.js** — 4 cases `04-catagoryAttribCRUDTest.cy.js`
+  - [ ] Create allow product category and peform Product Attribute CRUD Test
+  - [ ] Create allow Item category and peform Item Attribute CRUD Test
+  - [ ] Create allow variants category and peform variant Attribute CRUD Test
+  - [ ] Delete created Categories
+- [ ] **05-AddProductTests.cy.js** — 9 cases `05-AddProductTests.cy.js`
+  - [ ] Add Product Test
+  - [ ] Search added product Test
+  - [ ] Add variant Test
+  - [ ] Search added variant Test
+  - [ ] Add Item Test
+  - [ ] Search added Item Test
+  - [ ] Update Product Test
+  - [ ] Update Variant Test
+  - [ ] Update Item test
+- [ ] **07-StockInTests.cy.js** — 2 cases `07-StockInTests.cy.js`
+  - [ ] Import Product-Item and perform Stock In by Quantity
+  - [ ] Stock In with quantity exceeding expected quantity
+- [ ] **08-InventoryActionStockIn.cy.js** — 2 cases `08-InventoryActionStockIn.cy.js`
+  - [ ] should stock in items using Inventory Action
+  - [ ] should stock in product of product only category
+- [ ] **09-ExportExcelFileTests.cy.js** — 2 cases `09-ExportExcelFileTests.cy.js`
+  - [ ] Export Selected Excel File Test
+  - [ ] Export Searched Record Excel File Test
+- [ ] **10-ScanTests.cy.js** — 1 cases `10-ScanTests.cy.js`
+  - [ ] Stock In using scan Test
+- [ ] **11-StockOutTests.cy.js** — 3 cases `11-StockOutTests.cy.js`
+  - [ ] Product Stock out Test
+  - [ ] Variant Stock out Test
+  - [ ] Item Stock out Test
+- [ ] **12-InventoryActionStockOut.cy.js** — 1 cases `12-InventoryActionStockOut.cy.js`
+  - [ ] should stock out items using Inventory Action with reason "Sold"
+- [ ] **13-InventoryActionScanDamaged.cy.js** — 1 cases `13-InventoryActionScanDamaged.cy.js`
+  - [ ] should scan and mark damaged incoming items
+- [ ] **14-InventoryActionCheckItemStatus.cy.js** — 1 cases `14-InventoryActionCheckItemStatus.cy.js`
+  - [ ] should check item status using serial number from Excel file
+- [ ] **15-InvActionRestock.cy.js** — 1 cases `15-InvActionRestock.cy.js`
+  - [ ] should restock item using serial number
+- [ ] **16-InventoryActionStockOutBTO.cy.js** — 2 cases `16-InventoryActionStockOutBTO.cy.js`
+  - [ ] should stock out item with reason "Stockout from bto"
+  - [ ] should prevent duplicate stock out for same serial number with BTO reason
+- [ ] **17-InventoryActionProductListing.cy.js** — 2 cases `17-InventoryActionProductListing.cy.js`
+  - [ ] Inventory Action Add Item test
+  - [ ] Adding existing item in product listing
+- [ ] **19-DashboardTests.cy.js** — 29 cases `19-DashboardTests.cy.js`
+  - [ ] SW-DASH-TC01: Verify all four KPI card labels are visible on the dashboard
+  - [ ] SW-DASH-TC02: Verify the Stock Movement card title is visible
+  - [ ] SW-DASH-TC03: Verify the Inventory Overview card title is visible
+  - [ ] SW-DASH-TC04: Verify the Item Status card title is visible
+  - [ ] SW-DASH-TC05: Verify the Purchase Order Health card title is visible
+  - [ ] SW-DASH-TC06: Verify all time range toggle buttons are visible in the toolbar
+  - [ ] SW-DASH-TC07: Verify that selecting Last 7 Days shows the Filtered badge on KPI cards
+  - [ ] SW-DASH-TC08: Verify that switching back to All hides the Filtered badge
+  - [ ] SW-DASH-TC09: Verify the Edit Dashboard button is visible on load
+  - [ ] SW-DASH-TC10: Verify that clicking Edit Dashboard shows the Save Layout button
+  - [ ] SW-DASH-TC11: Verify that saving the layout exits edit mode and restores the Edit Dashboard button
+  - [ ] SW-DASH-TC12: Verify that the Reset button is visible in edit mode
+  - [ ] SW-DASH-TC13: Verify that clicking Reset in edit mode keeps edit mode active
+  - [ ] SW-DASH-TC14: Verify that clicking Custom opens the date range popover
+  - [ ] SW-DASH-TC15: Verify that the Apply button is enabled when the popover opens with default dates pre-filled
+  - [ ] SW-DASH-TC16: Verify that cancelling the custom date range popover closes it
+  - [ ] SW-DASH-TC17: Verify that applying a valid custom date range shows the Filtered badge on KPI cards
+  - [ ] SW-DASH-TC18: Verify that cancelling the custom date range popover does not apply the filter or show the Filtered badge
+  - [ ] SW-DASH-TC19: Verify that the Stock Movement card title and activity subtitle are visible
+  - [ ] SW-DASH-TC20: Verify that all four Inventory Overview legend rows are visible
+  - [ ] SW-DASH-TC21: Verify that clicking an Inventory Overview row navigates to the inventory page
+  - [ ] SW-DASH-TC22: Verify that all three Item Status rows are visible
+  - [ ] SW-DASH-TC23: Verify that clicking a Damaged Items row navigates to the inventory page
+  - [ ] SW-DASH-TC24: Verify that clicking a Missing Items row navigates to the inventory page
+  - [ ] SW-DASH-TC25: Verify that all three Purchase Order Health rows are rendered
+  - [ ] SW-DASH-TC26: Verify that the Open, Closed, and Cancelled work order rows are rendered
+  - [ ] SW-DASH-TC27: Verify that clicking the Work Orders card navigates to the work orders page
+  - [ ] SW-DASH-TC28: Verify that all three Asset Tracking rows are rendered
+  - [ ] SW-DASH-TC29: Verify that clicking a Disputed Items row navigates to the inventory page
+- [ ] **20-WorkOrderTests.cy.js** — 97 cases `20-WorkOrderTests.cy.js`
+  - [ ] SW-WO-TC01: Verify search with an empty field shows the total result count
+  - [ ] SW-WO-TC02: Verify search by work order number returns the matching work order
+  - [ ] SW-WO-TC03: Verify search by sales order number returns the matching work order
+  - [ ] SW-WO-TC04: Verify search by invoice number returns the matching work order
+  - [ ] SW-WO-TC05: Verify search by status "Open" returns a list of Open work orders
+  - [ ] SW-WO-TC06: Verify search by status "Draft" returns a list of Draft work orders
+  - [ ] SW-WO-TC07: Verify search by status "Closed" returns a list of Closed work orders
+  - [ ] SW-WO-TC08: Verify search by status "Cancelled" returns a list of Cancelled work orders
+  - [ ] SW-WO-TC09: Verify search with an invalid term shows "No Result" label and empty table
+  - [ ] SW-WO-TC10: Verify breadcrumb shows the Dashboard link and Work Order as the current page
+  - [ ] SW-WO-TC11: Verify clicking the Dashboard link in the breadcrumb navigates to the dashboard
+  - [ ] SW-WO-TC12: Verify all columns of the list are visible
+  - [ ] SW-WO-TC13: Verify clicking on a row opens work order details
+  - [ ] SW-WO-TC14: Verify clicking on a sales order number opens AccountWise in a new tab
+  - [ ] SW-WO-TC15: Verify clicking on an invoice number opens AccountWise in a new tab
+  - [ ] SW-WO-TC16: Verify clicking the View button opens work order
+  - [ ] SW-WO-TC17: Verify stockwise-created work order has Open status, disabled Open button, and enabled Cancel button
+  - [ ] SW-WO-TC18: Verify accountwise-approved work order shows Open status, sales order associated, both buttons disabled
+  - [ ] SW-WO-TC19: Verify accountwise-unapproved work order shows Draft status, sales order associated, Open enabled and Cancel disabled
+  - [ ] SW-WO-TC20: Verify closed work order shows Closed status and both action buttons disabled
+  - [ ] SW-WO-TC21: Verify clicking Cancel on an Open StockWise WO opens a confirmation popup
+  - [ ] SW-WO-TC22: Verify clicking No on the cancel confirmation closes the popup without changing status
+  - [ ] SW-WO-TC23: Verify clicking Yes on the cancel confirmation cancels the work order
+  - [ ] SW-WO-TC24: Verify clicking Open on a Draft WO opens the Force Open confirmation popup
+  - [ ] SW-WO-TC25: Verify clicking No on the Force Open popup closes it without changing status
+  - [ ] SW-WO-TC26: Verify clicking Yes on the Force Open popup changes the work order status to Open
+  - [ ] SW-WO-TC27: Verify clicking the Work Order Number column header once sorts the list ascending
+  - [ ] SW-WO-TC28: Verify clicking the Work Order Number column header again reverses to descending
+  - [ ] SW-WO-TC29: Verify clicking the Work Order Number column header again removes the sort
+  - [ ] SW-WO-TC30: Verify clicking the Status column header once sorts ascending and shows the Open status on top
+  - [ ] SW-WO-TC31: Verify clicking the Status column header again sorts descending and shows the Cancelled status on top
+  - [ ] SW-WO-TC32: Verify clicking the Status column header a third time removes the sort
+  - [ ] SW-WO-TC33: Verify First Page and Previous Page buttons are disabled on the first page
+  - [ ] SW-WO-TC34: Verify clicking the Next arrow navigates to the next page
+  - [ ] SW-WO-TC35: Verify clicking the Previous arrow navigates back to the previous page
+  - [ ] SW-WO-TC36: Verify clicking a page number navigates to that page
+  - [ ] SW-WO-TC37: Verify clicking the Last Page arrow navigates to the last page
+  - [ ] SW-WO-TC38: Verify Next Page and Last Page buttons are disabled when on the last page
+  - [ ] SW-WO-TC39: Verify clicking the First Page arrow navigates back to the first page
+  - [ ] SW-WO-TC40: Verify changing the rows-per-page selection sends the correct pageSize to the API
+  - [ ] SW-WO-TC41: Verify navigating away and back resets the rows-per-page selection to the default (75)
+  - [ ] SW-WO-TC42: Verify all rows-per-page options (75, 100, 150, 200, 300) are present and functional
+  - [ ] SW-WO-TC43: Verify clicking the Create Work Order button navigates to the create page
+  - [ ] SW-WO-TC44: Verify the create work order page URL is correct
+  - [ ] SW-WO-TC45: Verify the page heading on the create work order page
+  - [ ] SW-WO-TC46: Verify the breadcrumb on the create work order page
+  - [ ] SW-WO-TC47: Verify the Create Work Order submit button is disabled when product and quantity fields are empty
+  - [ ] SW-WO-TC48: Verify clicking the Product field opens the Add Product modal
+  - [ ] SW-WO-TC49: Verify a list of products appears in the Add Product modal
+  - [ ] SW-WO-TC50: Verify the available quantity label is displayed for each product in the modal
+  - [ ] SW-WO-TC51: Verify clicking the Add button without selecting a product shows an error toast
+  - [ ] SW-WO-TC52: Verify clicking on a product in the modal selects it
+  - [ ] SW-WO-TC53: Verify clicking Add after selecting a product closes the modal and shows the product in the field
+  - [ ] SW-WO-TC54: Verify the selected product available and incoming quantity labels appear below the product field
+  - [ ] SW-WO-TC55: Verify the quantity field only accepts numeric values
+  - [ ] SW-WO-TC56: Verify entering a quantity exceeding available stock shows a validation error
+  - [ ] SW-WO-TC57: Verify entering a valid quantity enables the Create Work Order button
+  - [ ] SW-WO-TC58: Verify the delete button is disabled when only one product row exists
+  - [ ] SW-WO-TC59: Verify clicking Add Product appends a new product and quantity row and enables the delete button
+  - [ ] SW-WO-TC60: Verify submitting the create form shows a success toast, redirects to the list, and the new work order appears in it
+  - [ ] SW-WO-TC61: Verify entering quantity 0 (lower boundary invalid) and clicking Create Work Order shows an error toast
+  - [ ] SW-WO-TC62: Verify breadcrumb on work order detail page shows Dashboard > Work Order > WO Number
+  - [ ] SW-WO-TC63: Verify all info labels are visible on the work order detail page
+  - [ ] SW-WO-TC64: Verify all product table columns are visible on the work order detail page
+  - [ ] SW-WO-TC65: Verify clicking the Scan button opens the Work Orders Scan modal
+  - [ ] SW-WO-TC66: Verify clicking the View Detail button navigates to the product scanned detail page
+  - [ ] SW-WO-TC67: Verify clicking Stock Out on an Open work order stocks out, shows success toast and changes status to Closed
+  - [ ] SW-WO-TC68: Verify Stock Out and Scan buttons are disabled on a Closed work order
+  - [ ] SW-WO-TC69: Verify Stock Out and Scan buttons are disabled on a Cancelled work order
+  - [ ] SW-WO-TC70: Verify clicking Stock Out on a Draft work order returns an error message
+  - [ ] SW-WO-TC71: Verify creating an AccountWise invoice with work_order toggle enabled creates a corresponding StockWise work order
+  - [ ] SW-WO-TC72: Verify a work order created from an AccountWise invoice has Open status
+  - [ ] SW-WO-TC73: Verify the product selected in the AccountWise invoice has its reserved quantity increased by the invoice line quantity
+  - [ ] SW-WO-TC74: Verify creating an AccountWise invoice with work_order toggle disabled does NOT create a StockWise work order
+  - [ ] SW-WO-TC75: Verify creating an AccountWise sales order with work_order toggle enabled creates a corresponding StockWise work order
+  - [ ] SW-WO-TC76: Verify a work order created from an AccountWise sales order has Draft status
+  - [ ] SW-WO-TC77: Verify the product selected in the AccountWise sales order has its reserved quantity increased by the sales order line quantity
+  - [ ] SW-WO-TC78: Verify creating an AccountWise sales order with work_order toggle disabled does NOT create a StockWise work order
+  - [ ] SW-WO-TC79: Verify approving an AccountWise sales order transitions the corresponding StockWise work order from Draft to Open
+  - [ ] SW-WO-TC80: Verify creating an AccountWise invoice with a product-with-items creates a corresponding StockWise work order
+  - [ ] SW-WO-TC81: Verify a work order created from an AccountWise invoice with a product-with-items has Open status
+  - [ ] SW-WO-TC82: Verify the product-with-items selected in the AccountWise invoice has its reserved quantity increased by the invoice line quantity
+  - [ ] SW-WO-TC83: Verify a work order created for a product-with-items has no items pre-assigned (productsItems is empty until scan)
+  - [ ] SW-WO-TC84: Verify creating an AccountWise invoice with a product-with-items and work_order toggle disabled does NOT create a StockWise work order
+  - [ ] SW-WO-TC85: Verify creating an AccountWise sales order with a product-with-items creates a corresponding StockWise work order
+  - [ ] SW-WO-TC86: Verify a work order created from an AccountWise sales order with a product-with-items has Draft status
+  - [ ] SW-WO-TC87: Verify the product-with-items selected in the AccountWise sales order has its reserved quantity increased by the sales order line quantity
+  - [ ] SW-WO-TC88: Verify approving an AccountWise sales order with a product-with-items transitions the corresponding StockWise work order from Draft to Open
+  - [ ] SW-WO-TC89: Verify the Work Orders Scan modal renders header, ScanForm, and ScanList
+  - [ ] SW-WO-TC90: Verify scanning a valid Available serial reserves it on the work order
+  - [ ] SW-WO-TC91: Verify scanning a serial belonging to a different product is rejected
+  - [ ] SW-WO-TC92: Verify scanning a duplicate (already-Reserved) serial is rejected
+  - [ ] SW-WO-TC93: Verify submitting an empty serial number triggers client-side validation and fires no scan request
+  - [ ] SW-WO-TC94: Verify clicking DONE closes the Scan modal with no further mutation
+  - [ ] SW-WO-TC95: Verify the Scanned Items page renders the WO header labels and ScanList
+  - [ ] SW-WO-TC96: Verify a previously-scanned serial appears in the Scanned Items page list
+  - [ ] SW-WO-TC97: Verify the Scanned Items page is read-only (Remove disabled) on a terminal-state WO
+- [ ] **21-PurchaseOrderReportTests.cy.js** — 22 cases `21-PurchaseOrderReportTests.cy.js`
+  - [ ] SW-POR-TC01: Verify page load fires all APIs
+  - [ ] SW-POR-TC02: Verify each tab badge displays the count returned by the tab counts API
+  - [ ] SW-POR-TC03: Verify the Expected tab is selected by default on page load
+  - [ ] SW-POR-TC04: Verify clicking each tab calls the items API with the correct status param
+  - [ ] SW-POR-TC05: Verify clicking a tab updates the active tab label in the UI
+  - [ ] SW-POR-TC06: Verify the PO number dropdown shows "All POs" by default
+  - [ ] SW-POR-TC07: Verify selecting a PO from the dropdown calls the items API with the correct poNumber param
+  - [ ] SW-POR-TC08: Verify the Export button is disabled when "All POs" is selected
+  - [ ] SW-POR-TC09: Verify the Export button is enabled after selecting a specific PO
+  - [ ] SW-POR-TC10: Verify searching sends the correct search param to the items API
+  - [ ] SW-POR-TC11: Verify table renders rows returned by the items API
+  - [ ] SW-POR-TC12: Verify clicking a table row navigates to the correct item detail URL
+  - [ ] SW-POR-TC13: Verify pagination summary shows correct record range and total on load
+  - [ ] SW-POR-TC14: Verify page size dropdown shows 75 as the default on load
+  - [ ] SW-POR-TC15: Verify changing to a non-default page size sends the correct page_size param
+  - [ ] SW-POR-TC16: Verify navigating to the next page sends the correct page param to the items API
+  - [ ] SW-POR-TC17: Verify clicking Export downloads an Excel file named after the selected PO
+  - [ ] SW-POR-TC18: Verify navigating to item detail page fires all required APIs
+  - [ ] SW-POR-TC19: Verify the Product Details section is collapsed by default on the item detail page
+  - [ ] SW-POR-TC20: Verify clicking the toggle expands the Product Details section
+  - [ ] SW-POR-TC21: Verify the Item List table renders rows on the item detail page
+  - [ ] SW-POR-TC22: Verify the PO Number column is present and has a value in the Item List table
+- [ ] **22-CostReportTests.cy.js** — 27 cases `22-CostReportTests.cy.js`
+  - [ ] SW-CR-TC01: Verify page load fires all required APIs with status 200
+  - [ ] SW-CR-TC02: Verify Total Inventory Cost stat card is visible on page load
+  - [ ] SW-CR-TC03: Verify the table renders rows on page load
+  - [ ] SW-CR-TC04: Verify the Total Inventory Cost stat card value matches the API response
+  - [ ] SW-CR-TC05: Verify the visible table rows match the product list returned by the API
+  - [ ] SW-CR-TC06: Verify searching by product name sends the correct param and all results contain that name
+  - [ ] SW-CR-TC07: Verify searching by category sends the correct param and all results contain that category
+  - [ ] SW-CR-TC08: Verify searching by make sends the correct param and all returned items contain that make
+  - [ ] SW-CR-TC09: Verify searching by model sends the correct param and all returned items contain that model
+  - [ ] SW-CR-TC10: Verify date range filter default selection is "Today"
+  - [ ] SW-CR-TC11: Verify selecting yesterday matches yesterday\
+  - [ ] SW-CR-TC12: Verify selecting "Last 7 Days" spans 7 days
+  - [ ] SW-CR-TC13: Verify selecting "Last Month" spans a 30-day window ending today
+  - [ ] SW-CR-TC14: Verify selecting a custom range with start date and end date sends correct parameters
+  - [ ] SW-CR-TC15: Verify selecting a same-day range sends correct parameters
+  - [ ] SW-CR-TC16: Verify "All POs" is selected by default in the PO dropdown
+  - [ ] SW-CR-TC17: Verify selecting a PO filters the table and updates the Total Inventory Cost
+  - [ ] SW-CR-TC18: Verify "All Categories" is selected by default in the category dropdown
+  - [ ] SW-CR-TC19: Verify selecting a category filters the table to that category
+  - [ ] SW-CR-TC20: Verify the default status option is selected on page load
+  - [ ] SW-CR-TC21: Verify selecting a status shows matching data and updates the Total Inventory Cost
+  - [ ] SW-CR-TC22: Verify pagination summary shows correct record range and total on load
+  - [ ] SW-CR-TC23: Verify page size dropdown shows 75 as the default on load
+  - [ ] SW-CR-TC24: Verify changing the page size sends the correct page_size param to the API
+  - [ ] SW-CR-TC25: Verify navigating to the next page sends the correct page param to the API
+  - [ ] SW-CR-TC26: Verify changing the page size shows the correct number of rows in the table
+  - [ ] SW-CR-TC27: Verify clicking Export Report triggers a successful .xlsx download
+- [ ] **25-WarehouseLocationsTests.cy.js** — 89 cases `25-WarehouseLocationsTests.cy.js`
+  - [ ] SW-WL-UI-TC01: Verify the page heading and breadcrumb render
+  - [ ] SW-WL-UI-TC02: Verify the table renders the documented column set
+  - [ ] SW-WL-UI-TC03: Verify the toolbar toggle buttons render
+  - [ ] SW-WL-UI-TC04: Verify the pagination footer renders the rows-per-page selector and navigation buttons
+  - [ ] SW-WL-UI-TC05: Verify the Show/Hide Columns toggle opens a column menu listing the documented columns
+  - [ ] SW-WL-UI-TC06: Verify the Density toggle changes the table row height
+  - [ ] SW-WL-UI-TC07: Verify the Full-Screen toggle enters and exits fullscreen mode
+  - [ ] SW-WL-UI-TC08: Verify the search input accepts text
+  - [ ] SW-WL-UI-TC09: Verify searching with an unmatchable term yields no rows
+  - [ ] SW-WL-UI-TC10: Verify clearing the search restores the grid
+  - [ ] SW-WL-UI-TC11: Verify the Status dropdown opens and contains the 'All bins' option
+  - [ ] SW-WL-UI-TC12: Verify selecting 'Empty bins' lists only Empty rows
+  - [ ] SW-WL-UI-TC13: Verify selecting 'Occupied bins' lists only Occupied rows
+  - [ ] SW-WL-UI-TC14: Verify all ten stat cards render
+  - [ ] SW-WL-UI-TC15: Verify each stat card holds a numeric value
+  - [ ] SW-WL-UI-TC16: Verify the Bin Occupancy % stat is the rounded ratio of Occupied Bins to Bins
+  - [ ] SW-WL-UI-TC17: Verify the Facilities Management page heading and core controls render
+  - [ ] SW-WL-UI-TC18: Verify clicking 'Manage Locations' from the main page navigates to Facilities Management
+  - [ ] SW-WL-UI-TC19: Verify clicking 'Add Facility' opens the Add Facility dialog
+  - [ ] SW-WL-UI-TC20: Verify cancelling the Add Facility dialog does not create a Facility
+  - [ ] SW-WL-UI-TC21: Verify adding a Facility with valid data creates it on the list
+  - [ ] SW-WL-UI-TC22: Verify searching a Facility by its name returns the matching card
+  - [ ] SW-WL-UI-TC23: Verify editing a Facility updates its name on the list
+  - [ ] SW-WL-UI-TC24: Verify deleting a Facility removes it from the list
+  - [ ] SW-WL-UI-TC25: Verify the Facility Code field is read-only and cannot be modified by the user
+  - [ ] SW-WL-UI-TC26: Verify the Zones Management page heading, breadcrumb and core controls render
+  - [ ] SW-WL-UI-TC27: Verify clicking 'Add Zone' opens the Add Zone dialog
+  - [ ] SW-WL-UI-TC28: Verify cancelling the Add Zone dialog does not create a Zone
+  - [ ] SW-WL-UI-TC29: Verify adding a Zone with valid data creates it on the list
+  - [ ] SW-WL-UI-TC30: Verify searching a Zone by its name returns the matching card
+  - [ ] SW-WL-UI-TC31: Verify editing a Zone updates its name on the list
+  - [ ] SW-WL-UI-TC32: Verify deleting a Zone removes it from the list
+  - [ ] SW-WL-UI-TC33: Verify clicking 'View & Manage Areas' on a Zone navigates to the Areas page
+  - [ ] SW-WL-UI-TC34: Verify the Zone Code field is read-only and cannot be modified by the user
+  - [ ] SW-WL-UI-TC35: Verify the Areas Management page heading and core controls render
+  - [ ] SW-WL-UI-TC36: Verify clicking 'Add Area' opens the Add Area dialog
+  - [ ] SW-WL-UI-TC37: Verify cancelling the Add Area dialog does not create an Area
+  - [ ] SW-WL-UI-TC38: Verify adding an Area with valid data creates it on the list
+  - [ ] SW-WL-UI-TC39: Verify searching an Area by its name returns the matching card
+  - [ ] SW-WL-UI-TC40: Verify editing an Area updates its name on the list
+  - [ ] SW-WL-UI-TC41: Verify deleting an Area removes it from the list
+  - [ ] SW-WL-UI-TC42: Verify clicking 'View & Manage Rows' on an Area navigates to the Rows page
+  - [ ] SW-WL-UI-TC43: Verify the Area Code field is read-only and cannot be modified by the user
+  - [ ] SW-WL-UI-TC44: Verify the bulk-hierarchy field rejects zero (lower invalid boundary)
+  - [ ] SW-WL-UI-TC45: Verify the bulk-hierarchy field clamps values above the documented maximum
+  - [ ] SW-WL-UI-TC46: Verify the Rows Management page heading and core controls render
+  - [ ] SW-WL-UI-TC47: Verify clicking 'Add Row' opens the Add Row dialog
+  - [ ] SW-WL-UI-TC48: Verify cancelling the Add Row dialog does not create a Row
+  - [ ] SW-WL-UI-TC49: Verify clicking 'Create' creates a new Row card with the auto-generated code
+  - [ ] SW-WL-UI-TC50: Verify searching a Row by its code returns the matching card
+  - [ ] SW-WL-UI-TC51: Verify deleting a Row removes it from the list
+  - [ ] SW-WL-UI-TC52: Verify clicking 'View & Manage Bays' on a Row navigates to the Bays page
+  - [ ] SW-WL-UI-TC53: Verify the Row Code field is read-only and cannot be modified by the user
+  - [ ] SW-WL-UI-TC54: Verify the Bays Management page heading and core controls render
+  - [ ] SW-WL-UI-TC55: Verify clicking 'Add Bay' opens the Add Bay dialog
+  - [ ] SW-WL-UI-TC56: Verify cancelling the Add Bay dialog does not create a Bay
+  - [ ] SW-WL-UI-TC57: Verify clicking 'Create' creates a new Bay card with the auto-generated code
+  - [ ] SW-WL-UI-TC58: Verify searching a Bay by its code returns the matching card
+  - [ ] SW-WL-UI-TC59: Verify deleting a Bay removes it from the list
+  - [ ] SW-WL-UI-TC60: Verify clicking 'View & Manage Levels' on a Bay navigates to the Levels page
+  - [ ] SW-WL-UI-TC61: Verify the Bay Code field is read-only and cannot be modified by the user
+  - [ ] SW-WL-UI-TC62: Verify the Levels Management page heading and core controls render
+  - [ ] SW-WL-UI-TC63: Verify clicking 'Add Level' opens the Add Level dialog
+  - [ ] SW-WL-UI-TC64: Verify cancelling the Add Level dialog does not create a Level
+  - [ ] SW-WL-UI-TC65: Verify clicking 'Create' creates a new Level card with the auto-generated code
+  - [ ] SW-WL-UI-TC66: Verify searching a Level by its code returns the matching card
+  - [ ] SW-WL-UI-TC67: Verify deleting a Level removes it from the list
+  - [ ] SW-WL-UI-TC68: Verify clicking 'View & Manage Bins' on a Level navigates to the Bins page
+  - [ ] SW-WL-UI-TC69: Verify the Level Code field is read-only and cannot be modified by the user
+  - [ ] SW-WL-UI-TC70: Verify the Bins Management page heading and core controls render
+  - [ ] SW-WL-UI-TC71: Verify clicking 'Add Bin' opens the Add Bin dialog
+  - [ ] SW-WL-UI-TC72: Verify cancelling the Add Bin dialog does not create a Bin
+  - [ ] SW-WL-UI-TC73: Verify clicking 'Create' creates a new Bin row in the table
+  - [ ] SW-WL-UI-TC74: Verify searching a Bin by its code returns the matching row
+  - [ ] SW-WL-UI-TC75: Verify deleting a Bin removes it from the table
+  - [ ] SW-WL-UI-TC76: Verify clicking 'View Label' on a Bin opens the QR-code dialog
+  - [ ] SW-WL-UI-TC77: Verify clicking 'Cancel' inside the QR-code overlay closes it
+  - [ ] SW-WL-UI-TC78: Verify the Bin Code field is read-only and cannot be modified by the user
+  - [ ] SW-WL-UI-TC79: Verify clicking 'View Label' on a main-grid Bin row opens the QR-code overlay
+  - [ ] SW-WL-UI-TC80: Verify clicking 'Delete' on a main-grid Bin row opens the Confirm Location Deletion dialog
+  - [ ] SW-WL-UI-TC81: Verify cancelling the delete dialog with 'No' preserves the Bin row
+  - [ ] SW-WL-UI-TC82: Verify confirming the delete dialog with 'Yes' removes the Bin from the main grid
+  - [ ] SW-WL-UI-TC83: Verify selecting a row reveals Print QR Codes + Clear Selection in the toolbar
+  - [ ] SW-WL-UI-TC84: Verify the select-all header checkbox selects every visible row
+  - [ ] SW-WL-UI-TC85: Verify clicking 'Print QR Codes' opens the bulk print dialog with print options
+  - [ ] SW-WL-UI-TC86: Verify the bulk print dialog shows '1 location(s) selected' when one row is checked
+  - [ ] SW-WL-UI-TC87: Verify the bulk print dialog shows '<N> location(s) selected' when multiple rows are checked
+  - [ ] SW-WL-UI-TC88: Verify clicking 'View Content' on an occupied Bin row opens the contents dialog
+  - [ ] SW-WL-UI-TC89: Verify a full UI Facility → Zone → Area → Row → Bay → Level → Bin drill-through works end-to-end
+- [ ] **26-WarehouseContainersTests.cy.js** — 50 cases `26-WarehouseContainersTests.cy.js`
+  - [ ] SW-WCN-UI-TC01: Verify the toolbar action buttons render
+  - [ ] SW-WCN-UI-TC02: Verify the table renders the documented column set
+  - [ ] SW-WCN-UI-TC03: Verify the pagination footer renders the rows-per-page selector and navigation buttons
+  - [ ] SW-WCN-UI-TC04: Verify the search input accepts text
+  - [ ] SW-WCN-UI-TC05: Verify searching with an unmatchable term yields no rows
+  - [ ] SW-WCN-UI-TC06: Verify clearing the search restores the grid
+  - [ ] SW-WCN-UI-TC07: Verify searching for an existing container code lists the row
+  - [ ] SW-WCN-UI-TC08: Verify the Type dropdown opens and contains the 'All Types' option
+  - [ ] SW-WCN-UI-TC09: Verify selecting a specific Type narrows the grid (soft-skip when no types exist)
+  - [ ] SW-WCN-UI-TC10: Verify clicking 'Add Container' opens the Add Container dialog
+  - [ ] SW-WCN-UI-TC11: Verify cancelling the Add Container dialog does not create a container
+  - [ ] SW-WCN-UI-TC12: Verify the Code ID field is disabled (auto-generated) in create mode
+  - [ ] SW-WCN-UI-TC13: Verify Max Items rejects 0 (lower invalid boundary)
+  - [ ] SW-WCN-UI-TC14: Verify Max Items rejects 10001 (upper invalid boundary)
+  - [ ] SW-WCN-UI-TC15: Verify creating a container with valid data creates it in the table
+  - [ ] SW-WCN-UI-TC16: Verify clicking 'Manage Types' opens the modal
+  - [ ] SW-WCN-UI-TC17: Verify New Type rejects special characters
+  - [ ] SW-WCN-UI-TC18: Verify New Type rejects consecutive spaces
+  - [ ] SW-WCN-UI-TC19: Verify Add creates a new container type
+  - [ ] SW-WCN-UI-TC20: Verify deleting a not-in-use type removes the row
+  - [ ] SW-WCN-UI-TC21: Verify Cancel ('No') on the delete-type confirm leaves the row
+  - [ ] SW-WCN-UI-TC22: Verify in-use types are not editable or deletable
+  - [ ] SW-WCN-UI-TC23: Verify Close dismisses the Manage Types modal
+  - [ ] SW-WCN-UI-TC24: Verify the row-actions cell renders all five icon buttons
+  - [ ] SW-WCN-UI-TC25: Verify View Contents opens and Close dismisses the Container Details modal
+  - [ ] SW-WCN-UI-TC26: Verify View Label opens and Cancel dismisses the label modal
+  - [ ] SW-WCN-UI-TC27: Verify Merge is disabled on an empty container
+  - [ ] SW-WCN-UI-TC28: Verify Stock Out is disabled on an empty container
+  - [ ] SW-WCN-UI-TC29: Verify Delete → Yes removes an empty container row
+  - [ ] SW-WCN-UI-TC30: Verify Delete → No leaves the container row intact
+  - [ ] SW-WCN-UI-TC31: Verify clicking the row body opens View Contents
+  - [ ] SW-WCN-UI-TC32: Verify Merge is enabled on a non-empty container
+  - [ ] SW-WCN-UI-TC33: Verify clicking Merge opens the Merge Container modal
+  - [ ] SW-WCN-UI-TC34: Verify merge succeeds between two containers of the same type
+  - [ ] SW-WCN-UI-TC35: Verify different container types cannot be merged
+  - [ ] SW-WCN-UI-TC36: Verify clicking the clock icon opens the Container Audit Trail dialog
+  - [ ] SW-WCN-UI-TC37: Verify clicking 'Assign To Location' opens the modal
+  - [ ] SW-WCN-UI-TC38: Verify Assign is disabled when no selections are made
+  - [ ] SW-WCN-UI-TC39: Verify scanning an unknown container code shows an error
+  - [ ] SW-WCN-UI-TC40: Verify scanning a valid container code selects it
+  - [ ] SW-WCN-UI-TC41: Verify happy-path assign — container + location → Assign
+  - [ ] SW-WCN-UI-TC42: Verify Cancel dismisses the Assign To Location modal
+  - [ ] SW-WCN-UI-TC43: Verify a Type created via Manage Types appears in Add Container's Type dropdown
+  - [ ] SW-WCN-UI-TC44: Verify a UI-created container can be assigned to a Bin
+  - [ ] SW-WCN-UI-TC45: Verify a loaded container can be stocked out via the row Stock Out icon
+  - [ ] SW-WCN-UI-TC46: Verify the full Containers E2E (Add type → Add container → Assign → Load → Stock Out)
+  - [ ] SW-WCN-UI-TC47: Verify Print Zebra in the View Label modal fires the print flow
+  - [ ] SW-WCN-UI-TC48: Verify checking a row surfaces the Print and Clear Selection buttons
+  - [ ] SW-WCN-UI-TC49: Verify printing a single QR via bulk-selection
+  - [ ] SW-WCN-UI-TC50: Verify printing multiple QRs via bulk-selection
+
+## api `(58 specs / 635 cases)`
+
+- [ ] **AttributeDeletionRestrictionAPI.cy.js** — 4 cases `api/AttributeDeletionRestrictionAPI.cy.js`
+  - [ ] SW*ATR_API*${caseId} - DELETE succeeds for unused ${uiType} attribute (baseline)
+  - [ ] SW_ATR_API_CONFLICT_SKIP - 409 when attribute is referenced by existing inventory (UI-driven fixture required)
+  - [ ] SW_ATR_API_NEG_01 - DELETE unknown attribute id returns 404 or 4xx
+  - [ ] SW_ATR_API_NEG_02 - unauthenticated DELETE /attributes/:id → 401
+- [ ] **AttributesExtendedAPI.cy.js** — 13 cases `api/AttributesExtendedAPI.cy.js`
+  - [ ] SW-ATE-API-TC01: GET /attributes without auth returns 401
+  - [ ] SW-ATE-API-TC02: GET /attributes with paging returns 200
+  - [ ] SW-ATE-API-TC03: GET /attributes/product-scan-attribute returns 2xx
+  - [ ] SW-ATE-API-TC04: GET /attributes/location-label returns 2xx
+  - [ ] SW-ATE-API-TC05: GET /attributes/export returns 2xx
+  - [ ] SW-ATE-API-TC06: POST /attributes with empty body is handled
+  - [ ] SW-ATE-API-TC07: POST /attributes/multi with empty array is handled
+  - [ ] SW-ATE-API-TC08: POST /attributes/reapply-location returns 2xx
+  - [ ] SW-ATE-API-TC09: PATCH /attributes with empty body and GET /:id for unknown id are handled
+  - [ ] SW-ATE-API-TC10: GET /attributes/:id/distinct-values without auth returns 401
+  - [ ] SW-ATE-API-TC11: GET /attributes/:id/distinct-values for unknown id is handled
+  - [ ] SW-ATE-API-TC12: POST /attributes/:id/convert-type without auth returns 401
+  - [ ] SW-ATE-API-TC13: POST /attributes/:id/convert-type missing body and unknown id are handled
+- [ ] **AuditAPI.cy.js** — 5 cases `api/AuditAPI.cy.js`
+  - [ ] SW-AUD-API-TC01: POST /audit without auth returns 401
+  - [ ] SW-AUD-API-TC02: POST /audit with empty body is reachable (non-5xx)
+  - [ ] SW-AUD-API-TC03: POST /audit with a valid payload returns 2xx
+  - [ ] SW-AUD-API-TC04: GET /audit/:userId for unknown user is handled
+  - [ ] SW-AUD-API-TC05: GET /audit/deleted-records/:poNumber without auth returns 401
+- [ ] **AuditTrailAPI.cy.js** — 6 cases `api/AuditTrailAPI.cy.js`
+  - [ ] SW-AT-API-TC01: GET /audit-trails without auth returns 401
+  - [ ] SW-AT-API-TC02: GET /audit-trails returns 200
+  - [ ] SW-AT-API-TC03: GET /audit-trails?page_size=1 returns at most 1 row
+  - [ ] SW-AT-API-TC04: GET /audit-trails/users returns 200
+  - [ ] SW-AT-API-TC05: GET /audit-trails/search is reachable
+  - [ ] SW-AT-API-TC06: GET /audit-trails with entityType + actionType filters is handled
+- [ ] **BrainBoxConfigAPI.cy.js** — 9 cases `api/BrainBoxConfigAPI.cy.js`
+  - [ ] BRBOX_CONF_API_001 - GET /configs returns (possibly empty) list
+  - [ ] BRBOX_CONF_API_002 - POST /configs creates a brainbox config when none exists
+  - [ ] BRBOX_CONF_API_003 - PATCH /configs/:id updates poNumber and categoryId
+  - [ ] BRBOX_CONF_API_004 - PATCH persists payloadFields array
+  - [ ] BRBOX_CONF_API_005 - PATCH with defaultCost persists numeric value
+  - [ ] BRBOX_CONF_API_006 - duplicate payload field paths still persist (string array shape)
+  - [ ] BRBOX_CONF_API_007 - import-mapping-templates list endpoint responds 200
+  - [ ] BRBOX_CONF_API_NEG_01 - unauthenticated POST /configs → 401
+  - [ ] BRBOX_CONF_API_NEG_02 - PATCH /configs/:id unknown id → 4xx
+- [ ] **BrainboxStockInAPI.cy.js** — 21 cases `api/BrainboxStockInAPI.cy.js`
+  - [ ] SW-BB-SI-API-TC01: Verify the API returns 401 when no auth token is provided
+  - [ ] SW-BB-SI-API-TC02: Verify the API returns 401 when a malformed auth token is provided
+  - [ ] SW-BB-SI-API-TC03: Verify the API returns 401 when an expired auth token is provided
+  - [ ] SW-BB-SI-API-TC04: Verify the API accepts a valid admin auth token
+  - [ ] SW-BB-SI-API-TC05: Verify the API accepts a valid worker auth token
+  - [ ] SW-BB-SI-API-TC06: Verify the API returns 400 when an empty body is sent
+  - [ ] SW-BB-SI-API-TC07: Verify the API returns 400 when the payload contains no mapped serial number key
+  - [ ] SW-BB-SI-API-TC08: Verify the API returns 400 when the mapped serial number is an empty string
+  - [ ] SW-BB-SI-API-TC09: Verify the API returns 400 when the serial number is null
+  - [ ] SW-BB-SI-API-TC10: Verify the API returns 400 when the serial number contains only whitespace
+  - [ ] SW-BB-SI-API-TC11: Verify the API handles serial numbers containing special characters correctly
+  - [ ] SW-BB-SI-API-TC12: Verify the API validates extremely long serial numbers (500+ characters)
+  - [ ] SW-BB-SI-API-TC13: Verify the API returns 400 when spec is an empty object
+  - [ ] SW-BB-SI-API-TC14: Verify the API returns 400 when spec contains only unmapped fields
+  - [ ] SW-BB-SI-API-TC15: Verify the API returns 400 when the request body is malformed JSON
+  - [ ] SW-BB-SI-API-TC16: Verify that GET, PUT, and DELETE methods are rejected on the stock-in endpoint
+  - [ ] SW-BB-SI-API-TC17: Verify a valid payload with a new serial number is stocked in successfully
+  - [ ] SW-BB-SI-API-TC18: Verify duplicate serial number is rejected
+  - [ ] SW-BB-SI-API-TC19: Verify duplicate data with a different serial number is accepted
+  - [ ] SW-BB-SI-API-TC20: Verify the item is assigned to the correct category when all mapped fields match
+  - [ ] SW-BB-SI-API-TC21: Verify the item is placed under the configured PO when mapped fields do not match
+- [ ] **BrainboxStockOutAPI.cy.js** — 13 cases `api/BrainboxStockOutAPI.cy.js`
+  - [ ] SW-BB-SO-API-TC01: Verify the API returns 401 when no auth token is provided
+  - [ ] SW-BB-SO-API-TC02: Verify the API returns 401 when a malformed auth token is provided
+  - [ ] SW-BB-SO-API-TC03: Verify the API returns 401 when an expired auth token is provided
+  - [ ] SW-BB-SO-API-TC04: Verify the API accepts a valid admin auth token
+  - [ ] SW-BB-SO-API-TC05: Verify the API accepts a valid worker auth token
+  - [ ] SW-BB-SO-API-TC06: Verify the API returns 400 when an empty body is sent
+  - [ ] SW-BB-SO-API-TC07: Verify the API returns 400 when the payload contains no mapped serial number key
+  - [ ] SW-BB-SO-API-TC08: Verify the API returns 400 when the mapped serial number is an empty string
+  - [ ] SW-BB-SO-API-TC09: Verify the API returns 400 when spec is an empty object
+  - [ ] SW-BB-SO-API-TC10: Verify the API returns 400 when spec contains only unmapped fields
+  - [ ] SW-BB-SO-API-TC11: Verify that a non-existing serial is automatically stocked in and then stocked out
+  - [ ] SW-BB-SO-API-TC12: Verify that an existing available item is successfully stocked out
+  - [ ] SW-BB-SO-API-TC13: Verify a payload wrapped inside a "spec" key is normalised and accepted
+- [ ] **CategoryAPI.cy.js** — 17 cases `api/CategoryAPI.cy.js`
+  - [ ] SW_CAT_API_01 - Create product-item category (allowItems=true)
+  - [ ] SW_CAT_API_03 - Create product-only category (allowItems=false)
+  - [ ] SW_CAT_API_05 - GET /categories returns a list
+  - [ ] SW_CAT_API_19 - GET /categories with sortOrder=Asc responds 200
+  - [ ] SW_CAT_API_20 - GET /categories with sortOrder=desc responds 200
+  - [ ] SW_CAT_API_ROUNDTRIP - GET /categories/:id returns the created row
+  - [ ] SW_CAT_API_22 - rename product-only category
+  - [ ] SW_CAT_API_23 - rename product-item category
+  - [ ] SW_CAT_API_24 - enable allowItems on product-only category (no data)
+  - [ ] SW_CAT_API_25 - disable allowItems on product-item category (no data)
+  - [ ] SW_CAT_API_RESTORE - rename roundtrip (edit then restore)
+  - [ ] SW_CAT_API_17 - missing name returns 400
+  - [ ] SW_CAT_API_34 - duplicate name returns 409
+  - [ ] SW_CAT_API_35 - special-characters-only name returns 400
+  - [ ] SW_CAT_API_AUTH - unauthenticated POST /categories returns 401
+  - [ ] SW_CAT_API_32 - delete product-only category (no data) succeeds
+  - [ ] SW_CAT_API_33 - delete product-item category (no data) succeeds
+- [ ] **ChatbotAPI.cy.js** — 8 cases `api/ChatbotAPI.cy.js`
+  - [ ] SW-CB-API-TC01: POST /chatbot/message without auth returns 401
+  - [ ] SW-CB-API-TC02: POST /chatbot/message with empty body is reachable (non-5xx)
+  - [ ] SW-CB-API-TC03: POST /chatbot/message with a valid prompt returns 2xx
+  - [ ] SW-CB-API-TC04: GET /chatbot/suggestions returns 200
+  - [ ] SW-CB-API-TC05: POST /chatbot/feedback with empty body is reachable (non-5xx)
+  - [ ] SW-CB-API-TC06: POST /chatbot/feedback with minimal valid body returns 2xx
+  - [ ] SW-CB-API-TC07: GET /chatbot/analytics/summary without auth returns 401
+  - [ ] SW-CB-API-TC08: GET /chatbot/analytics/interactions + /feedback are reachable
+- [ ] **ChatbotAccuracyAPI.cy.js** — 21 cases `api/ChatbotAccuracyAPI.cy.js`
+  - [ ] SW-CB-ACC-TC01: total available quantity — source=template, data has counts
+  - [ ] SW-CB-ACC-TC02: item status breakdown — source=template, has Available row
+  - [ ] SW-CB-ACC-TC03: open purchase orders — source=template, data has poNumber
+  - [ ] SW-CB-ACC-TC04: recently received items — source=template, has serialNumber
+  - [ ] SW-CB-ACC-TC05: audit trail — source=template, has actionType
+  - [ ] SW-CB-ACC-TC06: all products with available quantities — source=template
+  - [ ] SW-CB-ACC-TC07: stockout risk — source must NOT be agent, data has riskLevel
+  - [ ] SW-CB-ACC-TC08: RAM units forecast — source=forecast or template, non-empty response
+  - [ ] SW-CB-ACC-TC09: damaged inventory — source≠agent, data has brand/model
+  - [ ] SW-CB-ACC-TC10: max damaged product — source=template, has damagedCount
+  - [ ] SW-CB-ACC-TC11: damage cost summary — source=template, has totalDamageCost
+  - [ ] SW-CB-ACC-TC12: top selling inventory — source=template, has stockoutCount ordered DESC
+  - [ ] SW-CB-ACC-TC13: low stock items — source=template, data array returned
+  - [ ] SW-CB-ACC-TC14: inventory by brand — source=template, has brand + totalAvailable
+  - [ ] SW-CB-ACC-TC15: total inventory value — source=template, response mentions value
+  - [ ] SW-CB-ACC-TC16: PO status breakdown — source=template, has Open/Closed
+  - [ ] SW-CB-ACC-TC17: categories list — source=template, at least 5 categories
+  - [ ] SW-CB-ACC-TC18: damaged by brand — source=template, has brand + damagedCount
+  - [ ] SW-CB-ACC-TC19: products per category — source=template, at least 3 categories
+  - [ ] SW-CB-ACC-TC20: dashboard summary — source=template, has totalProducts + openPOs
+  - [ ] SW-CB-ACC-sanity: multiple template questions all return source≠agent
+- [ ] **CheckItemStatusAPI.cy.js** — 6 cases `api/CheckItemStatusAPI.cy.js`
+  - [ ] SW-CIS-API-TC01: GET /products/check-status/:serial is reachable without auth
+  - [ ] SW-CIS-API-TC02: GET /products/check-status/:serial returns a status field
+  - [ ] SW-CIS-API-TC03: GET /products/check-status/:serial with unknown serial is handled
+  - [ ] SW-CIS-API-TC04: POST /incoming-items/check-item-status without auth returns 401
+  - [ ] SW-CIS-API-TC05: POST /incoming-items/check-item-status with valid serial returns 200
+  - [ ] SW-CIS-API-TC06: GET /products/item/:serial returns detail payload
+- [ ] **CommonAttributeAPI.cy.js** — 8 cases `api/CommonAttributeAPI.cy.js`
+  - [ ] SW*ATR_API*${typeKey}\_CREATE - create common ${entityType.toLowerCase()} ${uiType} attribute
+  - [ ] SW*ATR_API*${typeKey}\_REQUIRED - toggle required on/off for ${uiType} ${entityType}
+  - [ ] SW*ATR_API*${typeKey}\_DELETE - delete common ${entityType.toLowerCase()} ${uiType} attribute
+  - [ ] SW_ATR_API_NEG_01 - rejects empty name with 400
+  - [ ] SW_ATR_API_NEG_02 - rejects name with special characters (regex violation)
+  - [ ] SW_ATR_API_NEG_03 - rejects missing required fields with 400
+  - [ ] SW_ATR_API_NEG_04 - unauthenticated POST /attributes → 401
+  - [ ] SW_ATR_API_NEG_05 - unauthenticated DELETE /attributes/:id → 401
+- [ ] **ConfigsPoAssignmentAPI.cy.js** — 7 cases `api/ConfigsPoAssignmentAPI.cy.js`
+  - [ ] SW-CFG-API-TC01: GET /configs without auth returns 401
+  - [ ] SW-CFG-API-TC02: GET /configs returns 200
+  - [ ] SW-CFG-API-TC03: GET /configs/:id for unknown id is handled
+  - [ ] SW-CFG-API-TC04: PATCH /configs/:id on unknown id is handled
+  - [ ] SW-CFG-API-TC05: GET /configs/po-assignment/workers returns 2xx
+  - [ ] SW-CFG-API-TC06: POST /configs/po-assignment with empty body is handled
+  - [ ] SW-CFG-API-TC07: DELETE /configs/po-assignment/:poNumber on unknown PO is handled
+- [ ] **CostReportAPI.cy.js** — 8 cases `api/CostReportAPI.cy.js`
+  - [ ] SW-CR-API-TC01: GET /reports/inventory-value-report without auth returns 401
+  - [ ] SW-CR-API-TC02: GET /reports/inventory-value-report returns list + summary
+  - [ ] SW-CR-API-TC03: summary.totalExpectedValue is numeric
+  - [ ] SW-CR-API-TC04: GET /reports/inventory-value-report?search=<name> narrows the list
+  - [ ] SW-CR-API-${caseId}: status=${status} filter returns 200 with a list
+  - [ ] SW-CR-API-TC08: poNumber filter returns rows scoped to that PO
+  - [ ] SW-CR-API-TC09: GET /reports/po-financial-summary?poNumber=allPO returns totalCost
+  - [ ] SW-CR-API-TC10: GET /excel/po-numbers returns the PO-dropdown list
+- [ ] **CreateCategoryAPI.cy.js** — 8 cases `api/CreateCategoryAPI.cy.js`
+  - [ ] SW_CAT_API_001 - creates a product-only category with valid payload
+  - [ ] SW_CAT_API_002 - rejects duplicate category name with 409
+  - [ ] SW_CAT_API_003 - rejects missing required "name" with 400
+  - [ ] SW_CAT_API_004 - rejects empty string name with 400
+  - [ ] SW_CAT_API_005 - rejects non-boolean allowItems with 400
+  - [ ] SW_CAT_API_006 - rejects unauthenticated request with 401
+  - [ ] SW_CAT_API_007 - creates "Mobile" category and updates its name with "updated" postfix
+  - [ ] SW_CAT_API_008 - created product-only category is retrievable via GET /categories/:id
+- [ ] **CustomReportsAPI.cy.js** — 7 cases `api/CustomReportsAPI.cy.js`
+  - [ ] SW-CR-API-TC01: GET /custom-reports/templates without auth returns 401
+  - [ ] SW-CR-API-TC02: GET /custom-reports/templates returns 200
+  - [ ] SW-CR-API-TC03: GET /custom-reports/templates/:id/fields returns 2xx
+  - [ ] SW-CR-API-TC04: POST /custom-reports/execute without auth returns 401
+  - [ ] SW-CR-API-TC05: POST /custom-reports/execute with empty body returns non-success
+  - [ ] SW-CR-API-TC06: POST /custom-reports/execute with a real templateId returns 2xx
+  - [ ] SW-CR-API-TC07: POST /custom-reports/export with a real templateId returns 2xx
+- [ ] **DashboardAPI.cy.js** — 32 cases `api/DashboardAPI.cy.js`
+  - [ ] SW-DASH-API-TC01: Verify that the response status is 200
+  - [ ] SW-DASH-API-TC02: Verify that the response success flag is true
+  - [ ] SW-DASH-API-TC03: Verify that the Expected Items count is present and numeric
+  - [ ] SW-DASH-API-TC04: Verify that the Available Items count is present and numeric
+  - [ ] SW-DASH-API-TC05: Verify that the Received Items count is present and numeric
+  - [ ] SW-DASH-API-TC06: Verify that the Reserved Items count is present and numeric
+  - [ ] SW-DASH-API-TC07: Verify that the Incoming Items count is present and numeric
+  - [ ] SW-DASH-API-TC08: Verify that the Damaged Items count is present and numeric
+  - [ ] SW-DASH-API-TC09: Verify that the Disputed Items count is present and numeric
+  - [ ] SW-DASH-API-TC10: Verify that the Missing Items count is present and numeric
+  - [ ] SW-DASH-API-TC11: Verify that the Sold Items count is present and numeric
+  - [ ] SW-DASH-API-TC12: Verify that the Stocked Out Items count is present and numeric
+  - [ ] SW-DASH-API-TC13: Verify that the Total Products count is present and numeric
+  - [ ] SW-DASH-API-TC14: Verify that the Total Purchase Orders count is present and numeric
+  - [ ] SW-DASH-API-TC15: Verify that the Total Work Orders count is present and numeric
+  - [ ] SW-DASH-API-TC16: Verify that the response status is 200
+  - [ ] SW-DASH-API-TC17: Verify that the response success flag is true
+  - [ ] SW-DASH-API-TC18: Verify that the Total Inventory Value is present and numeric
+  - [ ] SW-DASH-API-TC19: Verify that the trends endpoint is accessible without authentication
+  - [ ] SW-DASH-API-TC20: Verify that requesting trends for 1 day returns exactly 1 data point
+  - [ ] SW-DASH-API-TC21: Verify that omitting the days parameter returns the default 7 data points
+  - [ ] SW-DASH-API-TC22: Verify that requesting trends for 90 days returns exactly 90 data points
+  - [ ] SW-DASH-API-TC23: Verify that each trend entry contains the required day, date, received, stockedOut, incoming and avai fields
+  - [ ] SW-DASH-API-TC24: Verify that the inventory KPI summary endpoint returns 401 when called without authentication
+  - [ ] SW-DASH-API-TC25: Verify that the inventory KPI summary returns totalInventoryValue and totalProducts when no date filters are applied
+  - [ ] SW-DASH-API-TC26: Verify that the inventory KPI summary returns historical values when both startDate and endDate are provided
+  - [ ] SW-DASH-API-TC27: Verify that providing only a startDate returns an error due to the both-or-neither date rule
+  - [ ] SW-DASH-API-TC28: Verify that providing only an endDate returns an error due to the both-or-neither date rule
+  - [ ] SW-DASH-API-TC29: Verify that the monthly KPI summary endpoint returns 401 when called without authentication
+  - [ ] SW-DASH-API-TC30: Verify that the monthly KPI summary returns a successful response for an authenticated request
+  - [ ] SW-DASH-API-TC31: Verify that the monthly KPI summary contains all four KPI arrays with 12 monthly entries each
+  - [ ] SW-DASH-API-TC32: Verify that each monthly KPI entry contains a month string and a numeric value
+- [ ] **ErrorLogAPI.cy.js** — 6 cases `api/ErrorLogAPI.cy.js`
+  - [ ] SW-ERR-API-TC01: GET /error-logs without auth returns 401
+  - [ ] SW-ERR-API-TC02: GET /error-logs returns 200
+  - [ ] SW-ERR-API-TC03: GET /error-logs/search with empty term returns 2xx
+  - [ ] SW-ERR-API-TC04: GET /error-logs/modules returns 200 with a list
+  - [ ] SW-ERR-API-TC05: GET /error-logs/error-types returns 200
+  - [ ] SW-ERR-API-TC06: GET /error-logs with module + errorType filters is handled
+- [ ] **ExcelImportAPI.cy.js** — 7 cases `api/ExcelImportAPI.cy.js`
+  - [ ] SW-XLS-API-TC01: GET /excel/download without auth returns 401
+  - [ ] SW-XLS-API-TC02: GET /excel/download returns 2xx
+  - [ ] SW-XLS-API-TC03: GET /excel/po-numbers returns 200
+  - [ ] SW-XLS-API-TC04: GET /excel/:poNumber/files with unknown PO is handled
+  - [ ] SW-XLS-API-TC05: GET /excel/downloadInventoryExcel returns 2xx
+  - [ ] SW-XLS-API-TC06: GET /excel/export-products returns 2xx
+  - [ ] SW-XLS-API-TC07: POST /excel/files/download with empty body is handled
+- [ ] **ExportInventoryAPI.cy.js** — 8 cases `api/ExportInventoryAPI.cy.js`
+  - [ ] SW-EXP-API-TC01: GET /excel/downloadInventoryExcel without auth returns 401
+  - [ ] SW-EXP-API-TC02: GET /excel/downloadInventoryExcel returns 2xx
+  - [ ] SW-EXP-API-TC03: GET /excel/downloadInventoryExcel?categoryId=<id> returns 2xx
+  - [ ] SW-EXP-API-TC04: GET /excel/downloadInventoryExcel?token=<jwt> works without an Authorization header
+  - [ ] SW-EXP-API-TC05: GET /excel/downloadInventoryExcel?productIds=<id> returns 2xx
+  - [ ] SW-EXP-API-TC06: GET /excel/export-products without auth returns 401
+  - [ ] SW-EXP-API-TC07: GET /excel/export-products?search=<term> returns 2xx
+  - [ ] SW-EXP-API-TC08: GET /excel/export-products?token=<jwt> works without an Authorization header
+- [ ] **GeneralConfigAPI.cy.js** — 34 cases `api/GeneralConfigAPI.cy.js`
+  - [ ] SW_GEN_CONF_API_01 – Enable 'Require Purchase Order (PO Number)'
+  - [ ] SW_GEN_CONF_API_02 – Disable 'Require Purchase Order (PO Number)'
+  - [ ] SW_GEN_CONF_API_11 – Enable 'Allow Scan Entire Inventory'
+  - [ ] SW_GEN_CONF_API_12 – Disable 'Allow Scan Entire Inventory'
+  - [ ] SW_GEN_CONF_API_13 – Enable 'Allow Manual Entry'
+  - [ ] SW_GEN_CONF_API_14 – Disable 'Allow Manual Entry'
+  - [ ] SW_GEN_CONF_API_15 – Enable 'Allow Container Location Assignment'
+  - [ ] SW_GEN_CONF_API_16 – Disable 'Allow Container Location Assignment'
+  - [ ] SW_GEN_CONF_API_19 – Enable 'Allow Import/Export of Attributes'
+  - [ ] SW_GEN_CONF_API_20 – Disable 'Allow Import/Export of Attributes'
+  - [ ] SW_GEN_CONF_API_22 – Enable 'Allow Inventory Editing'
+  - [ ] SW_GEN_CONF_API_23 – Disable 'Allow Inventory Editing'
+  - [ ] SW_GEN_CONF_API_25 – Enable 'Allow Inventory Stock Out'
+  - [ ] SW_GEN_CONF_API_26 – Disable 'Allow Inventory Stock Out'
+  - [ ] SW_GEN_CONF_API_28 – Enable 'Allow Create Work Order'
+  - [ ] SW_GEN_CONF_API_29 – Disable 'Allow Create Work Order'
+  - [ ] SW_GEN_CONF_API_31 – Enable 'Single PO Assignment Per Worker'
+  - [ ] SW_GEN_CONF_API_32 – Disable 'Single PO Assignment Per Worker'
+  - [ ] SW_GEN_CONF_API_34 – Enable 'Allow Product Upload Without Items'
+  - [ ] SW_GEN_CONF_API_35 – Disable 'Allow Product Upload Without Items'
+  - [ ] SW_GEN_CONF_API_08 – Add a new Stock Out Reason
+  - [ ] SW_GEN_CONF_API_09 – Remove a Stock Out Reason
+  - [ ] SW_GEN_CONF_API_10 – Protected reason 'Sold' is present and unique
+  - [ ] SW_GEN_CONF_API_04 – Compose productName with multiple attributes + custom text
+  - [ ] SW_GEN_CONF_API_05 – Remove a specific attribute from productName sequence
+  - [ ] SW_GEN_CONF_API_06 – Custom text persists in productName after save
+  - [ ] SW_GEN_CONF_API_07 – Replace existing productName tags with a new sequence
+  - [ ] SW_GEN_CONF_API_21 – 'Allow Import/Export of Attributes' persists after refetch
+  - [ ] SW_GEN_CONF_API_24 – 'Allow Inventory Editing' persists after refetch
+  - [ ] SW_GEN_CONF_API_27 – 'Allow Inventory Stock Out' persists after refetch
+  - [ ] SW_GEN_CONF_API_30 – 'Allow Create Work Order' persists after refetch
+  - [ ] SW_GEN_CONF_API_33 – 'Single PO Assignment Per Worker' persists after refetch
+  - [ ] SW_GEN_CONF_API_36 – 'Allow Product Upload Without Items' persists after refetch
+  - [ ] SW_GEN_CONF_API_37 – PATCH /configs/:id without auth returns 401
+- [ ] **HealthcheckAPI.cy.js** — 2 cases `api/HealthcheckAPI.cy.js`
+  - [ ] SW-HC-API-TC01: GET /health without auth returns 200
+  - [ ] SW-HC-API-TC02: GET /health returns a JSON body
+- [ ] **ImportAPI.cy.js** — 10 cases `api/ImportAPI.cy.js`
+  - [ ] SW_IMP_API_001 – import product-only category with all attributes
+  - [ ] SW_IMP_API_002 – product-only import is searchable via /incoming-items
+  - [ ] SW_IMP_API_003 – quantity counters reflect uploaded Excel quantity
+  - [ ] SW_IMP_API_004 – import product-item with 2 serial numbers
+  - [ ] SW_IMP_API_005 – serial numbers from product-item import are queryable
+  - [ ] SW_IMP_API_006 – product-item quantity-only upload (depends on config)
+  - [ ] SW_IMP_API_007 – mixed product-only + product-item in one file
+  - [ ] SW_IMP_API_008 – summary successCount equals 3 for 3 clean rows
+  - [ ] SW_IMP_API_009 – extra unknown column is ignored and reported in summary
+  - [ ] SW_IMP_API_010 – re-import of same serial reports ignoredExistingValues
+- [ ] **ImportMappingTemplatesAPI.cy.js** — 7 cases `api/ImportMappingTemplatesAPI.cy.js`
+  - [ ] SW-IMT-API-TC01: GET /import-mapping-templates without auth returns 401
+  - [ ] SW-IMT-API-TC02: GET /import-mapping-templates returns 200
+  - [ ] SW-IMT-API-TC03: GET /import-mapping-templates/:id for unknown id is handled
+  - [ ] SW-IMT-API-TC04: POST /import-mapping-templates with empty body is handled
+  - [ ] SW-IMT-API-TC05: PUT /import-mapping-templates/:id on unknown id is handled
+  - [ ] SW-IMT-API-TC06: DELETE /import-mapping-templates/:id on unknown id is handled
+  - [ ] SW-IMT-API-TC07: POST /import-mapping-templates/detect with empty body is handled
+- [ ] **IncomingItemsExtendedAPI.cy.js** — 18 cases `api/IncomingItemsExtendedAPI.cy.js`
+  - [ ] SW-IIE-API-TC01: GET /incoming-items/scan-summary without auth returns 401
+  - [ ] SW-IIE-API-TC02: GET /incoming-items/scan-summary with unknown PO is handled
+  - [ ] SW-IIE-API-TC03: GET /incoming-items/damaged returns 200
+  - [ ] SW-IIE-API-TC04: GET /incoming-items/manual-added-products with unknown PO is handled
+  - [ ] SW-IIE-API-TC05: GET /incoming-items/export-products with unknown PO is handled
+  - [ ] SW-IIE-API-TC06: GET /incoming-items/downloadInventoryExcel is handled
+  - [ ] SW-IIE-API-TC07: GET /incoming-items/report with unknown PO is handled
+  - [ ] SW-IIE-API-TC08: GET /incoming-items/:po/:productId detail family is handled
+  - [ ] SW-IIE-API-TC09: POST /incoming-items/hardware-stock-in with empty body is handled
+  - [ ] SW-IIE-API-TC10: POST /incoming-items/hardware-stock-out with empty body is handled
+  - [ ] SW-IIE-API-TC11: POST /incoming-items/set-expected-quantity with empty body is handled
+  - [ ] SW-IIE-API-TC12: POST /incoming-items/set-expected-quantity with unknown PO is handled
+  - [ ] SW-IIE-API-TC13: POST /incoming-items/add-product with empty body is handled
+  - [ ] SW-IIE-API-TC14: PATCH /incoming-items/status with empty body is handled
+  - [ ] SW-IIE-API-TC15: PATCH /incoming-items/status with unknown serial is handled
+  - [ ] SW-IIE-API-TC16: POST /incoming-items/update-cost-price with empty body is handled
+  - [ ] SW-IIE-API-TC17: POST /incoming-items/update-cost-price with empty itemIds is handled
+  - [ ] SW-IIE-API-TC18: POST /incoming-items/reports/advanced-search is public and handled
+- [ ] **IncomingItemsExtraAPI.cy.js** — 8 cases `api/IncomingItemsExtraAPI.cy.js`
+  - [ ] SW-IIX-API-TC01: GET /incoming-items base is public
+  - [ ] SW-IIX-API-TC02: GET /incoming-items/attribute is handled
+  - [ ] SW-IIX-API-TC03: GET /incoming-items/getProductCost is handled
+  - [ ] SW-IIX-API-TC04: GET /incoming-items/all returns 2xx
+  - [ ] SW-IIX-API-TC05: GET /incoming-items/details-incoming/:id for unknown id is handled
+  - [ ] SW-IIX-API-TC06: GET /incoming-items/scanned-items is handled
+  - [ ] SW-IIX-API-TC07: POST /incoming-items/mark-status with empty body is handled
+  - [ ] SW-IIX-API-TC08: GET /incoming-items/new-product-flag is handled
+- [ ] **InventoryActionStockOutAPI.cy.js** — 10 cases `api/InventoryActionStockOutAPI.cy.js`
+  - [ ] SW-IAS-API-TC01: POST /products/stock-out without auth returns 401
+  - [ ] SW-IAS-API-TC02: POST /products/stock-out with empty body returns non-success
+  - [ ] SW-IAS-API-TC03: POST /products/stock-out with unknown serial returns non-success
+  - [ ] SW-IAS-API-TC04: POST /products/stock-out flips an Available item to StockedOut (reason=Sold)
+  - [ ] SW-IAS-API-TC05: POST /products/stock-out with reason=Shipped is semantically handled
+  - [ ] SW-IAS-API-TC06: POST /products/stock-out with reason="stockout from bto" is semantically handled
+  - [ ] SW-IAS-API-TC07: POST /products/stockout-by-serial without auth returns 401
+  - [ ] SW-IAS-API-TC08: POST /products/stockout-by-serial with unknown serials returns non-success
+  - [ ] SW-IAS-API-TC09: POST /products/stockout-by-serial-number without auth returns 401
+  - [ ] SW-IAS-API-TC10: POST /products/stockout-by-serial-number with unknown serial returns non-success
+- [ ] **InventoryAuditAPI.cy.js** — 15 cases `api/InventoryAuditAPI.cy.js`
+  - [ ] SW-IA-API-TC01: GET /inventory-audits without auth returns 401
+  - [ ] SW-IA-API-TC02: GET /inventory-audits returns 200
+  - [ ] SW-IA-API-TC03: POST /inventory-audits with empty body returns non-success
+  - [ ] SW-IA-API-TC04: POST /inventory-audits with valid name returned 2xx in before()
+  - [ ] SW-IA-API-TC05: GET /inventory-audits/:id for the seed audit returns 200
+  - [ ] SW-IA-API-TC06: PUT /inventory-audits/:id updates the audit
+  - [ ] SW-IA-API-TC07: GET /inventory-audits/active returns 2xx
+  - [ ] SW-IA-API-TC08: GET /inventory-audits/settings returns 200
+  - [ ] SW-IA-API-TC09: PUT /inventory-audits/settings is reachable
+  - [ ] SW-IA-API-TC10: POST /:id/start then /:id/scan records a scan
+  - [ ] SW-IA-API-TC11: GET /:id/scans returns 200
+  - [ ] SW-IA-API-TC12: GET /:id/live-summary returns 200
+  - [ ] SW-IA-API-TC13: GET /:id/report is reachable
+  - [ ] SW-IA-API-TC14: POST /:id/complete is reachable
+  - [ ] SW-IA-API-TC15: GET /:id/report/export is reachable
+- [ ] **LoginAPI.cy.js** — 10 cases `api/LoginAPI.cy.js`
+  - [ ] SW-AUTH-API-TC01: POST /auth/login with admin credentials returns 200 and tokens
+  - [ ] SW-AUTH-API-TC02: Admin login response exposes role=admin
+  - [ ] SW-AUTH-API-TC03: POST /auth/login with worker credentials returns 200 and tokens
+  - [ ] SW-AUTH-API-TC04: Admin access token is accepted by a protected StockWise endpoint
+  - [ ] SW-AUTH-API-TC05: POST /auth/login with unknown username returns 401
+  - [ ] SW-AUTH-API-TC06: POST /auth/login with wrong password returns 401
+  - [ ] SW-AUTH-API-TC07: POST /auth/login with missing password returns 4xx
+  - [ ] SW-AUTH-API-TC08: POST /auth/login with missing username returns 4xx
+  - [ ] SW-AUTH-API-TC09: POST /auth/refresh with a valid refreshToken returns a new accessToken
+  - [ ] SW-AUTH-API-TC10: POST /auth/refresh with an invalid refreshToken is rejected
+- [ ] **ManageHierarchyAPI.cy.js** — 7 cases `api/ManageHierarchyAPI.cy.js`
+  - [ ] SW_CAT_HIER_API_01 - set dependsOn: Model → Brand
+  - [ ] SW_CAT_HIER_API_02 - set dependsOn: RAM → Model (chain of 3)
+  - [ ] SW_CAT_HIER_API_03 - GET verifies the full chain persists
+  - [ ] SW_CAT_HIER_API_04 - rewire chain: RAM → Brand, Model cleared
+  - [ ] SW_CAT_HIER_API_05 - clear all dependsOn (reset hierarchy)
+  - [ ] SW_CAT_HIER_API_06 - POST /categories/multi accepts bulk hierarchy payload
+  - [ ] SW_CAT_HIER_API_NEG_01 - unauthenticated PATCH /attributes → 401
+- [ ] **MiscExtraAPI.cy.js** — 7 cases `api/MiscExtraAPI.cy.js`
+  - [ ] SW-MSC-API-TC01: POST /categories/:id/convert-to-items on unknown id is handled
+  - [ ] SW-MSC-API-TC02: POST /locations/import with no file is handled
+  - [ ] SW-MSC-API-TC03: PUT /containers/:id/move/:toLocationId on unknown ids is handled
+  - [ ] SW-MSC-API-TC04: DELETE /containers/:id/items/:serial on unknown pair is handled
+  - [ ] SW-MSC-API-TC05: POST /chatbot/message/stream is reachable
+  - [ ] SW-MSC-API-TC06: POST /chatbot/message/stream with empty body is handled
+  - [ ] SW-MSC-API-TC07: GET /categories/:id for unknown id is handled
+- [ ] **NotificationsAPI.cy.js** — 10 cases `api/NotificationsAPI.cy.js`
+  - [ ] SW-NOT-API-TC01: GET /notifications without auth returns 401
+  - [ ] SW-NOT-API-TC02: GET /notifications returns 200
+  - [ ] SW-NOT-API-TC03: GET /notifications/unread-count returns a numeric count
+  - [ ] SW-NOT-API-TC04: PATCH /notifications/:id/read with unknown id is handled
+  - [ ] SW-NOT-API-TC05: PATCH /notifications/read-all returns 2xx
+  - [ ] SW-NOT-API-TC06: DELETE /notifications/:id with unknown id is handled
+  - [ ] SW-NOT-API-TC07: PATCH /notifications/trigger-check returns 2xx
+  - [ ] SW-NOT-API-TC08: PATCH /notifications/read-all without auth returns 401
+  - [ ] SW-NOT-API-TC09: GET /notifications/low-stock-products without auth returns 401
+  - [ ] SW-NOT-API-TC10: GET /notifications/low-stock-products returns 200
+- [ ] **ProductAPI.cy.js** — 12 cases `api/ProductAPI.cy.js`
+  - [ ] SW-PROD-API-TC01: POST /products creates a product in a product-only category
+  - [ ] SW-PROD-API-TC02: GET /products?search=<term> returns the newly created product
+  - [ ] SW-PROD-API-TC03: GET /products/:id returns the created product by id
+  - [ ] SW-PROD-API-TC04: PATCH /products/:id updates the product name
+  - [ ] SW-PROD-API-TC05: POST /products/deleteProduct removes the product
+  - [ ] SW-PROD-API-TC06: POST /products/item creates a serialized item under a product
+  - [ ] SW-PROD-API-TC07: GET /products/item/:serialNumber returns the created item
+  - [ ] SW-PROD-API-TC08: PATCH /products/item/:serialNumber updates an item attribute
+  - [ ] SW-PROD-API-TC09: POST /products without auth returns 401
+  - [ ] SW-PROD-API-TC10: GET /products/:id for unknown id returns 404
+  - [ ] SW-PROD-API-TC11: GET /products?page=1&page_size=3 returns paginated results
+  - [ ] SW-PROD-API-TC12: POST /products/deleteProduct with missing id returns 4xx
+- [ ] **ProductCategoryAttributeAPI.cy.js** — 8 cases `api/ProductCategoryAttributeAPI.cy.js`
+  - [ ] SW*ATR_API*${caseId}\_01 - create ${uiType} attribute on product-only category
+  - [ ] SW*ATR_API*${caseId}\_02 - update ${uiType} attribute name
+  - [ ] SW*ATR_API*${caseId}\_03 - toggle required on
+  - [ ] SW*ATR_API*${caseId}\_04 - toggle required off
+  - [ ] SW*ATR_API*${caseId}\_05 - delete ${uiType} attribute
+  - [ ] SW_ATR_API_NEG_01 - empty attribute name → 400
+  - [ ] SW_ATR_API_NEG_02 - attribute name with special chars → 400
+  - [ ] SW_ATR_API_NEG_03 - unauthenticated POST /attributes → 401
+- [ ] **ProductItemCategoryAttributeAPI.cy.js** — 4 cases `api/ProductItemCategoryAttributeAPI.cy.js`
+  - [ ] SW*ATR_API*${caseId}\_01 - create ${entityType} ${uiType} attribute
+  - [ ] SW*ATR_API*${caseId}\_02 - update name
+  - [ ] SW*ATR_API*${caseId}\_03 - toggle required on/off
+  - [ ] SW*ATR_API*${caseId}\_04 - delete ${entityType} ${uiType} attribute
+- [ ] **ProductListingAPI.cy.js** — 10 cases `api/ProductListingAPI.cy.js`
+  - [ ] SW-PL-API-TC01: GET /products returns a paginated list without auth
+  - [ ] SW-PL-API-TC02: GET /products?page_size=1 returns at most 1 row
+  - [ ] SW-PL-API-TC03: GET /products?search=<name> narrows the list
+  - [ ] SW-PL-API-TC04: GET /products?categoryId=<id> only returns rows in that category
+  - [ ] SW-PL-API-TC05: GET /products/search without auth returns 401
+  - [ ] SW-PL-API-TC06: GET /products/search returns a paginated list
+  - [ ] SW-PL-API-TC07: GET /products/grouped without groupBy returns 400
+  - [ ] SW-PL-API-TC08: GET /products/grouped?groupBy=name returns a 200
+  - [ ] SW-PL-API-TC09: POST /products/advanced-search without auth returns 401
+  - [ ] SW-PL-API-TC10: POST /products/advanced-search with valid criteria returns 200
+- [ ] **ProductNameAPI.cy.js** — 7 cases `api/ProductNameAPI.cy.js`
+  - [ ] SW_CAT_PN_API_01 - create product name template for the category
+  - [ ] SW_CAT_PN_API_02 - GET /configs returns the saved template
+  - [ ] SW_CAT_PN_API_03 - PATCH /configs/:id updates template (append Capacity tag)
+  - [ ] SW_CAT_PN_API_04 - PATCH with custom text segment persists
+  - [ ] SW_CAT_PN_API_05 - PATCH with empty productName array is accepted (reset)
+  - [ ] SW_CAT_PN_API_NEG_01 - unauthenticated POST /configs → 401
+  - [ ] SW_CAT_PN_API_NEG_02 - PATCH /configs/:id unknown id → 4xx
+- [ ] **ProductsExtendedAPI.cy.js** — 25 cases `api/ProductsExtendedAPI.cy.js`
+  - [ ] SW-PE-API-TC01: GET /products without auth returns 200 (public)
+  - [ ] SW-PE-API-TC02: GET /products/check-status/:serial without auth returns 2xx
+  - [ ] SW-PE-API-TC03: POST /products/asset-id/scan with empty body is handled
+  - [ ] SW-PE-API-TC04: POST /products/asset-id/generate with empty body is handled
+  - [ ] SW-PE-API-TC05: POST /products/asset-id/disassembly/preview with empty body is handled
+  - [ ] SW-PE-API-TC06: POST /products/asset-id/disassembly/create-and-generate with empty body is handled
+  - [ ] SW-PE-API-TC07: POST /products/asset-id/generate-from-po with empty body is handled
+  - [ ] SW-PE-API-TC08: POST /products/asset-id/preview-from-po with empty body is handled
+  - [ ] SW-PE-API-TC09: POST /products/asset-id/bulk-generate-by-serials with empty body is handled
+  - [ ] SW-PE-API-TC10: POST /products/asset-id/reassembly/link-and-stockout with empty body is handled
+  - [ ] SW-PE-API-TC11: GET /products/asset-id/lifecycle/:assetId is handled
+  - [ ] SW-PE-API-TC12: GET /products/asset-id/category/:categoryId/products is handled
+  - [ ] SW-PE-API-TC13: POST /products/item-shift with empty body is handled
+  - [ ] SW-PE-API-TC14: POST /products/multiple-items-shift with empty body is handled
+  - [ ] SW-PE-API-TC15: POST /products/product-shift with empty body is handled
+  - [ ] SW-PE-API-TC16: PATCH /products/:id/activate on unknown id is handled
+  - [ ] SW-PE-API-TC17: PATCH /products/:id/deactivate on unknown id is handled
+  - [ ] SW-PE-API-TC17a: PATCH /products/bulk-deactivate covers auth + Joi + unknown-id
+  - [ ] SW-PE-API-TC17b: PATCH /products/bulk-activate covers auth + Joi + unknown-id
+  - [ ] SW-PE-API-TC18: POST /products/update-cost-price with empty body is handled
+  - [ ] SW-PE-API-TC19: POST /products/bulk-update-cost-price with empty body is handled
+  - [ ] SW-PE-API-TC20: GET /products/source-locations + vendor-location-breakdown + audit are 2xx
+  - [ ] SW-PE-API-TC21: GET /products/asset-id/disassembly/generated-labels/:serial is handled
+  - [ ] SW-PE-API-TC22: GET /products/asset-id/disassembly/assembled-items/:serial is handled
+  - [ ] SW-PE-API-TC23: GET /products/asset-id/disassembly/category/:categoryId/products is handled
+- [ ] **ProductsExtraAPI.cy.js** — 16 cases `api/ProductsExtraAPI.cy.js`
+  - [ ] SW-PX-API-TC01: GET /products/product-names returns 2xx
+  - [ ] SW-PX-API-TC02: GET /products/searchable-fields returns 2xx
+  - [ ] SW-PX-API-TC03: GET /products/stockout-order-numbers returns 2xx
+  - [ ] SW-PX-API-TC04: GET /products/stockout-items with unknown orderNumber is handled
+  - [ ] SW-PX-API-TC05: POST /products/ingest-items with empty body is handled
+  - [ ] SW-PX-API-TC06: POST /products/variant with empty body is handled
+  - [ ] SW-PX-API-TC07: POST /products/item with empty body is handled
+  - [ ] SW-PX-API-TC08: DELETE /products/deletevariant/:id on unknown id is handled
+  - [ ] SW-PX-API-TC09: GET /products/check-product-status with unknown value is handled
+  - [ ] SW-PX-API-TC10: GET /products/:id/items for unknown id is handled
+  - [ ] SW-PX-API-TC11: GET /products/:productId/variants for unknown id is handled
+  - [ ] SW-PX-API-TC12: GET /products/:productId/variant/:variantId for unknown ids is handled
+  - [ ] SW-PX-API-TC13: GET /products/:id/variant/:variantId/items for unknown ids is handled
+  - [ ] SW-PX-API-TC14: PATCH /products/variant/:id with empty body is handled
+  - [ ] SW-PX-API-TC15: PATCH /products/item/:serialNumber with empty body is handled
+  - [ ] SW-PX-API-TC16: POST /products/stock-out-variant with empty body is handled
+- [ ] **PurchaseOrderAPI.cy.js** — 18 cases `api/PurchaseOrderAPI.cy.js`
+  - [ ] SW-PO-API-TC01: GET /purchase-orders without auth returns 401
+  - [ ] SW-PO-API-TC02: GET /purchase-orders returns 200
+  - [ ] SW-PO-API-TC03: GET /purchase-orders/get-products is reachable without auth
+  - [ ] SW-PO-API-TC04: GET /purchase-orders/po-numbers returns 200
+  - [ ] SW-PO-API-TC05: GET /purchase-orders/po-number-detail-by-po/:po returns 2xx
+  - [ ] SW-PO-API-TC06: GET /purchase-orders/get-categories-by-po/:po returns 2xx
+  - [ ] SW-PO-API-TC07: GET /purchase-orders/discrepencies-details-by-po/:po/:status returns 2xx
+  - [ ] SW-PO-API-TC08: GET /purchase-orders/discrepencies-cost-details-by-po/:po returns 2xx
+  - [ ] SW-PO-API-TC09: GET /purchase-orders/checkStatus/:po returns 2xx
+  - [ ] SW-PO-API-TC10: GET /purchase-orders/assigned-po returns 2xx
+  - [ ] SW-PO-API-TC11: GET /purchase-orders/assigned-po/:userId returns 2xx
+  - [ ] SW-PO-API-TC12: GET /purchase-orders/:po/cost-breakdown returns 2xx
+  - [ ] SW-PO-API-TC13: GET /purchase-orders/:po/cost-updates returns 2xx
+  - [ ] SW-PO-API-TC14: POST /purchase-orders/scan without auth returns 401
+  - [ ] SW-PO-API-TC15: POST /purchase-orders/scan with empty body returns non-success
+  - [ ] SW-PO-API-TC16: POST /purchase-orders/check-in-all with unknown PO is handled
+  - [ ] SW-PO-API-TC17: POST /purchase-orders/adjust and /update-status with empty body are handled
+  - [ ] SW-PO-API-TC18: PATCH close/reopen PurchaseOrder with unknown PO is handled
+- [ ] **PurchaseOrderExtraAPI.cy.js** — 6 cases `api/PurchaseOrderExtraAPI.cy.js`
+  - [ ] SW-POX-API-TC01: POST /purchase-orders with empty body is handled
+  - [ ] SW-POX-API-TC02: GET /purchase-orders/item/:id/:status for unknown id is handled
+  - [ ] SW-POX-API-TC03: GET /purchase-orders/assigned-po/:userId is handled
+  - [ ] SW-POX-API-TC04: GET /purchase-orders/:po/deleted-items/:productId is handled
+  - [ ] SW-POX-API-TC05: GET /purchase-orders/po-numbers/:productId is handled
+  - [ ] SW-POX-API-TC06: DELETE /purchase-orders/:poNumber on unknown PO is handled
+- [ ] **PurchaseOrderReportAPI.cy.js** — 6 cases `api/PurchaseOrderReportAPI.cy.js`
+  - [ ] SW-POR-API-TC01: GET /incoming-items/reports?poNumber=allPO returns tab-count summary
+  - [ ] SW-POR-API-TC02: every tab summaryKey is present on reports
+  - [ ] SW-POR-API-TC03: GET /incoming-items/defective-reports for Expected returns paginated rows
+  - [ ] SW-POR-API-${caseId}: GET /incoming-items/defective-reports?status=${status} returns 200 with a list
+  - [ ] SW-POR-API-TC09: GET /excel/po-numbers?close=true returns a list of PO numbers
+  - [ ] SW-POR-API-TC10: GET /incoming-items/defective-reports?page_size=1 returns at most 1 row
+- [ ] **ReportsAPI.cy.js** — 12 cases `api/ReportsAPI.cy.js`
+  - [ ] SW-RPT-API-TC01: GET /reports/inventory-value-report without auth returns 401
+  - [ ] SW-RPT-API-TC02: GET /reports/inventory-value-report returns 200
+  - [ ] SW-RPT-API-TC03: GET /reports/inventory-value-report/grouped returns 200
+  - [ ] SW-RPT-API-TC04: GET /reports/inventory-value-report/export returns 2xx
+  - [ ] SW-RPT-API-TC05: GET /reports/inventory-value-report/grouped/export returns 2xx
+  - [ ] SW-RPT-API-TC06: GET /reports/po-financial-summary returns 200
+  - [ ] SW-RPT-API-TC07: GET /reports/ending-inventory-report returns 200
+  - [ ] SW-RPT-API-TC08: GET /reports/ending-inventory-report/grouped + /export are 2xx
+  - [ ] SW-RPT-API-TC09: GET /reports/sales-report with filters returns 200
+  - [ ] SW-RPT-API-TC10: GET /reports/sales-report/export returns 2xx
+  - [ ] SW-RPT-API-TC11: GET /reports/asset-lifecycle-report + /export are 2xx
+  - [ ] SW-RPT-API-TC12: GET /reports/monthly-kpi-summary returns 200
+- [ ] **RestockAPI.cy.js** — 8 cases `api/RestockAPI.cy.js`
+  - [ ] SW-RES-API-TC01: POST /products/restock-by-serial-number without auth returns 401
+  - [ ] SW-RES-API-TC02: POST /products/restock-by-serial-number with empty body returns non-success
+  - [ ] SW-RES-API-TC03: POST /products/restock-by-serial-number with unknown serial returns non-success
+  - [ ] SW-RES-API-TC04: POST /products/restock-by-serial-number flips a non-Available item to Available
+  - [ ] SW-RES-API-TC05: POST /products/mark-available without auth returns 401
+  - [ ] SW-RES-API-TC06: POST /products/mark-available with empty body is NOT rejected by Joi
+  - [ ] SW-RES-API-TC07: POST /products/mark-available against a real serial returns 2xx
+  - [ ] SW-RES-API-TC08: POST /products/restock-product with empty body returns non-success
+- [ ] **ScanAPI.cy.js** — 8 cases `api/ScanAPI.cy.js`
+  - [ ] SW-SCN-API-TC01: POST /incoming-items/scan without auth returns 401
+  - [ ] SW-SCN-API-TC02: POST /incoming-items/scan with empty body returns non-success
+  - [ ] SW-SCN-API-TC03: POST /incoming-items/scan with unknown serial returns non-success
+  - [ ] SW-SCN-API-TC04: POST /incoming-items/scan with unknown PO returns non-success
+  - [ ] SW-SCN-API-TC05: POST /incoming-items/scan-all with empty body returns 400
+  - [ ] SW-SCN-API-TC06: POST /incoming-items/scan-all with numeric poNumber returns 400
+  - [ ] SW-SCN-API-TC07: POST /incoming-items/scan-all with unknown PO returns 200 with empty/null message
+  - [ ] SW-SCN-API-TC08: POST /incoming-items/scan-all without auth returns 401
+- [ ] **ScanConfigAPI.cy.js** — 7 cases `api/ScanConfigAPI.cy.js`
+  - [ ] SCAN_CFG_API_001 - GET /view-configs?type=scanView returns a scanView row
+  - [ ] SCAN_CFG_API_002 - PATCH with empty columns persists (all off)
+  - [ ] SCAN_CFG_API_003 - PATCH with seed column persists (one on)
+  - [ ] SCAN_CFG_API_004 - PATCH restoring original columns round-trips cleanly
+  - [ ] SCAN_CFG_API_005 - PATCH with unknown column name is rejected
+  - [ ] SCAN_CFG_API_NEG_01 - PATCH missing columns returns 400
+  - [ ] SCAN_CFG_API_NEG_02 - unauthenticated PATCH /view-configs/:id → 401
+- [ ] **ScanDamagedAPI.cy.js** — 8 cases `api/ScanDamagedAPI.cy.js`
+  - [ ] SW-SD-API-TC01: POST /incoming-items/scan-damaged without auth returns 401
+  - [ ] SW-SD-API-TC02: POST /incoming-items/scan-damaged with empty body returns non-success
+  - [ ] SW-SD-API-TC03: POST /incoming-items/scan-damaged with unknown serial returns non-success
+  - [ ] SW-SD-API-TC04: POST /products/mark-status without auth returns 401
+  - [ ] SW-SD-API-TC05: POST /products/mark-status with unknown serial returns non-success
+  - [ ] SW-SD-API-TC06: POST /products/mark-status marks an Available item as Damaged
+  - [ ] SW-SD-API-TC07: POST /products/mark-status with productIdsArray schema is accepted shape-wise
+  - [ ] SW-SD-API-TC08: POST /products/mark-status with missing quantity in productIdsArray returns 400
+- [ ] **StockInAPI.cy.js** — 10 cases `api/StockInAPI.cy.js`
+  - [ ] SW-SI-API-TC01: GET /incoming-items/po-numbers returns a list for the logged-in user
+  - [ ] SW-SI-API-TC02: POST /incoming-items/check-in is reachable and returns a structured response
+  - [ ] SW-SI-API-TC03: POST /incoming-items/product-stock-in accepts productId + poNumber + quantity
+  - [ ] SW-SI-API-TC04: GET /products/:id returns a non-negative quantity
+  - [ ] SW-SI-API-TC05: POST /incoming-items/check-in with unknown PO returns non-success
+  - [ ] SW-SI-API-TC06: POST /incoming-items/check-in with empty body returns 4xx
+  - [ ] SW-SI-API-TC07: POST /incoming-items/check-in without auth returns 401
+  - [ ] SW-SI-API-TC08: POST /incoming-items/product-stock-in with negative quantity returns non-success
+  - [ ] SW-SI-API-TC09: GET /incoming-items/reports exposes Incoming / Available / Received buckets
+  - [ ] SW-SI-API-TC10: GET /incoming-items/po-numbers without auth returns 401
+- [ ] **StockOutAPI.cy.js** — 2 cases `api/StockOutAPI.cy.js`
+  - [ ] should successfully stock out an Available item via API with reason "stockout from bto"
+  - [ ] should prevent duplicate stock out for the same serial number via API
+- [ ] **StockoutBTOAPI.cy.js** — 19 cases `api/StockoutBTOAPI.cy.js`
+  - [ ] SW-STKBTO-TC01: Verify the API returns an error when serialNumber is missing from the request
+  - [ ] SW-STKBTO-TC02: Verify the API returns an error when reason is missing from the request
+  - [ ] SW-STKBTO-TC03: Verify the API returns an error when serialNumber is an empty string
+  - [ ] SW-STKBTO-TC04: Verify the API returns an error when an invalid reason value is provided
+  - [ ] SW-STKBTO-TC05: Verify that an Incoming item is successfully stocked out when reason is stockout from bto
+  - [ ] SW-STKBTO-TC06: Verify that an Available item is successfully stocked out when reason is stockout from bto
+  - [ ] SW-STKBTO-TC07: Verify that a Damaged item is successfully stocked out when reason is stockout from bto
+  - [ ] SW-STKBTO-TC08: Verify that a Disputed item is successfully stocked out when reason is stockout from bto
+  - [ ] SW-STKBTO-TC09: Verify that a Missing item is successfully stocked out when reason is stockout from bto
+  - [ ] SW-STKBTO-TC10: Verify that stocking out an already StockedOut item with reason stockout from bto returns an error
+  - [ ] SW-STKBTO-TC11: Verify that an Available item is successfully stocked out when reason is Sold
+  - [ ] SW-STKBTO-TC12: Verify that stocking out an Incoming item with reason Sold returns an error
+  - [ ] SW-STKBTO-TC13: Verify that stocking out a Damaged item with reason Sold returns an error
+  - [ ] SW-STKBTO-TC14: Verify that stocking out a Disputed item with reason Sold returns an error
+  - [ ] SW-STKBTO-TC15: Verify that stocking out a Missing item with reason Sold returns an error
+  - [ ] SW-STKBTO-TC16: Verify that stocking out an already StockedOut item with reason Sold returns an error
+  - [ ] SW-STKBTO-TC17: Verify the API returns 401 when no auth token is provided
+  - [ ] SW-STKBTO-TC18: Verify the API returns 401 when a malformed auth token is provided
+  - [ ] SW-STKBTO-TC19: Verify a worker token can successfully stockout an available item
+- [ ] **ViewConfigsAPI.cy.js** — 6 cases `api/ViewConfigsAPI.cy.js`
+  - [ ] SW-VCF-API-TC01: GET /view-configs without auth returns 401
+  - [ ] SW-VCF-API-TC02: GET /view-configs returns 200
+  - [ ] SW-VCF-API-TC03: POST /view-configs with empty body is handled
+  - [ ] SW-VCF-API-TC04: GET /view-configs/:id for unknown id is handled
+  - [ ] SW-VCF-API-TC05: PATCH /view-configs/:id on unknown id is handled
+  - [ ] SW-VCF-API-TC06: DELETE /view-configs/:id on unknown id is handled
+- [ ] **WmsContainerAPI.cy.js** — 25 cases `api/WmsContainerAPI.cy.js`
+  - [ ] SW-WCN-API-TC01: GET /containers without auth returns 401
+  - [ ] SW-WCN-API-TC02: GET /containers returns 200
+  - [ ] SW-WCN-API-TC03: GET /containers/next-code/:containerTypeId returns 2xx
+  - [ ] SW-WCN-API-TC04: GET /containers/check-location/999999999 returns 2xx
+  - [ ] SW-WCN-API-TC05: GET /containers/item-product-locations returns 2xx
+  - [ ] SW-WCN-API-TC06: GET /containers/product-assignments/999999999 returns 2xx
+  - [ ] SW-WCN-API-TC07: POST /containers with empty body returns non-success
+  - [ ] SW-WCN-API-TC08: POST /containers with valid body returns 2xx
+  - [ ] SW-WCN-API-TC09: GET /containers/:id returns 2xx for the seed container
+  - [ ] SW-WCN-API-TC10: PUT /containers/:id updates the seed container
+  - [ ] SW-WCN-API-TC11: GET /containers/:id/items returns 200
+  - [ ] SW-WCN-API-TC12: GET /containers/:id/quantities returns 200
+  - [ ] SW-WCN-API-TC13: POST /containers/:id/quantities with empty body is handled
+  - [ ] SW-WCN-API-TC14: POST /containers/:id/items with empty body is handled
+  - [ ] SW-WCN-API-TC15: POST /containers/:id/assign with empty body is handled
+  - [ ] SW-WCN-API-TC16: POST /containers/:id/recalculate returns 2xx
+  - [ ] SW-WCN-API-TC17: POST /containers/:id/clear returns 2xx
+  - [ ] SW-WCN-API-TC18: POST /containers/:id/move-contents with empty body is handled
+  - [ ] SW-WCN-API-TC19: POST /containers/scan-assign with empty body is handled
+  - [ ] SW-WCN-API-TC20: DELETE /containers/items/:serialNumber with unknown serial is handled
+  - [ ] SW-WCN-API-TC21: POST /containers/:id/move-to-location/:locId on unknown ids is handled
+  - [ ] SW-WCN-API-TC22: POST /containers/:id/move-from-location/:locId on unknown ids is handled
+  - [ ] SW-WCN-API-TC23: POST /containers/:id/move-quantity-to-location/:locId on unknown ids is handled
+  - [ ] SW-WCN-API-TC24: GET /containers/deleted requires auth and returns 200
+  - [ ] SW-WCN-API-TC25: POST /containers/:id/restore with unknown id is handled
+- [ ] **WmsContainerTypeAPI.cy.js** — 6 cases `api/WmsContainerTypeAPI.cy.js`
+  - [ ] SW-WCT-API-TC01: GET /container-types without auth returns 401
+  - [ ] SW-WCT-API-TC02: GET /container-types returns 200
+  - [ ] SW-WCT-API-TC03: POST /container-types with empty body returns non-success
+  - [ ] SW-WCT-API-TC04: POST /container-types with a unique name returns 2xx
+  - [ ] SW-WCT-API-TC05: PUT /container-types with empty body returns non-success
+  - [ ] SW-WCT-API-TC06: POST /container-types/:id/restore round-trips delete → restore
+- [ ] **WmsLocationAPI.cy.js** — 16 cases `api/WmsLocationAPI.cy.js`
+  - [ ] SW-WL-API-TC01: GET /locations without auth returns 401
+  - [ ] SW-WL-API-TC02: GET /locations returns 200
+  - [ ] SW-WL-API-TC03: POST /locations with empty body returns non-success
+  - [ ] SW-WL-API-TC04: POST /locations with valid body returns 2xx and yields an id
+  - [ ] SW-WL-API-TC05: GET /locations/next-code/Facility returns 2xx
+  - [ ] SW-WL-API-TC06: GET /locations/dashboard/summary returns 200
+  - [ ] SW-WL-API-TC07: GET /locations/dashboard/hierarchy-report returns 200
+  - [ ] SW-WL-API-TC08: GET /locations/dashboard/contents-search is reachable
+  - [ ] SW-WL-API-TC09: GET /locations/scan-path with unknown code is handled
+  - [ ] SW-WL-API-TC10: GET /locations/universal-scan with unknown code is handled
+  - [ ] SW-WL-API-TC11: GET /locations/:id/hierarchy returns 2xx for the created location
+  - [ ] SW-WL-API-TC12: PUT /locations/:id updates the seed location
+  - [ ] SW-WL-API-TC13: POST /locations/quick-create-bin with empty body returns non-success
+  - [ ] SW-WL-API-TC14: POST /locations/bulk-create-area with empty body returns non-success
+  - [ ] SW-WL-API-TC15: GET /locations/deleted requires auth and returns 200
+  - [ ] SW-WL-API-TC16: POST /locations/:id/restore with unknown id is handled
+- [ ] **WmsLocationAssignmentAPI.cy.js** — 12 cases `api/WmsLocationAssignmentAPI.cy.js`
+  - [ ] SW-WLA-API-TC01: POST /location-assignments/:locId/items without auth returns 401
+  - [ ] SW-WLA-API-TC02: GET /location-assignments/:locId/items for unknown loc is handled
+  - [ ] SW-WLA-API-TC03: GET /location-assignments/:locId/containers is handled
+  - [ ] SW-WLA-API-TC04: GET /location-assignments/:locId/quantities is handled
+  - [ ] SW-WLA-API-TC05: POST /location-assignments/:locId/items with empty body is handled
+  - [ ] SW-WLA-API-TC06: POST /location-assignments/:locId/quantities with empty body is handled
+  - [ ] SW-WLA-API-TC07: PUT /location-assignments/:from/move-item/:to with empty body is handled
+  - [ ] SW-WLA-API-TC08: PUT /location-assignments/:from/move-quantity/:to with empty body is handled
+  - [ ] SW-WLA-API-TC09: POST /location-assignments/:from/move-all/:to against unknown locs is handled
+  - [ ] SW-WLA-API-TC10: GET /location-assignments/product-assignments/:productId is handled
+  - [ ] SW-WLA-API-TC11: DELETE /location-assignments/items/:serialNumber for unknown serial is handled
+  - [ ] SW-WLA-API-TC12: POST /location-assignments/:locId/move-quantity-to-container/:cid is handled
+- [ ] **WorkOrderAPI.cy.js** — 12 cases `api/WorkOrderAPI.cy.js`
+  - [ ] SW-WO-API-TC01: GET /work-orders without auth returns 401
+  - [ ] SW-WO-API-TC02: GET /work-orders returns a paginated list with workOrderNumber
+  - [ ] SW-WO-API-TC03: GET /work-orders?search=<workOrderNumber> returns the matching row
+  - [ ] SW-WO-API-TC04: GET /work-orders?search=<saleOrderNumber> returns rows with that SO
+  - [ ] SW-WO-API-TC05: GET /work-orders?search=<invoiceNumber> returns rows with that invoice
+  - [ ] SW-WO-API-TC06: GET /work-orders?status=Open returns Open work orders only
+  - [ ] SW-WO-API-TC07: GET /work-orders?status=Draft returns Draft work orders only
+  - [ ] SW-WO-API-TC08: GET /work-orders?status=Closed returns Closed work orders only
+  - [ ] SW-WO-API-TC09: GET /work-orders?status=Cancelled returns Cancelled work orders only
+  - [ ] SW-WO-API-TC10: GET /work-orders with a garbage search term returns no rows
+  - [ ] SW-WO-API-TC11: GET /work-orders?status=Bogus returns 400
+  - [ ] SW-WO-API-TC12: GET /work-orders/:id returns the work order by id
+- [ ] **WorkOrderExtendedAPI.cy.js** — 14 cases `api/WorkOrderExtendedAPI.cy.js`
+  - [ ] SW-WOE-API-TC01: GET /work-orders without auth returns 401
+  - [ ] SW-WOE-API-TC02: GET /work-orders returns 200
+  - [ ] SW-WOE-API-TC03: GET /work-orders/:id is public and handled for unknown id
+  - [ ] SW-WOE-API-TC04: GET /work-orders/sale-order/:orderId is handled
+  - [ ] SW-WOE-API-TC05: GET /work-orders/scanned-items is handled
+  - [ ] SW-WOE-API-TC06: POST /work-orders with empty body is handled
+  - [ ] SW-WOE-API-TC07: POST /work-orders/scan with empty body is handled
+  - [ ] SW-WOE-API-TC08: POST /work-orders/attach-invoice with empty body is handled
+  - [ ] SW-WOE-API-TC09: POST /work-orders/product/stockout with empty body is handled
+  - [ ] SW-WOE-API-TC10: POST /work-orders/bulk-stockout with empty body is handled
+  - [ ] SW-WOE-API-TC11: POST /work-orders/unscan with empty body is handled
+  - [ ] SW-WOE-API-TC12: PATCH /work-orders/:id on unknown id is handled
+  - [ ] SW-WOE-API-TC13: PATCH /work-orders/:workOrderNumber/products with empty body is handled
+  - [ ] SW-WOE-API-TC14: DELETE /work-orders/:id + /:id/cancel on unknown ids are handled
+- [ ] **ZZ_TeardownAPI.cy.js** — 6 cases `api/ZZ_TeardownAPI.cy.js`
+  - [ ] Phase 1 - delete serialised product items belonging to test products
+  - [ ] Phase 2 - delete test-prefixed products
+  - [ ] Phase 3 - delete worker / PO-assignment rows attached to test POs
+  - [ ] Phase 4 - delete test-prefixed purchase orders
+  - [ ] Phase 5 - delete test-prefixed attributes
+  - [ ] Phase 6 - delete test-prefixed categories
+
+## Configuration `(14 specs / 525 cases)`
+
+- [ ] **01-common-attribute-tests.cy.js** — 119 cases `Configuration/01-common-attribute-tests.cy.js`
+  - [ ] SW_ATR_01 - Add Common Product Attribute (Text) with V-Lookup
+  - [ ] SW_ATR_02 - Update Common Product Attribute Name
+  - [ ] SW_ATR_03 - Update Common Product Attribute (Enable Required)
+  - [ ] SW_ATR_04 - Update Common Product Attribute (Disable Required)
+  - [ ] SW_ATR_06 - Verify Edit V-Lookup
+  - [ ] SW_ATR_05 - Delete Common Product Attribute
+  - [ ] SW_ATR_07 - Add Common Product Attribute (Multi Line Text)
+  - [ ] SW_ATR_08 - Update Common Product Attribute Name (Multi Line Text)
+  - [ ] SW_ATR_09 - Update Common Product Attribute (Enable Required - Multi Line Text)
+  - [ ] SW_ATR_10 - Update Common Product Attribute (Disable Required - Multi Line Text)
+  - [ ] SW_ATR_11 - Delete Common Product Attribute (Multi Line Text)
+  - [ ] SW_ATR_12 - Negative Test: Create Number type Attribute with invalid Max Value
+  - [ ] SW_ATR_13 - Add Common Product Attribute (Number)
+  - [ ] SW_ATR_14 - Update Common Product Attribute Name (Number)
+  - [ ] SW_ATR_15 - Update Common Product Attribute (Enable Required - Number)
+  - [ ] SW_ATR_16 - Update Common Product Attribute (Disable Required - Number)
+  - [ ] SW_ATR_17 - Delete Common Product Attribute (Number)
+  - [ ] SW_ATR_18 - Add Common Product Attribute (Email)
+  - [ ] SW_ATR_19 - Update Common Product Attribute Name (Email)
+  - [ ] SW_ATR_20 - Update Common Product Attribute (Enable Required - Email)
+  - [ ] SW_ATR_21 - Update Common Product Attribute (Disable Required - Email)
+  - [ ] SW_ATR_22 - Delete Common Product Attribute (Email)
+  - [ ] SW_ATR_23 - Add Common Product Attribute (URL)
+  - [ ] SW_ATR_24 - Update Common Product Attribute Name (URL)
+  - [ ] SW_ATR_25 - Update Common Product Attribute (Enable Required - URL)
+  - [ ] SW_ATR_26 - Update Common Product Attribute (Disable Required - URL)
+  - [ ] SW_ATR_27 - Delete Common Product Attribute (URL)
+  - [ ] SW_ATR_28 - Add Common Product Attribute (Decimal)
+  - [ ] SW_ATR_29 - Update Common Product Attribute Name (Decimal)
+  - [ ] SW_ATR_30 - Update Common Product Attribute (Enable Required - Decimal)
+  - [ ] SW_ATR_31 - Update Common Product Attribute (Disable Required - Decimal)
+  - [ ] SW_ATR_32 - Delete Common Product Attribute (Decimal)
+  - [ ] SW_ATR_33 - Add Common Product Attribute (Amount)
+  - [ ] SW_ATR_34 - Update Common Product Attribute Name (Amount)
+  - [ ] SW_ATR_35 - Update Common Product Attribute (Enable Required - Amount)
+  - [ ] SW_ATR_36 - Update Common Product Attribute (Disable Required - Amount)
+  - [ ] SW_ATR_37 - Delete Common Product Attribute (Amount)
+  - [ ] SW_ATR_38 - Add Common Product Attribute (Percent)
+  - [ ] SW_ATR_39 - Update Common Product Attribute Name (Percent)
+  - [ ] SW_ATR_40 - Update Common Product Attribute (Enable Required - Percent)
+  - [ ] SW_ATR_41 - Update Common Product Attribute (Disable Required - Percent)
+  - [ ] SW_ATR_42 - Delete Common Product Attribute (Percent)
+  - [ ] SW_ATR_43 - Add Common Product Attribute (List)
+  - [ ] SW_ATR_44 - Update Common Product Attribute Name (List)
+  - [ ] SW_ATR_45 - Update Common Product Attribute (Enable Required - List)
+  - [ ] SW_ATR_46 - Update Common Product Attribute (Disable Required - List)
+  - [ ] SW_ATR_48 - Verify Add Row (List) for Common Product Attribute
+  - [ ] SW_ATR_49 - Verify Bulk Addition (List) for Common Product Attribute
+  - [ ] SW_ATR_50 - Verify Remove Option (List) for Common Product Attribute
+  - [ ] SW_ATR_47 - Delete Common Product Attribute (List)
+  - [ ] SW_ATR_51 - Add Common Product Attribute (Boolean)
+  - [ ] SW_ATR_52 - Update Common Product Attribute Name (Boolean)
+  - [ ] SW_ATR_53 - Update Common Product Attribute (Enable Required - Boolean)
+  - [ ] SW_ATR_54 - Update Common Product Attribute (Disable Required - Boolean)
+  - [ ] SW_ATR_55 - Delete Common Product Attribute (Boolean)
+  - [ ] SW_ATR_56 - Add Common Item Attribute (Text)
+  - [ ] SW_ATR_57 - Verify Uniqueness (Text) for Common Item Attribute
+  - [ ] SW_ATR_58 - Update Common Item Attribute Name (Text)
+  - [ ] SW_ATR_59 - Update Common Item Attribute (Enable Required)
+  - [ ] SW_ATR_60 - Update Common Item Attribute (Disable Required)
+  - [ ] SW_ATR_61 - Delete Common Item Attribute (Text)
+  - [ ] SW_ATR_62 - Add Common Item Attribute (Multi Line Text)
+  - [ ] SW_ATR_63 - Update Common Item Attribute Name (Multi Line Text)
+  - [ ] SW_ATR_64 - Update Common Item Attribute (Enable Required)
+  - [ ] SW_ATR_65 - Update Common Item Attribute (Disable Required)
+  - [ ] SW_ATR_66 - Delete Common Item Attribute (Multi Line Text)
+  - [ ] SW_ATR_67 - Negative Test: Max Value Limit (Number) for Item Attribute
+  - [ ] SW_ATR_68 - Add Common Item Attribute (Number)
+  - [ ] SW_ATR_69 - Update Common Item Attribute Name (Number)
+  - [ ] SW_ATR_70 - Update Common Item Attribute (Enable Required)
+  - [ ] SW_ATR_71 - Update Common Item Attribute (Disable Required)
+  - [ ] SW_ATR_72 - Delete Common Item Attribute (Number)
+  - [ ] SW_ATR_73 - Add Common Item Attribute (Email)
+  - [ ] SW_ATR_74 - Update Common Item Attribute Name (Email)
+  - [ ] SW_ATR_75 - Update Common Item Attribute (Enable Required)
+  - [ ] SW_ATR_76 - Update Common Item Attribute (Disable Required)
+  - [ ] SW_ATR_77 - Delete Common Item Attribute (Email)
+  - [ ] SW_ATR_78 - Add Common Item Attribute (URL)
+  - [ ] SW_ATR_79 - Update Common Item Attribute Name (URL)
+  - [ ] SW_ATR_80 - Update Common Item Attribute (Enable Required)
+  - [ ] SW_ATR_81 - Update Common Item Attribute (Disable Required)
+  - [ ] SW_ATR_82 - Delete Common Item Attribute (URL)
+  - [ ] SW_ATR_83 - Add Common Item Attribute (Decimal)
+  - [ ] SW_ATR_84 - Update Common Item Attribute Name (Decimal)
+  - [ ] SW_ATR_85 - Update Common Item Attribute (Enable Required)
+  - [ ] SW_ATR_86 - Update Common Item Attribute (Disable Required)
+  - [ ] SW_ATR_87 - Delete Common Item Attribute (Decimal)
+  - [ ] SW_ATR_88 - Add Common Item Attribute (Amount)
+  - [ ] SW_ATR_89 - Update Common Item Attribute Name (Amount)
+  - [ ] SW_ATR_90 - Update Common Item Attribute (Enable Required)
+  - [ ] SW_ATR_91 - Update Common Item Attribute (Disable Required)
+  - [ ] SW_ATR_92 - Delete Common Item Attribute (Amount)
+  - [ ] SW_ATR_93 - Add Common Item Attribute (Percent)
+  - [ ] SW_ATR_94 - Update Common Item Attribute Name (Percent)
+  - [ ] SW_ATR_95 - Update Common Item Attribute (Enable Required)
+  - [ ] SW_ATR_96 - Update Common Item Attribute (Disable Required)
+  - [ ] SW_ATR_97 - Delete Common Item Attribute (Percent)
+  - [ ] SW_ATR_98 - Add Common Item Attribute (List)
+  - [ ] SW_ATR_99 - Update Common Item Attribute Name (List)
+  - [ ] SW_ATR_100 - Update Common Item Attribute (Enable Required)
+  - [ ] SW_ATR_101 - Update Common Item Attribute (Disable Required)
+  - [ ] SW_ATR_103 - Verify Add Row (List) for Common Item Attribute
+  - [ ] SW_ATR_104 - Verify Bulk Addition (List) for Common Item Attribute
+  - [ ] SW_ATR_105 - Verify Remove Option (List) for Common Item Attribute
+  - [ ] SW_ATR_102 - Delete Common Item Attribute (List)
+  - [ ] SW_ATR_106 - Add Common Item Attribute (Boolean)
+  - [ ] SW_ATR_107 - Update Common Item Attribute Name (Boolean)
+  - [ ] SW_ATR_108 - Update Common Item Attribute (Enable Required)
+  - [ ] SW_ATR_109 - Update Common Item Attribute (Disable Required)
+  - [ ] SW_ATR_110 - Delete Common Item Attribute (Boolean)
+  - [ ] SW_ATR_111 - Create Product Attribute with Empty Name
+  - [ ] SW_ATR_112 - Create Duplicate Common Product Attribute
+  - [ ] SW_ATR_113 - Add Attribute of type Email with Invalid Email Format in Default Value.
+  - [ ] SW_ATR_114 - Add Attribute of type URL with Invalid URL Format in Default Value.
+  - [ ] SW_ATR_115 - Add Attribute of type Multi Line Text with Min Length > Max Length Validation
+  - [ ] SW_ATR_116 - Add Attribute of type Decimal with Non-Numeric Decimal Default Value
+  - [ ] SW_ATR_117 - Update Attribute name as duplicate(Item)
+  - [ ] SW_ATR_118 - Verify Delete Protection for Referenced Attributes
+  - [ ] SW_ATR_119 - Create List Attribute with No Options
+- [ ] **02-product-cat-attribute-tests.cy.js** — 54 cases `Configuration/02-product-cat-attribute-tests.cy.js`
+  - [ ] SW_CAT_03 - Create Product-Only Category 'RAM Automation Cat'
+  - [ ] SW_ATR_241 - Add Text Attribute for Product-Only Category
+  - [ ] SW_ATR_242 - Update Text Attribute Name for Product-Only Category
+  - [ ] SW_ATR_243 - Update Text Attribute (Enable Required) for Product-Only Category
+  - [ ] SW_ATR_244 - Update Text Attribute (Disable Required) for Product-Only Category
+  - [ ] SW_ATR_245 - Delete Text Attribute for Product-Only Category
+  - [ ] SW_ATR_246 - Add Multi Line Text Attribute for Product-Only Category
+  - [ ] SW_ATR_247 - Update Multi Line Text Attribute Name for Product-Only Category
+  - [ ] SW_ATR_248 - Update Multi Line Text Attribute (Enable Required) for Product-Only Category
+  - [ ] SW_ATR_249 - Update Multi Line Text Attribute (Disable Required) for Product-Only Category
+  - [ ] SW_ATR_250 - Delete Multi Line Text Attribute for Product-Only Category
+  - [ ] SW_ATR_251 - Add Number Attribute for Product-Only Category
+  - [ ] SW_ATR_252 - Update Number Attribute Name for Product-Only Category
+  - [ ] SW_ATR_253 - Update Number Attribute (Enable Required) for Product-Only Category
+  - [ ] SW_ATR_254 - Update Number Attribute (Disable Required) for Product-Only Category
+  - [ ] SW_ATR_255 - Delete Number Attribute for Product-Only Category
+  - [ ] SW_ATR_256 - Add Email Attribute for Product-Only Category
+  - [ ] SW_ATR_257 - Update Email Attribute Name for Product-Only Category
+  - [ ] SW_ATR_258 - Update Email Attribute (Enable Required) for Product-Only Category
+  - [ ] SW_ATR_259 - Update Email Attribute (Disable Required) for Product-Only Category
+  - [ ] SW_ATR_260 - Delete Email Attribute for Product-Only Category
+  - [ ] SW_ATR_261 - Add URL Attribute for Product-Only Category
+  - [ ] SW_ATR_262 - Update URL Attribute Name for Product-Only Category
+  - [ ] SW_ATR_263 - Update URL Attribute (Enable Required) for Product-Only Category
+  - [ ] SW_ATR_264 - Update URL Attribute (Disable Required) for Product-Only Category
+  - [ ] SW_ATR_265 - Delete URL Attribute for Product-Only Category
+  - [ ] SW_ATR_266 - Add Decimal Attribute for Product-Only Category
+  - [ ] SW_ATR_267 - Update Decimal Attribute Name for Product-Only Category
+  - [ ] SW_ATR_268 - Update Decimal Attribute (Enable Required) for Product-Only Category
+  - [ ] SW_ATR_269 - Update Decimal Attribute (Disable Required) for Product-Only Category
+  - [ ] SW_ATR_270 - Delete Decimal Attribute for Product-Only Category
+  - [ ] SW_ATR_271 - Add Amount Attribute for Product-Only Category
+  - [ ] SW_ATR_272 - Update Amount Attribute Name for Product-Only Category
+  - [ ] SW_ATR_273 - Update Amount Attribute (Enable Required) for Product-Only Category
+  - [ ] SW_ATR_274 - Update Amount Attribute (Disable Required) for Product-Only Category
+  - [ ] SW_ATR_275 - Delete Amount Attribute for Product-Only Category
+  - [ ] SW_ATR_276 - Add Percent Attribute for Product-Only Category
+  - [ ] SW_ATR_277 - Update Percent Attribute Name for Product-Only Category
+  - [ ] SW_ATR_278 - Update Percent Attribute (Enable Required) for Product-Only Category
+  - [ ] SW_ATR_279 - Update Percent Attribute (Disable Required) for Product-Only Category
+  - [ ] SW_ATR_280 - Delete Percent Attribute for Product-Only Category
+  - [ ] SW_ATR_281 - Add List Attribute for Product-Only Category
+  - [ ] SW_ATR_282 - Update List Attribute Name for Product-Only Category
+  - [ ] SW_ATR_283 - Update List Attribute (Enable Required) for Product-Only Category
+  - [ ] SW_ATR_284 - Update List Attribute (Disable Required) for Product-Only Category
+  - [ ] SW_ATR_286 - Verify Bulk Add for List Attribute for Product-Only Category
+  - [ ] SW_ATR_287 - Verify Add Row for List Attribute for Product-Only Category
+  - [ ] SW_ATR_288 - Verify Remove Option for List Attribute for Product-Only Category
+  - [ ] SW_ATR_285 - Delete List Attribute for Product-Only Category
+  - [ ] SW_ATR_289 - Add Boolean Attribute for Product-Only Category
+  - [ ] SW_ATR_290 - Update Boolean Attribute Name for Product-Only Category
+  - [ ] SW_ATR_291 - Update Boolean Attribute (Enable Required) for Product-Only Category
+  - [ ] SW_ATR_292 - Update Boolean Attribute (Disable Required) for Product-Only Category
+  - [ ] SW_ATR_293 - Delete Boolean Attribute for Product-Only Category
+- [ ] **03-product-Item-cat-attribute-tests.cy.js** — 125 cases `Configuration/03-product-Item-cat-attribute-tests.cy.js`
+  - [ ] SW_CAT_01 - Create Category 'Laptop Automation Cat'
+  - [ ] SW_ATR_120 - Add Category-Specific Product Attribute (Text)
+  - [ ] SW_ATR_121 - Update Category-Specific Product Attribute Name (Text)
+  - [ ] SW_ATR_122 - Delete Category-Specific Product Attribute (Text)
+  - [ ] SW_ATR_123 - Add Category-Specific Product Attribute (Multi Line Text)
+  - [ ] SW_ATR_124 - Update Category-Specific Product Attribute Name (Multi Line Text)
+  - [ ] SW_ATR_125 - Update Category-Specific Product Attribute (Enable Required)
+  - [ ] SW_ATR_126 - Update Category-Specific Product Attribute (Disable Required)
+  - [ ] SW_ATR_127 - Delete Category-Specific Product Attribute (Multi Line Text)
+  - [ ] SW_ATR_128 - Add Category-Specific Product Attribute (Number)
+  - [ ] SW_ATR_129 - Update Category-Specific Product Attribute Name (Number)
+  - [ ] SW_ATR_130 - Update Category-Specific Product Attribute (Enable Required)
+  - [ ] SW_ATR_131 - Update Category-Specific Product Attribute (Disable Required)
+  - [ ] SW_ATR_132 - Delete Category-Specific Product Attribute (Number)
+  - [ ] SW_ATR_133 - Add Category-Specific Product Attribute (Email)
+  - [ ] SW_ATR_134 - Update Category-Specific Product Attribute Name (Email)
+  - [ ] SW_ATR_135 - Update Category-Specific Product Attribute (Enable Required)
+  - [ ] SW_ATR_136 - Update Category-Specific Product Attribute (Disable Required)
+  - [ ] SW_ATR_137 - Delete Category-Specific Product Attribute (Email)
+  - [ ] SW_ATR_138 - Add Category-Specific Product Attribute (URL)
+  - [ ] SW_ATR_139 - Update Category-Specific Product Attribute Name (URL)
+  - [ ] SW_ATR_140 - Update Category-Specific Product Attribute (Enable Required)
+  - [ ] SW_ATR_141 - Update Category-Specific Product Attribute (Disable Required)
+  - [ ] SW_ATR_142 - Delete Category-Specific Product Attribute (URL)
+  - [ ] SW_ATR_143 - Add Category-Specific Product Attribute (Decimal)
+  - [ ] SW_ATR_144 - Update Category-Specific Product Attribute Name (Decimal)
+  - [ ] SW_ATR_145 - Update Category-Specific Product Attribute (Enable Required)
+  - [ ] SW_ATR_146 - Update Category-Specific Product Attribute (Disable Required)
+  - [ ] SW_ATR_147 - Delete Category-Specific Product Attribute (Decimal)
+  - [ ] SW_ATR_148 - Add Category-Specific Product Attribute (Amount)
+  - [ ] SW_ATR_149 - Update Category-Specific Product Attribute Name (Amount)
+  - [ ] SW_ATR_150 - Update Category-Specific Product Attribute (Enable Required)
+  - [ ] SW_ATR_151 - Update Category-Specific Product Attribute (Disable Required)
+  - [ ] SW_ATR_152 - Delete Category-Specific Product Attribute (Amount)
+  - [ ] SW_ATR_153 - Add Category-Specific Product Attribute (Percent)
+  - [ ] SW_ATR_154 - Update Category-Specific Product Attribute Name (Percent)
+  - [ ] SW_ATR_155 - Update Category-Specific Product Attribute (Enable Required)
+  - [ ] SW_ATR_156 - Update Category-Specific Product Attribute (Disable Required)
+  - [ ] SW_ATR_157 - Delete Category-Specific Product Attribute (Percent)
+  - [ ] SW_ATR_158 - Add Category-Specific Product Attribute (List)
+  - [ ] SW_ATR_159 - Update Category-Specific Product Attribute Name (List)
+  - [ ] SW_ATR_160 - Update Category-Specific Product Attribute (Enable Required)
+  - [ ] SW_ATR_161 - Update Category-Specific Product Attribute (Disable Required)
+  - [ ] SW_ATR_163 - Verify Add Row (List) for Category Product Attribute
+  - [ ] SW_ATR_164 - Verify Bulk Addition (List) for Category Product Attribute
+  - [ ] SW_ATR_165 - Verify Remove Option (List) for Category Product Attribute
+  - [ ] SW_ATR_162 - Delete Category-Specific Product Attribute (List)
+  - [ ] SW_ATR_166 - Add Category-Specific Product Attribute (Boolean)
+  - [ ] SW_ATR_167 - Update Category-Specific Product Attribute Name (Boolean)
+  - [ ] SW_ATR_168 - Update Category-Specific Product Attribute (Enable Required)
+  - [ ] SW_ATR_169 - Update Category-Specific Product Attribute (Disable Required)
+  - [ ] SW_ATR_170 - Delete Category-Specific Product Attribute (Boolean)
+  - [ ] SW_ATR_171 - Add Category-Specific Item Attribute (Text)
+  - [ ] SW_ATR_172 - Update Category-Specific Item Attribute Name (Text)
+  - [ ] SW_ATR_173 - Update Category-Specific Item Attribute (Enable Required)
+  - [ ] SW_ATR_174 - Update Category-Specific Item Attribute (Disable Required)
+  - [ ] SW_ATR_175 - Delete Category-Specific Item Attribute (Text)
+  - [ ] SW_ATR_176 - Add Category-Specific Item Attribute (Multi Line Text)
+  - [ ] SW_ATR_177 - Update Category-Specific Item Attribute Name (Multi Line Text)
+  - [ ] SW_ATR_178 - Update Category-Specific Item Attribute (Enable Required)
+  - [ ] SW_ATR_179 - Update Category-Specific Item Attribute (Disable Required)
+  - [ ] SW_ATR_180 - Delete Category-Specific Item Attribute (Multi Line Text)
+  - [ ] SW_ATR_181 - Add Category-Specific Item Attribute (Number)
+  - [ ] SW_ATR_182 - Update Category-Specific Item Attribute Name (Number)
+  - [ ] SW_ATR_183 - Update Category-Specific Item Attribute (Enable Required)
+  - [ ] SW_ATR_184 - Update Category-Specific Item Attribute (Disable Required)
+  - [ ] SW_ATR_185 - Delete Category-Specific Item Attribute (Number)
+  - [ ] SW_ATR_186 - Add Category-Specific Item Attribute (Email)
+  - [ ] SW_ATR_187 - Update Category-Specific Item Attribute Name (Email)
+  - [ ] SW_ATR_188 - Update Category-Specific Item Attribute (Enable Required)
+  - [ ] SW_ATR_189 - Update Category-Specific Item Attribute (Disable Required)
+  - [ ] SW_ATR_190 - Delete Category-Specific Item Attribute (Email)
+  - [ ] SW_ATR_191 - Add Category-Specific Item Attribute (URL)
+  - [ ] SW_ATR_192 - Update Category-Specific Item Attribute Name (URL)
+  - [ ] SW_ATR_193 - Update Category-Specific Item Attribute (Enable Required)
+  - [ ] SW_ATR_194 - Update Category-Specific Item Attribute (Disable Required)
+  - [ ] SW_ATR_195 - Delete Category-Specific Item Attribute (URL)
+  - [ ] SW_ATR_196 - Add Category-Specific Item Attribute (Decimal)
+  - [ ] SW_ATR_197 - Update Category-Specific Item Attribute Name (Decimal)
+  - [ ] SW_ATR_198 - Update Category-Specific Item Attribute (Enable Required)
+  - [ ] SW_ATR_199 - Update Category-Specific Item Attribute (Disable Required)
+  - [ ] SW_ATR_200 - Delete Category-Specific Item Attribute (Decimal)
+  - [ ] SW_ATR_201 - Add Category-Specific Item Attribute (Amount)
+  - [ ] SW_ATR_202 - Update Category-Specific Item Attribute Name (Amount)
+  - [ ] SW_ATR_203 - Update Category-Specific Item Attribute (Enable Required)
+  - [ ] SW_ATR_204 - Update Category-Specific Item Attribute (Disable Required)
+  - [ ] SW_ATR_205 - Delete Category-Specific Item Attribute (Amount)
+  - [ ] SW_ATR_206 - Add Category-Specific Item Attribute (Percent)
+  - [ ] SW_ATR_207 - Update Category-Specific Item Attribute Name (Percent)
+  - [ ] SW_ATR_208 - Update Category-Specific Item Attribute (Enable Required)
+  - [ ] SW_ATR_209 - Update Category-Specific Item Attribute (Disable Required)
+  - [ ] SW_ATR_210 - Delete Category-Specific Item Attribute (Percent)
+  - [ ] SW_ATR_211 - Add Category-Specific Item Attribute (List)
+  - [ ] SW_ATR_212 - Update Category-Specific Item Attribute Name (List)
+  - [ ] SW_ATR_213 - Update Category-Specific Item Attribute (Enable Required)
+  - [ ] SW_ATR_214 - Update Category-Specific Item Attribute (Disable Required)
+  - [ ] SW_ATR_215 - Verify Add Row (List) for Category Item Attribute
+  - [ ] SW_ATR_216 - Verify Bulk Addition (List) for Category Item Attribute
+  - [ ] SW_ATR_217 - Verify Remove Option (List) for Category Item Attribute
+  - [ ] SW_ATR_218 - Delete Category-Specific Item Attribute (List)
+  - [ ] SW_ATR_219 - Add Category-Specific Item Attribute (Boolean)
+  - [ ] SW_ATR_220 - Update Category-Specific Item Attribute Name (Boolean)
+  - [ ] SW_ATR_221 - Update Category-Specific Item Attribute (Enable Required)
+  - [ ] SW_ATR_222 - Update Category-Specific Item Attribute (Disable Required)
+  - [ ] SW_ATR_223 - Delete Category-Specific Item Attribute (Boolean)
+  - [ ] SW_ATR_224 - Create Product Attribute with Empty Name for Product-Item Category
+  - [ ] SW_ATR_225 - Create Duplicate Product Attribute Name for Product-Item Category
+  - [ ] SW_ATR_226 - Create Duplicate Item Attribute Name for Product-Item Category
+  - [ ] SW_ATR_227 - Create Multi Line Text Attribute with Max Length > 2000 for Product-Item Category
+  - [ ] SW_ATR_228 - Create Multi Line Text with Min Length > Max Length for Product-Item Category
+  - [ ] SW_ATR_229 - Create Number Attribute with Max Value Exceeding System Limit for Product-Item Category
+  - [ ] SW_ATR_230 - Create Email Attribute with Invalid Default Value Format for Product-Item Category
+  - [ ] SW_ATR_231 - Create URL Attribute with Invalid Default Value Format for Product-Item Category
+  - [ ] SW_ATR_232 - Create List Attribute with No Options for Product-Item Category
+  - [ ] SW_ATR_233 - Verify Bulk Addition with Empty String for Product-Item Category
+  - [ ] SW_ATR_234 - Delete Default Required Attribute "Category" for Product-Item Category
+  - [ ] SW_ATR_235 - Delete Default Required Attribute "Quantity" for Product-Item Category
+  - [ ] SW_ATR_236 - Update Attribute Name to Empty String for Product-Item Category
+  - [ ] SW_ATR_237 - Update Attribute Name to Duplicate Name for Product-Item Category
+  - [ ] SW_ATR_238 - Create Decimal Attribute with Invalid Default Value for Product-Item Category
+  - [ ] SW_ATR_239 - Create Amount Attribute with Negative Default Value for Product-Item Category
+  - [ ] SW_ATR_240 - Create Percent Attribute with Default Value > 100 for Product-Item Category
+  - [ ] SW_ATR_CLEANUP_03 - Delete Laptop Automation Cat
+  - [ ] SW_ATR_CLEANUP_04 - Delete RAM Automation Cat
+  - [ ] SW_ATR_CLEANUP_05 - Delete All Common Attributes (Product and Item)
+- [ ] **04-attribute-deletion-restriction-tests.cy.js** — 52 cases `Configuration/04-attribute-deletion-restriction-tests.cy.js`
+  - [ ] SW_ATR_SETUP_01 - Import Laptop Automation Cat data (common product + item + category product + item attributes)
+  - [ ] SW_ATR_SETUP_02 - Import RAM Automation Cat data (category-specific attributes)
+  - [ ] SW_ATR_298 - Common Product Text Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_299 - Common Product MultiLineText Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_300 - Common Product Number Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_301 - Common Product Email Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_302 - Common Product URL Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_303 - Common Product Decimal Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_304 - Common Product Amount Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_305 - Common Product Percent Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_306 - Common Product List Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_307 - Common Product Boolean Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_308 - Common Item Text Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_309 - Common Item MultiLineText Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_310 - Common Item Number Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_311 - Common Item Email Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_312 - Common Item URL Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_313 - Common Item Decimal Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_314 - Common Item Amount Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_315 - Common Item Percent Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_316 - Common Item List Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_317 - Common Item Boolean Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_318 - Laptop Cat Product Text Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_319 - Laptop Cat Product MultiLineText Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_320 - Laptop Cat Product Number Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_321 - Laptop Cat Product Email Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_322 - Laptop Cat Product URL Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_323 - Laptop Cat Product Decimal Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_324 - Laptop Cat Product Amount Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_325 - Laptop Cat Product Percent Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_326 - Laptop Cat Product List Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_327 - Laptop Cat Product Boolean Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_328 - Laptop Cat Item Text Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_329 - Laptop Cat Item MultiLineText Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_330 - Laptop Cat Item Number Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_331 - Laptop Cat Item Email Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_332 - Laptop Cat Item URL Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_333 - Laptop Cat Item Decimal Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_334 - Laptop Cat Item Amount Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_335 - Laptop Cat Item Percent Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_336 - Laptop Cat Item List Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_337 - Laptop Cat Item Boolean Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_338 - RAM Cat Product Text Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_339 - RAM Cat Product MultiLineText Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_340 - RAM Cat Product Number Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_341 - RAM Cat Product Email Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_342 - RAM Cat Product URL Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_343 - RAM Cat Product Decimal Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_344 - RAM Cat Product Amount Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_345 - RAM Cat Product Percent Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_346 - RAM Cat Product List Attribute Cannot Be Deleted When Data Exists
+  - [ ] SW_ATR_347 - RAM Cat Product Boolean Attribute Cannot Be Deleted When Data Exists
+- [ ] **05-categoryTests.cy.js** — 43 cases `Configuration/05-categoryTests.cy.js`
+  - [ ] SW_CAT_01 - Create a new category 'Laptop Automation Cat' with Allow Items enabled and navigate to Add Attribute screen
+  - [ ] SW_CAT_03 - Create 'RAM Automation Cat' as a product-only category (Allow Items: Disabled)
+  - [ ] SW_CAT_02 - Verify that clicking 'Manage Attribute' for Laptop Automation Cat navigates to the attribute management page
+  - [ ] SW_CAT_04 - Verify clicking 'Manage Attribute' for product-only category RAM Automation Cat shows product attributes only
+  - [ ] SW_CAT_05 - Verify user can access Category page through side menu
+  - [ ] SW_CAT_06 - Verify the URL updates correctly when Category page loads
+  - [ ] SW_CAT_07 - Verify Category page breadcrumbs
+  - [ ] SW_CAT_08 - Verify Add Category modal title is 'Add Category'
+  - [ ] SW_CAT_09 - Verify Name field is present in Add Category modal
+  - [ ] SW_CAT_10 - Verify Cancel button closes modal without saving
+  - [ ] SW_CAT_12 - Verify Add Category form contains Name input field
+  - [ ] SW_CAT_13 - Verify Allow Items toggle is present and OFF by default in Add Category
+  - [ ] SW_CAT_14 - Verify Save, Save & Add Attributes, and Cancel buttons are present in Add Category
+  - [ ] SW_CAT_17 - Verify Name field is mandatory in Add Category (empty name → validation error)
+  - [ ] SW_CAT_34 - Create Category with Duplicate Name shows duplicate error
+  - [ ] SW_CAT_35 - Create Category with Special Characters Only shows validation error
+  - [ ] SW_CAT_19 - Category List Sorting – Ascending (click Category Name header once)
+  - [ ] SW_CAT_20 - Category List Sorting – Descending (click Category Name header twice)
+  - [ ] SW_CAT_22 - Verify the category name can be updated for a Product-Only category (RAM Automation Cat)
+  - [ ] SW_CAT_23 - Verify the category name can be updated for a Product-Item category (Laptop Automation Cat)
+  - [ ] SW_CAT_24 - Verify enabling the 'Allow Items' toggle for a Product-Only category (RAM Automation Cat)
+  - [ ] SW_CAT_25 - Verify disabling the 'Allow Items' toggle for a Product-Item category (Laptop Automation Cat)
+  - [ ] SW_CAT_RESTORE - Restore both category names to original values after edit tests
+  - [ ] SW_CAT_SETUP_ATTR_01 - Add 'Model Number' (Text) Product Attribute for Laptop Automation Cat
+  - [ ] SW_CAT_SETUP_ATTR_02 - Add 'Brand' (Text) Product Attribute for RAM Automation Cat
+  - [ ] SW_CAT_SETUP_ATTR_03 - Add 'Memory Generation' (Text) Product Attribute for RAM Automation Cat
+  - [ ] SW_CAT_SETUP_RESTORE - Re-enable Allow Items toggle for Laptop Automation Cat before importing data
+  - [ ] SW_CAT_SETUP_01 - Import Laptop Automation Cat inventory data (serialized item)
+  - [ ] SW_CAT_SETUP_02 - Import RAM Automation Cat inventory data (product-only with quantity)
+  - [ ] SW_CAT_18 - Verify Allow Items toggle CANNOT be turned OFF when items exist for Laptop Automation Cat
+  - [ ] SW_CAT_26 - Verify Allow Items toggle is disabled for RAM Automation Cat (has associated products)
+  - [ ] SW_CAT_27 - Verify Allow Items toggle is disabled for Laptop Automation Cat (has associated products/items)
+  - [ ] SW_CAT_11 - Verify 'No' Button on Category Deletion Pop Up – Laptop Automation Cat remains in list
+  - [ ] SW_CAT_28 - Verify cancellation of product-only category deletion (RAM Automation Cat)
+  - [ ] SW_CAT_29 - Verify cancellation of product-item category deletion (Laptop Automation Cat)
+  - [ ] SW_CAT_15 - Verify Delete confirmation dialog appears when clicking Delete on a category
+  - [ ] SW_CAT_16 - Verify Attributes Management button navigates to attributes page
+  - [ ] SW_CAT_30 - Verify product-only category (RAM Automation Cat) cannot be deleted when associated data exists
+  - [ ] SW_CAT_31 - Verify product-item category (Laptop Automation Cat) cannot be deleted when associated data exists
+  - [ ] SW_CAT_CLEANUP_01 - Delete Laptop Automation Cat Import PO
+  - [ ] SW_CAT_CLEANUP_02 - Delete RAM Automation Cat Import PO
+  - [ ] SW_CAT_32 - Verify product-only category (RAM Automation Cat) deletion succeeds when no associated data
+  - [ ] SW_CAT_33 - Verify product-item category (Laptop Automation Cat) deletion succeeds when no associated data
+- [ ] **06-productNameTests.cy.js** — 14 cases `Configuration/06-productNameTests.cy.js`
+  - [ ] SW_CAT_PN_01 – Verify Attribute List in Manage Product Name Modal - Laptop Automation Cat
+  - [ ] SW_CAT_PN_02 – Create Product Name Configuration - Laptop Automation Cat
+  - [ ] SW_CAT_PN_09 – Create Product Name Configuration - RAM Automation Cat
+  - [ ] SW_CAT_PN_03 – Verify Saved Product Name Configuration - Laptop Automation Cat
+  - [ ] SW_CAT_PN_10 – Verify Saved Product Name Configuration - RAM Automation Cat
+  - [ ] SW_CAT_PN_04 – Update Product Name Configuration - Laptop Automation Cat
+  - [ ] SW_CAT_PN_11 – Update Product Name Configuration - RAM Automation Cat
+  - [ ] SW_CAT_PN_05 – Remove Product Name Configuration - Laptop Automation Cat
+  - [ ] SW_CAT_PN_12 – Remove Product Name Configuration - RAM Automation Cat
+  - [ ] SW_CAT_PN_06 – Add Custom Text to Product Name Configuration - Laptop Automation Cat
+  - [ ] SW_CAT_PN_14 – Add Custom Text to Product Name Configuration - RAM Automation Cat
+  - [ ] Clean Up Test – Custom Text Tag Deletion from Product Name Configuration - Laptop Automation Cat
+  - [ ] Clean Up Test – Custom Text Tag Deletion from Product Name Configuration - RAM Automation Cat
+  - [ ] SW_CAT_PN_07 – Verify Validation for Empty Product Name Configuration - Laptop Automation Cat
+- [ ] **07-manageHierarchyTests.cy.js** — 9 cases `Configuration/07-manageHierarchyTests.cy.js`
+  - [ ] SW_CAT_HIER_01 - Verify Opening Manage Hierarchy Modal (Product Item Category)
+  - [ ] SW_CAT_HIER_07 - Verify Opening Manage Hierarchy Modal (Product Category)
+  - [ ] SW_CAT_HIER_02 - Verify Drag and Drop to Create Hierarchy Product Item Category
+  - [ ] SW_CAT_HIER_05 - Verify Cancel Reordering of Current Hierarchy
+  - [ ] SW_CAT_HIER_03 - Verify Reordering of Current Hierarchy
+  - [ ] SW_CAT_HIER_04 - Verify Removing Attributes from Current Hierarchy
+  - [ ] SW_CAT_HIER_06 - Verify Cancel discards Attribute moved from attribute list to dependency list
+  - [ ] SW_CAT_HIER_08 - Verify Drag and Drop to Create Hierarchy Product Category
+  - [ ] SW_CAT_HIER_09 - Verify Cancel Reordering of Current Hierarchy Product only category
+- [ ] **08-scan-config-tests.cy.js** — 10 cases `Configuration/08-scan-config-tests.cy.js`
+  - [ ] SCAN_CFG_001 – Select Common Unique Attribute and Verify Count
+  - [ ] SCAN_CFG_002 – Remove Common Unique Attribute and Verify Count
+  - [ ] SCAN_CFG_003 – Select Category Unique Attribute and Verify Count
+  - [ ] SCAN_CFG_004 – Remove Category Unique Attribute and Verify Count
+  - [ ] SCAN_CFG_005 - Verify Clear Button Reverts to Last Saved State
+  - [ ] SCAN_CFG_006 - Save Multiple Selection and Verify Persistence
+  - [ ] SW_ATR_CLEANUP_01 - Delete Laptop Cat Import PO
+  - [ ] SW_ATR_CLEANUP_02 - Delete RAM Cat Import PO
+  - [ ] SW_ATR_CLEANUP_03 - Delete Laptop Automation Cat
+  - [ ] SW_ATR_CLEANUP_04 - Delete RAM Automation Cat
+- [ ] **09-BrainBoxConfigTests.cy.js** — 9 cases `Configuration/09-BrainBoxConfigTests.cy.js`
+  - [ ] BRBOX_CONF_001 - Ensure the user can successfully select an active PO from the dynamic list.
+  - [ ] BRBOX_CONF_002 - Verify Category selection for BrainBox mapping
+  - [ ] BRBOX_CONF_003 - Verify 'Adding Payload Field' UI functionality
+  - [ ] BRBOX_CONF_004 - Verify an attribute already mapped to a field is disabled for other fields.
+  - [ ] BRBOX_CONF_005 - Verify successful saving of full BrainBox mapping configuration
+  - [ ] BRBOX_CONF_006 - Verify deletion of individual Payload Mapping rows
+  - [ ] BRBOX_CONF_007 - Verify Editing of individual Attribute in a row
+  - [ ] BRBOX_CONF_008 - Verify Editing of individual Payload Field Name in a row
+  - [ ] BRBOX_CONF_009 - Verify validation for duplicate Payload Field names
+- [ ] **10-generalConfigTests.cy.js** — 34 cases `Configuration/10-generalConfigTests.cy.js`
+  - [ ] SW_GEN_CONF_03 – Verify Product Name Config Dropdown Options (Full Attribute List)
+  - [ ] SW_GEN_CONF_04 – Verify selecting multiple attributes and adding custom text
+  - [ ] SW_GEN_CONF_05 – Verify removing specific attributes from the sequence
+  - [ ] SW_GEN_CONF_06 – Verify Product Name Config with custom text applies and persists
+  - [ ] SW_GEN_CONF_07 – Verify Updating Product Name Configuration (Replace existing tags)
+  - [ ] SW_GEN_CONF_08 – Verify Adding a New Stock Out Reason
+  - [ ] SW_GEN_CONF_09 – Verify Removing a Stock Out Reason
+  - [ ] SW_GEN_CONF_10 – Verify Duplicate Stock Out Reason Prevention
+  - [ ] SW_GEN_CONF_11 – Verify Enabling 'Allow Scan Entire Inventory' toggle
+  - [ ] SW_GEN_CONF_12 – Verify Disabling 'Allow Scan Entire Inventory' toggle
+  - [ ] SW_GEN_CONF_13 – Verify Enabling 'Allow Manual Entry' toggle
+  - [ ] SW_GEN_CONF_14 – Verify Disabling 'Allow Manual Entry' toggle
+  - [ ] SW_GEN_CONF_25 – Verify Enabling 'Allow Inventory Stock Out' toggle
+  - [ ] SW_GEN_CONF_27 – Verify 'Allow Inventory Stock Out' toggle state persists after page refresh
+  - [ ] SW_GEN_CONF_26 – Verify Disabling 'Allow Inventory Stock Out' toggle
+  - [ ] SW_GEN_CONF_22 – Verify Enabling 'Allow Inventory Editing' toggle
+  - [ ] SW_GEN_CONF_24 – Verify 'Allow Inventory Editing' toggle state persists after page refresh
+  - [ ] SW_GEN_CONF_23 – Verify Disabling 'Allow Inventory Editing' toggle
+  - [ ] SW_GEN_CONF_19 – Verify Enabling 'Allow Import/Export of Attributes' toggle
+  - [ ] SW_GEN_CONF_20 – Verify Disabling 'Allow Import/Export of Attributes' toggle
+  - [ ] SW_GEN_CONF_21 -Verify 'Allow Import/Export of Attributes' toggle state persists after page refresh
+  - [ ] SW_GEN_CONF_28 - Verify Enabling 'Allow Create Work Order' toggle
+  - [ ] SW_GEN_CONF_29 - Verify Disabling 'Allow Create Work Order' toggle
+  - [ ] SW_GEN_CONF_30 - Verify 'Allow Create Work Order' toggle persists after page refresh
+  - [ ] SW_GEN_CONF_15 – Verify Enabling 'Allow Container Location Assignment' toggle
+  - [ ] SW_GEN_CONF_16 – Verify Disabling 'Allow Container Location Assignment' toggle
+  - [ ] SW_GEN_CONF_31 - Verify Enabling 'Single PO Assignment Per Worker' toggle
+  - [ ] SW_GEN_CONF_32 - Verify Disabling 'Single PO Assignment Per Worker' toggle
+  - [ ] SW_GEN_CONF_33 - Verify 'Single PO Assignment Per Worker' Persists after page refresh
+  - [ ] SW_GEN_CONF_01 -Verify Enabling 'Require Purchase Order (PO Number)' toggle
+  - [ ] SW_GEN_CONF_02 - Verify Disabling 'Require Purchase Order (PO Number)' toggle
+  - [ ] SW_GEN_CONF_34 - Verify Enabling 'Allow Product Upload Without Items' toggle
+  - [ ] SW_GEN_CONF_35 - Verify Disabling 'Allow Product Upload Without Items' toggle
+  - [ ] SW_GEN_CONF_36 - Verify 'Allow Product Upload Without Items' toggle Persists after page refresh
+- [ ] **11-zz-teardownConfiguration.cy.js** — 2 cases `Configuration/11-zz-teardownConfiguration.cy.js`
+  - [ ] SW_CFG_TEARDOWN_01 – delete all Configuration-suite test data via API
+  - [ ] SW_CFG_TEARDOWN_02 – verify shared categories are gone
+- [ ] **12-generalConfigExtendedTests.cy.js** — 27 cases `Configuration/12-generalConfigExtendedTests.cy.js`
+  - [ ] SW_GEN_CONF_17 – Verify Enabling 'Require PO Number for Damaging Products' toggle
+  - [ ] SW_GEN_CONF_18 – Verify Disabling 'Require PO Number for Damaging Products' toggle
+  - [ ] SW_GEN_CONF_37 – Verify 'Require PO Number for Damaging Products' toggle state persists after page refresh
+  - [ ] SW_GEN_CONF_38 – Verify Enabling 'Require PO Number for Stock Out' toggle
+  - [ ] SW_GEN_CONF_39 – Verify Disabling 'Require PO Number for Stock Out' toggle
+  - [ ] SW_GEN_CONF_40 – Verify 'Require PO Number for Stock Out' toggle state persists after page refresh
+  - [ ] SW_GEN_CONF_41 – Verify Enabling 'Require Work Order for Stock Out' toggle
+  - [ ] SW_GEN_CONF_42 – Verify Disabling 'Require Work Order for Stock Out' toggle
+  - [ ] SW_GEN_CONF_43 – Verify 'Require Work Order for Stock Out' toggle state persists after page refresh
+  - [ ] SW_GEN_CONF_44 – Verify Disabling 'Bulk Stock Out (Skip Item Scanning)' toggle
+  - [ ] SW_GEN_CONF_45 – Verify Enabling 'Bulk Stock Out (Skip Item Scanning)' toggle
+  - [ ] SW_GEN_CONF_46 – Verify 'Bulk Stock Out' toggle state persists after page refresh
+  - [ ] SW_GEN_CONF_47 – Verify Enabling 'Auto-move Items Without Confirmation' toggle
+  - [ ] SW_GEN_CONF_48 – Verify Disabling 'Auto-move Items Without Confirmation' toggle
+  - [ ] SW_GEN_CONF_49 – Verify Enabling 'Allow Exceeding Expected Quantity' toggle
+  - [ ] SW_GEN_CONF_50 – Verify Disabling 'Allow Exceeding Expected Quantity' toggle
+  - [ ] SW_GEN_CONF_51 – Verify 'Allow Exceeding Expected Quantity' toggle state persists after page refresh
+  - [ ] SW_GEN_CONF_52 – Verify Disabling 'Open Items View on Status Click' toggle
+  - [ ] SW_GEN_CONF_53 – Verify Enabling 'Open Items View on Status Click' toggle
+  - [ ] SW_GEN_CONF_54 – Verify 'Open Items View on Status Click' toggle state persists after page refresh
+  - [ ] SW_GEN_CONF_55 – Set valid low-stock threshold (EP: valid positive integer)
+  - [ ] SW_GEN_CONF_56 – Set low-stock threshold to BVA lower boundary (0)
+  - [ ] SW_GEN_CONF_57 – Clear low-stock threshold (EP: null disables global alert)
+  - [ ] SW_GEN_CONF_58 – Verify low-stock threshold value persists after page refresh
+  - [ ] SW_GEN_CONF_59 – Verify Adding a New Damage Reason
+  - [ ] SW_GEN_CONF_60 – Verify Removing a Damage Reason
+  - [ ] SW_GEN_CONF_61 – Verify Duplicate Damage Reason Prevention
+- [ ] **13-printersPageTests.cy.js** — 15 cases `Configuration/13-printersPageTests.cy.js`
+  - [ ] SW-PRINTERS-TC01 – Verify Printers page loads with correct heading
+  - [ ] SW-PRINTERS-TC02 – Verify all three tabs are visible
+  - [ ] SW-PRINTERS-TC03 – Verify navigating to Setup tab renders PrintwiseSetup component
+  - [ ] SW-PRINTERS-TC04 – Verify navigating to Print Jobs tab renders job statistics
+  - [ ] SW-PRINTERS-TC05 – Verify Printwise URL input renders with placeholder
+  - [ ] SW-PRINTERS-TC06 – Verify Apply button is disabled when URL matches the active URL
+  - [ ] SW-PRINTERS-TC07 – Verify Apply button becomes enabled when URL is changed
+  - [ ] SW-PRINTERS-TC08 – Verify connection status chip renders (Checking / Connected / Not reachable)
+  - [ ] SW-PRINTERS-TC09 – Verify 'Install the Printwise agent' section renders with download buttons
+  - [ ] SW-PRINTERS-TC10 – Verify 'Printer assignment' section heading renders
+  - [ ] SW-PRINTERS-TC11 – Verify connection status chip is visible on Workstations tab
+  - [ ] SW-PRINTERS-TC12 – Verify 'No agents registered' message appears when Printwise is unreachable
+  - [ ] SW-PRINTERS-TC13 – Verify all job statistics cards are visible
+  - [ ] SW-PRINTERS-TC14 – Verify Status filter and Time window filter are visible
+  - [ ] SW-PRINTERS-TC15 – Verify 'No jobs in this window' empty state appears when Printwise unreachable
+- [ ] **14-attributeExtrasTests.cy.js** — 12 cases `Configuration/14-attributeExtrasTests.cy.js`
+  - [ ] SW_ATR_EXT_01 – 'Use as Location' label is visible on common attribute Add form
+  - [ ] SW_ATR_EXT_02 – Create common attribute with 'Use as Location' enabled, then delete it
+  - [ ] SW_ATR_EXT_03 – 'Use as Location' label is NOT visible on category-specific attribute form
+  - [ ] SW_ATR_EXT_04 – Setup: create convertible Text attribute (decision-table positive column)
+  - [ ] SW_ATR_EXT_05 – Convert Text attribute to List (state-transition: Text → List)
+  - [ ] SW_ATR_EXT_06 – Convert List attribute back to Text (state-transition: List → Text)
+  - [ ] SW_ATR_EXT_07 – Convert button is NOT visible for non-convertible types (Number)
+  - [ ] SW_ATR_EXT_08 – Import/Export menu opens with Import and Export options
+  - [ ] SW_ATR_EXT_09 – Importing a valid JSON file calls POST /categories/multi and shows success toast
+  - [ ] SW_ATR_EXT_10 – Importing a malformed JSON file shows 'invalid JSON' error (no API call)
+  - [ ] SW_ATR_EXT_11 – Importing a non-JSON (.txt) file shows 'valid JSON file' error
+  - [ ] SW_ATR_EXT_12 – Clicking 'Export Attributes' calls GET /attributes/export
+
+## IncomingInventory `(32 specs / 417 cases)`
+
+- [ ] **AddItemTests.cy.js** — 12 cases `IncomingInventory/AddItemTests.cy.js`
+  - [ ] SW-AI-TC01 — Add Item button visible on ItemView when a specific PO is selected
+  - [ ] SW-AI-TC02 — Add Item button absent when allowManualEntries=false
+  - [ ] SW-AI-TC03 — Clicking Add Item routes to /add-item(s) and renders the form
+  - [ ] SW-AI-TC04 — Single serial submits; POST 200/201; success toast; item exists via API
+  - [ ] SW-AI-TC05 — Two space-separated serials submit and create both items
+  - [ ] SW-AI-TC06 — Comma-separated serials submit and create both items
+  - [ ] SW-AI-TC07 — Empty serial submit shows 'Please scan at least one item' toast and fires no POST
+  - [ ] SW-AI-TC08 — Duplicate serials in the textarea show inline 'Duplicate serials' warning
+  - [ ] SW-AI-TC09 — Cancel returns to ItemView without firing the Add Item POST
+  - [ ] SW-AI-TC10 — 'Clear All' button empties the serial textarea
+  - [ ] SW-AI-TC11 — Decimal cost (e.g. 99.99) is accepted and submits successfully
+  - [ ] SW-AI-TC12 — Zero cost (BVA lower-valid) is accepted and submits successfully
+- [ ] **AddProduct.cy.js** — 16 cases `IncomingInventory/AddProduct.cy.js`
+  - [ ] SW-IMP-ADD-TC01 — Complete Add Product to PO flow
+  - [ ] SW-IMP-ADD-TC02 — Back button on cost screen returns to product list
+  - [ ] SW-IMP-ADD-TC03 — Close dialog via ✕ without adding product
+  - [ ] SW-IMP-ADD-TC04 — Verify added product appears in PO table
+  - [ ] SW-IMP-ADD-TC05 — Search with valid product name shows results
+  - [ ] SW-IMP-ADD-TC06 — Search with no results shows empty message
+  - [ ] SW-IMP-ADD-TC07 — Click Add without selecting product shows error
+  - [ ] SW-IMP-ADD-TC08 — Zero expected quantity keeps Add to PO disabled
+  - [ ] SW-IMP-ADD-TC09 — Negative expected quantity keeps Add to PO disabled
+  - [ ] SW-IMP-ADD-TC10 — Empty expected quantity keeps Add to PO disabled
+  - [ ] SW-IMP-ADD-TC11 — Min expected quantity (1) enables Add to PO
+  - [ ] SW-IMP-ADD-TC12 — Large expected quantity (9999) enables Add to PO
+  - [ ] SW-IMP-ADD-TC13 — Min cost (0.01) is accepted
+  - [ ] SW-IMP-ADD-TC14 — Zero cost is accepted
+  - [ ] SW-IMP-ADD-TC15 — Verify selected product card on cost screen
+  - [ ] SW-IMP-ADD-TC16 — Add second product to same PO
+- [ ] **AddProductTests.cy.js** — 3 cases `IncomingInventory/AddProductTests.cy.js`
+  - [ ] SW_INC_ADDP_001 — add a product-item product to another PO
+  - [ ] SW_INC_ADDP_002 — add a product-only product to another PO
+  - [ ] SW_INC_ADDP_003 — [NEGATIVE] adding the same product to the same PO is rejected
+- [ ] **AllPOsTests.cy.js** — 5 cases `IncomingInventory/AllPOsTests.cy.js`
+  - [ ] SW_INC_ALLPO_001 — header 3-dots menu shows only Download Template and Customize Column
+  - [ ] SW_INC_ALLPO_002 — product-only row menu in All-POs view enables only the global actions
+  - [ ] SW_INC_ALLPO_003 — product details page rows have no row-level long-button when reached from All-POs
+  - [ ] SW_INC_ALLPO_004 — every stat card matches the All-POs reports API
+  - [ ] SW_INC_ALLPO_005 — pagination footer reflects the All-POs listing API
+- [ ] **AuditTrailTests.cy.js** — 14 cases `IncomingInventory/AuditTrailTests.cy.js`
+  - [ ] SW-IAT-TC01 — Open audit trail for scanned item: dialog shows serial and entries
+  - [ ] SW-IAT-TC02 — Close audit trail dialog dismisses cleanly
+  - [ ] SW-IAT-TC03 — Damaged status change creates audit entry (Reason field is optional per BE diff)
+  - [ ] SW-IAT-TC04 — Missing status change creates audit entry
+  - [ ] SW-IAT-TC05 — Multiple status transitions appear newest-first (Missing before Damaged)
+  - [ ] SW-IAT-TC06 — Fresh Incoming item: empty state if no item-level audit records (probe-then-skip)
+  - [ ] SW-IAT-TC07 — Null audit fields (reason/description) are not rendered on a scan-action entry
+  - [ ] SW-IAT-TC08 — Re-opening audit trail refetches and renders consistent data
+  - [ ] SW-IAT-TC09 — 'Audit trail' menu item is enabled for both Available and Reserved items
+  - [ ] SW-IAT-TC10 — Disputed status change creates audit entry
+  - [ ] SW-IAT-TC11 — Reserved state via Work Order scan creates audit trail entry
+  - [ ] SW-IAT-TC12 — StockedOut action creates audit entry
+  - [ ] SW-IAT-TC13 — Restock after StockedOut creates audit entry in newest-first order
+  - [ ] SW-IAT-TC14 — Deleted item: row absent from table and audit API probe returns NotFound
+- [ ] **ChangeStatusTests.cy.js** — 26 cases `IncomingInventory/ChangeStatusTests.cy.js`
+  - [ ] SW_INC_CS_001 — Incoming item status changed to Missing; only Missing count increments, Incoming unchanged
+  - [ ] SW_INC_CS_002 — Incoming item status changed to Damaged; Received+1, Damaged+1, Incoming-1
+  - [ ] SW_INC_CS_003 — Incoming item status changed to Disputed; Received+1, Disputed+1, Incoming-1
+  - [ ] SW_INC_CS_004 — Available item status changed to Sold; Available-1, Sold+1
+  - [ ] SW_INC_CS_005 — [ALL-7-STATUSES] change item to Missing; Missing increments, Incoming unchanged
+  - [ ] SW_INC_CS_006 — [ALL-7-STATUSES] change item to Damaged; Received+1, Damaged+1, Incoming-1
+  - [ ] SW_INC_CS_007 — [ALL-7-STATUSES] change item to Disputed; Received+1, Disputed+1, Incoming-1
+  - [ ] SW_INC_CS_008 — [ALL-7-STATUSES] change item to StockedOut; scan then stock out, StockedOut+1
+  - [ ] SW_INC_CS_009 — [ALL-7-STATUSES] change item to Available; Received+1, Available+1, Incoming-1
+  - [ ] SW_INC_CS_011 — [ALL-7-STATUSES] change item to Reserved; Available-1, Reserved+1
+  - [ ] SW_INC_CS_012 — [NEGATIVE] changing Available item to Missing is rejected by API
+  - [ ] SW_INC_CS_013 — [NEGATIVE] changing Available item to Damaged is rejected by API
+  - [ ] SW_INC_CS_014 — [NEGATIVE] changing Available item to Disputed is rejected by API
+  - [ ] SW_INC_CS_015 — Incoming product qty changed to Missing; only Missing count increments, Incoming unchanged
+  - [ ] SW_INC_CS_016 — Incoming product qty changed to Damaged; Received+1, Damaged+1, Incoming-1
+  - [ ] SW_INC_CS_017 — Incoming product qty changed to Disputed; Received+1, Disputed+1, Incoming-1
+  - [ ] SW_INC_CS_018 — Available product qty changed to Sold; Available-1, Sold+1
+  - [ ] SW_INC_CS_019 — [ALL-7-STATUSES] change product qty to Missing; Missing increments, Incoming unchanged
+  - [ ] SW_INC_CS_020 — [ALL-7-STATUSES] change product qty to Damaged; Received+1, Damaged+1, Incoming-1
+  - [ ] SW_INC_CS_021 — [ALL-7-STATUSES] change product qty to Disputed; Received+1, Disputed+1, Incoming-1
+  - [ ] SW_INC_CS_022 — [ALL-7-STATUSES] change product qty to StockedOut; StockedOut(others)+1
+  - [ ] SW_INC_CS_023 — [ALL-7-STATUSES] change product qty to Available; Received+1, Available+1, Incoming-1
+  - [ ] SW_INC_CS_025 — [ALL-7-STATUSES] change product qty to Reserved; Available-1, Reserved+1
+  - [ ] SW_INC_CS_026 — [NEGATIVE] changing Available product qty to Missing is rejected by API
+  - [ ] SW_INC_CS_027 — [NEGATIVE] changing Available product qty to Damaged is rejected by API
+  - [ ] SW_INC_CS_028 — [NEGATIVE] changing Available product qty to Disputed is rejected by API
+- [ ] **DownloadTemplate.cy.js** — 6 cases `IncomingInventory/DownloadTemplate.cy.js`
+  - [ ] SW_DT_001 – Dialog opens from header action menu with correct UI elements
+  - [ ] SW_DT_002 – Download button is disabled when no template is selected
+  - [ ] SW_DT_003 – Template dropdown lists General and category-specific templates
+  - [ ] SW_DT_004 – Download General Template and verify headers contain common Product and Item attributes
+  - [ ] SW_DT_005 – Download RAM Template and verify common Product + RAM Product headers, no Item attributes
+  - [ ] SW_DT_006 – Download Laptop Template and verify common + Laptop-specific Product and Item headers
+- [ ] **ExportTests.cy.js** — 21 cases `IncomingInventory/ExportTests.cy.js`
+  - [ ] SW-EXP-TC01 — Export chevron is absent when "All POs" is selected
+  - [ ] SW-EXP-TC02 — Export chevron + "Export" menu item are visible and enabled for a specific PO
+  - [ ] SW-EXP-TC03 — Product-only PO exports as <poNumber>.xlsx with one sheet matching the RAM category and the product-only column set
+  - [ ] SW-EXP-TC04 — Product-item PO exports a Laptop sheet with per-item rows and a Status column; no quantity columns appear
+  - [ ] SW-EXP-TC05 — Mixed PO produces exactly two sheets, one per category, each with the appropriate shape
+  - [ ] SW-EXP-TC06 — Status filter "Available" exports only items in Available status (product-item PO)
+  - [ ] SW-EXP-TC07 — Status filter "Damaged" exports only Damaged rows with reason populated
+  - [ ] SW-EXP-TC08 — Status filter "Reserved" on a product-only PO yields a summary row whose Reserved Quantity > 0
+  - [ ] SW-EXP-TC09 — Status filter "Incoming" on a product-only PO yields rows with Incoming Quantity > 0
+  - [ ] SW-EXP-TC10 — Status filter "Stocked out (others)" excludes Sold-reason items
+  - [ ] SW-EXP-TC11 — Status filter "Sold" exports only rows where Stockout Reason = Sold
+  - [ ] SW-EXP-TC12 — Status filter "Received" excludes Incoming and Missing items
+  - [ ] SW-EXP-TC13 — Search filter prunes the workbook to the matched product only
+  - [ ] SW-EXP-TC14 — search=<Laptop> + status=Available intersects: only Available Laptop rows are in the workbook
+  - [ ] SW-EXP-TC15 — search=<Laptop> + status=Damaged intersects: only Damaged Laptop rows are in the workbook
+  - [ ] SW-EXP-TC16 — Status filter "Missing" with no Missing rows yields an "Empty Inventory" sheet
+  - [ ] SW-EXP-TC17 — Search term that matches no product yields an "Empty Inventory" sheet
+  - [ ] SW-EXP-TC18 — Product-only summary row qty values match the listing API (single source of truth)
+  - [ ] SW-EXP-TC19 — Product-only PO with two distinct (status, reason) stockout groups emits two stockout rows
+  - [ ] SW-EXP-TC20 — Status filter "Missing" exports only rows in Missing status
+  - [ ] SW-EXP-TC21 — Status filter "Disputed" exports only rows in Disputed status
+- [ ] **ImportTests.cy.js** — 69 cases `IncomingInventory/ImportTests.cy.js`
+  - [ ] SW_IMP_001 – Import product-only category with all attributes
+  - [ ] SW_IMP_002 – Verify product details attributes after product-only import
+  - [ ] SW_IMP_003 – Verify quantity counters after product-only import
+  - [ ] SW_IMP_004 – Import product-item category with serial numbers and all attributes
+  - [ ] SW_IMP_005 – Verify items list and item attributes after product-item import
+  - [ ] SW_IMP_006 – Import product-item with quantity only (config ON, no serials)
+  - [ ] SW_IMP_007 – Import mixed product-only and product-item categories in single file
+  - [ ] SW_IMP_008 – Verify Import Summary popup success count
+  - [ ] SW_IMP_009 – Verify extra columns are ignored without import failure
+  - [ ] SW_IMP_010 – Verify duplicate serial numbers are shown as ignored on re-import
+  - [ ] SW_IMP_011 – Import Product category data with all attribute data types and verify values
+  - [ ] SW_IMP_012 – Import Item category data with all attribute data types and verify values
+  - [ ] SW_IMP_013 – Verify CSV file is rejected with error message
+  - [ ] SW_IMP_014 – Verify TXT file is rejected with error message
+  - [ ] SW_IMP_015 – Verify PDF file is rejected with error message
+  - [ ] SW_IMP_016 – Verify empty Excel file (header only) is rejected
+  - [ ] SW_IMP_017 – Verify multi-sheet Excel file is rejected
+  - [ ] SW_IMP_018 – Verify file missing Category column triggers column mapping dialog
+  - [ ] SW_IMP_019 – Verify file missing required product attribute column (product-only category) is rejected
+  - [ ] SW_IMP_020 – Verify file missing required item attribute column (product-item category) is rejected
+  - [ ] SW_IMP_021 – Verify file missing required common product attribute column is rejected
+  - [ ] SW_IMP_022 – Verify invalid category name produces error with row number
+  - [ ] SW_IMP_023 – Verify empty Category cell produces error with row number
+  - [ ] SW_IMP_024 – Verify empty serial number rejected when config is OFF
+  - [ ] SW_IMP_025 – Verify missing Cost column produces error for all rows (product-only)
+  - [ ] SW_IMP_026 – Verify missing Cost column produces error for all rows (product-item)
+  - [ ] SW_IMP_027 – Verify Cost missing in one row targets only that row (product-only)
+  - [ ] SW_IMP_028 – Verify Cost missing in one row targets only that row (product-item)
+  - [ ] SW_IMP_029 – Verify empty required attribute (RAM Brand) produces error for correct row
+  - [ ] SW_IMP_030 – Verify empty required attribute (Support Contact) produces error for correct row
+  - [ ] SW_IMP_031 – Verify empty required item attribute (Asset Tag ID) error for correct row
+  - [ ] SW_IMP_032 – Verify empty required common attribute (Support Contact) error for correct row
+  - [ ] SW_IMP_033 – Verify empty required common item attribute (Asset Security Code) error
+  - [ ] SW_IMP_035 – Verify import without PO when Require PO Number is ON produces error
+  - [ ] SW_IMP_036 – Verify invalid Number-type value in product-only category attribute produces error with row number
+  - [ ] SW_IMP_037 – Verify invalid Decimal-type value in product-only category attribute produces error
+  - [ ] SW_IMP_038 – Verify invalid Boolean-type value in product-only category attribute produces error with row number
+  - [ ] SW_IMP_039 – Verify invalid Email-type value in product-only category attribute produces error
+  - [ ] SW_IMP_040 – Verify invalid URL-type value in product-only category attribute produces error
+  - [ ] SW_IMP_041 – Verify invalid Percent-type value in product-only category attribute produces error with row number
+  - [ ] SW_IMP_042 – Verify invalid List-type value in product-only category attribute produces error
+  - [ ] SW_IMP_043 – Verify invalid Number-type value in product-item category attribute produces error
+  - [ ] SW_IMP_044 – Verify invalid Decimal-type value in product-item category attribute produces error
+  - [ ] SW_IMP_045 – Verify invalid Boolean-type value in product-item category attribute produces error
+  - [ ] SW_IMP_046 – Verify invalid Email-type value in product-item category attribute produces error
+  - [ ] SW_IMP_047 – Verify invalid URL-type value in product-item category attribute produces error
+  - [ ] SW_IMP_048 – Verify invalid Percent-type value in product-item category attribute produces error
+  - [ ] SW_IMP_049 – Verify invalid List-type value in product-item category product attribute produces error
+  - [ ] SW_IMP_050 – Verify invalid List-type value in product-item category item attribute produces error
+  - [ ] SW_IMP_051 – Verify invalid Number-type value in common product attribute produces error
+  - [ ] SW_IMP_052 – Verify invalid Email-type value in common product attribute produces error
+  - [ ] SW_IMP_053 – Verify invalid List-type value in common product attribute produces error
+  - [ ] SW_IMP_054 – Verify invalid Number-type value in common item attribute produces error
+  - [ ] SW_IMP_055 – Verify invalid List-type value in common item attribute produces error
+  - [ ] SW_IMP_056 – Verify duplicate column header reported in Error Summary
+  - [ ] SW_IMP_057 – Verify Serial Number in product-only file does not prevent import
+  - [ ] SW_IMP_058 – Verify in-file duplicate serial numbers are counted in Duplicate Values
+  - [ ] SW_IMP_059 – Verify already-existing serial numbers reported in Existing Values Ignored
+  - [ ] SW_IMP_060 – Verify product-only with Quantity=0 is rejected with quantity error
+  - [ ] SW_IMP_061 – Verify product-only without Quantity column is rejected with quantity error
+  - [ ] SW_IMP_062 – Verify config ON: product-item with Qty, no SN imports successfully
+  - [ ] SW_IMP_063 – Verify config ON: product-item with serial numbers creates items
+  - [ ] SW_IMP_064 – Verify config OFF: product-item without SN is rejected
+  - [ ] SW_IMP_065 – Verify config toggle does not affect product-only imports
+  - [ ] SW_IMP_066 – Comprehensive: multiple row-level error types in one file
+  - [ ] SW_IMP_067 – Bulk import 1000 Laptop items across 10 products (100 items each) and verify 10 product rows are created
+  - [ ] SW_IMP_068 – Bulk import 200 Laptop items for a single product and verify expected quantity is 200
+  - [ ] SW_IMP_069 – Product-only: verify Expected & Incoming after import, then re-import same PO
+  - [ ] SW_IMP_070 – Product-item: verify Expected & Incoming after import, then re-import same PO
+- [ ] **IncInvStatsClickTests.cy.js** — 54 cases `IncomingInventory/IncInvStatsClickTests.cy.js`
+  - [ ] SW_INC_STAT_001 – Available shows Product-Item with Available > 0 (Lenovo)
+  - [ ] SW_INC_STAT_002 – Available shows Product-Only with Available > 0 (Kingston DDR4)
+  - [ ] SW_INC_STAT_003 – Available shows both Product-Only and Product-Item with Available > 0
+  - [ ] SW_INC_STAT_004 – Available hides Product-Only with Available = 0 (Corsair)
+  - [ ] SW_INC_STAT_005 – Available hides Product-Item with Available = 0 (Dell)
+  - [ ] SW_INC_STAT_006 – Available hides both Product-Only and Product-Item with Available = 0
+  - [ ] SW_INC_STAT_007 – Received shows Product-Item with Received > 0 (Lenovo)
+  - [ ] SW_INC_STAT_008 – Received shows Product-Only with Received > 0 (Kingston)
+  - [ ] SW_INC_STAT_009 – Received shows both Product-Only and Product-Item with Received > 0
+  - [ ] SW_INC_STAT_010 – Received hides Product-Only with Received = 0 (Corsair)
+  - [ ] SW_INC_STAT_011 – Received hides Product-Item with Received = 0 (Dell)
+  - [ ] SW_INC_STAT_012 – Received hides both Product-Only and Product-Item with Received = 0
+  - [ ] SW_INC_STAT_013 – Incoming shows Product-Item with Incoming > 0 (Dell)
+  - [ ] SW_INC_STAT_014 – Incoming shows Product-Only with Incoming > 0 (Corsair)
+  - [ ] SW_INC_STAT_015 – Incoming shows both Product-Only and Product-Item with Incoming > 0
+  - [ ] SW_INC_STAT_016 – Incoming hides Product-Only with Incoming = 0 (HyperX)
+  - [ ] SW_INC_STAT_017 – Incoming hides Product-Item with Incoming = 0 (EliteBook)
+  - [ ] SW_INC_STAT_018 – Incoming hides both fully-received products
+  - [ ] SW_INC_STAT_019 – Damaged shows Product-Item with Damaged > 0 (Lenovo)
+  - [ ] SW_INC_STAT_020 – Damaged shows Product-Only with Damaged > 0 (Kingston)
+  - [ ] SW_INC_STAT_021 – Damaged shows both Product-Only and Product-Item with Damaged > 0
+  - [ ] SW_INC_STAT_022 – Damaged hides Product-Only with Damaged = 0 (Corsair)
+  - [ ] SW_INC_STAT_023 – Damaged hides Product-Item with Damaged = 0 (Dell)
+  - [ ] SW_INC_STAT_024 – Damaged hides both untouched products
+  - [ ] SW_INC_STAT_025 – Disputed shows Product-Item with Disputed > 0 (Lenovo)
+  - [ ] SW_INC_STAT_026 – Disputed shows Product-Only with Disputed > 0 (Kingston)
+  - [ ] SW_INC_STAT_027 – Disputed shows both Product-Only and Product-Item with Disputed > 0
+  - [ ] SW_INC_STAT_028 – Disputed hides Product-Only with Disputed = 0 (Corsair)
+  - [ ] SW_INC_STAT_029 – Disputed hides Product-Item with Disputed = 0 (Dell)
+  - [ ] SW_INC_STAT_030 – Disputed hides both untouched products
+  - [ ] SW_INC_STAT_031 – Missing shows Product-Item with Missing > 0 (Lenovo)
+  - [ ] SW_INC_STAT_032 – Missing shows Product-Only with Missing > 0 (Kingston)
+  - [ ] SW_INC_STAT_033 – Missing shows both Product-Only and Product-Item with Missing > 0
+  - [ ] SW_INC_STAT_034 – Missing hides Product-Only with Missing = 0 (Corsair)
+  - [ ] SW_INC_STAT_035 – Missing hides Product-Item with Missing = 0 (Dell)
+  - [ ] SW_INC_STAT_036 – Missing hides both untouched products
+  - [ ] SW_INC_STAT_037 – Sold shows Product-Item with Sold > 0 (Lenovo)
+  - [ ] SW_INC_STAT_038 – Sold shows Product-Only with Sold > 0 (Kingston)
+  - [ ] SW_INC_STAT_039 – Sold shows both Product-Only and Product-Item with Sold > 0
+  - [ ] SW_INC_STAT_040 – Sold hides Product-Only with Sold = 0 (Corsair)
+  - [ ] SW_INC_STAT_041 – Sold hides Product-Item with Sold = 0 (Dell)
+  - [ ] SW_INC_STAT_042 – Sold hides both untouched products
+  - [ ] SW_INC_STAT_043 – Stocked out (others) shows Product-Item with stat > 0 (Lenovo)
+  - [ ] SW_INC_STAT_044 – Stocked out (others) shows Product-Only with stat > 0 (Kingston)
+  - [ ] SW_INC_STAT_045 – Stocked out (others) shows both Product-Only and Product-Item with stat > 0
+  - [ ] SW_INC_STAT_046 – Stocked out (others) hides Product-Only with stat = 0 (Corsair)
+  - [ ] SW_INC_STAT_047 – Stocked out (others) hides Product-Item with stat = 0 (Dell)
+  - [ ] SW_INC_STAT_048 – Stocked out (others) hides both untouched products
+  - [ ] SW_INC_STAT_049 – Reserved shows Product-Item with Reserved > 0 (Lenovo)
+  - [ ] SW_INC_STAT_050 – Reserved shows Product-Only with Reserved > 0 (Kingston)
+  - [ ] SW_INC_STAT_051 – Reserved shows both Product-Only and Product-Item with Reserved > 0
+  - [ ] SW_INC_STAT_052 – Reserved hides Product-Only with Reserved = 0 (Corsair)
+  - [ ] SW_INC_STAT_053 – Reserved hides Product-Item with Reserved = 0 (Dell)
+  - [ ] SW_INC_STAT_054 – Reserved hides both untouched products
+- [ ] **IncomingInventoryDeleteProduct.cy.js** — 10 cases `IncomingInventory/IncomingInventoryDeleteProduct.cy.js`
+  - [ ] SW-IID-TC01 — Product Only: Delete product with PO context, verify success toast
+  - [ ] SW-IID-TC02 — Product with Items: Delete product that has serial items, verify cascade
+  - [ ] SW-IID-TC03 — Product with Variants: Delete product with variants, verify deletion
+  - [ ] SW-IID-TC04 — Cancel delete: Open dialog, click cancel, verify product still exists
+  - [ ] SW-IID-TC05 — Wrong confirmation text: Type 'delete' (lowercase), verify disabled confirm
+  - [ ] SW-IID-TC06 — Empty confirmation: Leave field empty, verify disabled confirm
+  - [ ] SW-IID-TC07 — Partial text: Type 'DEL', verify disabled confirm
+  - [ ] SW-IID-TC08 — 'All POs' view: Verify delete menu is hidden when no PO selected
+  - [ ] SW-IID-TC09 — Inventory page: Verify delete available from /inventory route too
+  - [ ] SW-IID-TC10 — Verify removal: Delete product, immediately verify removal from table
+- [ ] **IncomingInventoryMoveProduct.cy.js** — 10 cases `IncomingInventory/IncomingInventoryMoveProduct.cy.js`
+  - [ ] SW-IIM-TC01 — Product Only: Move RAM product from Source PO to Target PO
+  - [ ] SW-IIM-TC02 — Product with Items: Move Laptop items from Source PO to Target PO (skipped — requires matching product in target)
+  - [ ] SW-IIM-TC03 — Cancel Move: Open dialog, select target, click Cancel
+  - [ ] SW-IIM-TC04 — Empty Target PO: Attempt move without selecting target PO (skipped — validation behavior varies)
+  - [ ] SW-IIM-TC05 — Same Source/Target PO: Attempt to move to same PO (skipped — business rule dependent)
+  - [ ] SW-IIM-TC06 — Minimum Quantity: Move product with qty=1
+  - [ ] SW-IIM-TC07 — Large Quantity: Move product with qty=999
+  - [ ] SW-IIM-TC08 — 'All POs' view: Move menu hidden when no specific PO selected
+  - [ ] SW-IIM-TC09 — Inventory route: Move menu hidden on /inventory page
+  - [ ] SW-IIM-TC10 — State transition: Verify product removed from source after move
+- [ ] **ItemDelete.cy.js** — 11 cases `IncomingInventory/ItemDelete.cy.js`
+  - [ ] SW-IVID-TC01 — Delete Incoming item
+  - [ ] SW-IVID-TC02 — Delete Available item
+  - [ ] SW-IVID-TC03 — Delete Damaged item
+  - [ ] SW-IVID-TC04 — Delete Disputed item
+  - [ ] SW-IVID-TC05 — Reserved item cannot be deleted
+  - [ ] SW-IVID-TC06 — Delete Missing item
+  - [ ] SW-IVID-TC07 — StockedOut item cannot be deleted
+  - [ ] SW-IVID-TC08 — Cancel then successful delete on same item
+  - [ ] SW-IVID-TC09 — Deleting last item leaves table empty
+  - [ ] SW-IVID-TC10 — Deleted item does not reappear after page reload
+  - [ ] SW-IVID-TC11 — Cancel delete operation keeps the item
+- [ ] **ItemSearchTests.cy.js** — 15 cases `IncomingInventory/ItemSearchTests.cy.js`
+  - [ ] SW-ISE-UI-TC01 — search by exact serial number returns matching item (Use-Case)
+  - [ ] SW-ISE-UI-TC02 — search term + status filter sends both params to API (Use-Case)
+  - [ ] SW-ISE-UI-TC03 — non-existent search term returns empty table (EP)
+  - [ ] SW-ISE-UI-TC04 — lowercase and uppercase serial prefix return the same result count (EP)
+  - [ ] SW-ISE-UI-TC05 — whitespace-only search is treated as empty: API receives no search param (EP)
+  - [ ] SW-ISE-UI-TC06 — leading whitespace in search term is trimmed in API request (EP)
+  - [ ] SW-ISE-UI-TC07 — exact serial with hyphens matches only that item (EP)
+  - [ ] SW-ISE-UI-TC08 — initial page load requests items with no search or status filter (EP)
+  - [ ] SW-ISE-UI-DT-${status} — clicking '${status}' filter card sends status=${status} to API (Decision Table)
+  - [ ] SW-ISE-UI-TC09 — page 1 is the active page on initial load (BVA — start boundary)
+  - [ ] SW-ISE-UI-TC10 — 500-char search term is handled gracefully (Error Guessing)
+  - [ ] SW-ISE-UI-TC11 — exact serial search returns a single result (Edge Case)
+  - [ ] SW-ISE-UI-TC12 — clearing search input resets items to full list (Use-Case)
+  - [ ] SW-ISE-UI-TC13 — search returns item from beyond first page (BVA — cross-page, Use-Case)
+  - [ ] SW-ISE-UI-TC14 — search term is preserved when status filter is applied (Edge Case)
+- [ ] **MoveItemTests.cy.js** — 11 cases `IncomingInventory/MoveItemTests.cy.js`
+  - [ ] SW-MI-TC01 — Incoming item moves to target PO and shows success toast (State Transition)
+  - [ ] SW-MI-TC02 — Available item moves to target PO and shows success toast (State Transition)
+  - [ ] SW-MI-TC03 — Damaged item moves to target PO and shows success toast (State Transition)
+  - [ ] SW-MI-TC04 — Disputed item moves to target PO and shows success toast (State Transition)
+  - [ ] SW-MI-TC05 — Missing item moves to target PO and shows success toast (State Transition)
+  - [ ] SW-MI-TC06 — Cancel move dialog mid-flow: item remains in original PO (Use Case)
+  - [ ] SW-MI-TC07 — 'All POs' view: Move Item not shown in row action menu (Decision Table)
+  - [ ] SW-MI-TC08 — /inventory route: Move Item not shown in row action menu (Decision Table)
+  - [ ] SW-MI-TC09 — API rejection for blocked move surfaces error toast in dialog (Error Guessing + State Transition)
+  - [ ] SW-MI-TC10 — StockedOut item: 'Move Item' in action menu is disabled (Decision Table)
+  - [ ] SW-MI-TC11 — Reserved item: 'Move Item' in action menu is disabled (Decision Table)
+- [ ] **POFilesTests.cy.js** — 6 cases `IncomingInventory/POFilesTests.cy.js`
+  - [ ] SW_INC_POFI_001 — "PO Files" menu item is visible when a specific PO is selected
+  - [ ] SW_INC_POFI_002 — modal opens with correct title, Close button and X button present
+  - [ ] SW_INC_POFI_003 — Close button dismisses the modal
+  - [ ] SW_INC_POFI_004 — X IconButton in title bar dismisses the modal
+  - [ ] SW_INC_POFI_005 — file list renders correctly and per-file download fires the right API call
+  - [ ] SW_INC_POFI_006 — empty state shown and Download All absent when no files exist
+- [ ] **PaginationTests.cy.js** — 8 cases `IncomingInventory/PaginationTests.cy.js`
+  - [ ] SW_INC_PAGE_001 – Rows-per-page dropdown exposes the configured options with 75 selected by default
+  - [ ] SW_INC_PAGE_002 – Record count text matches the seeded total and visible row count
+  - [ ] SW_INC_PAGE_003 – Next-arrow click advances from page 1 to page 2 with the correct record range
+  - [ ] SW_INC_PAGE_004 – Prev-arrow click returns from page 2 to page 1 with the correct record range
+  - [ ] SW_INC_PAGE_007 – Navigating pages changes the rows rendered in the table
+  - [ ] SW_INC_PAGE_008 – Increasing rows-per-page beyond the total collapses the table to one page
+  - [ ] SW_INC_PAGE_005 – Previous-page button is disabled on the first page
+  - [ ] SW_INC_PAGE_006 – Next-page button is disabled on the last page
+- [ ] **ProductDetailsItemsSorting.cy.js** — 10 cases `IncomingInventory/ProductDetailsItemsSorting.cy.js`
+  - [ ] SW-PDIS-TC001 — Serial Number sort cycles through ascending and descending
+  - [ ] SW-PDIS-TC002 — Status column sort cycles through ascending and descending
+  - [ ] SW-PDIS-TC003 — Location column sort cycles through ascending and descending
+  - [ ] SW-PDIS-TC004 — Container column sort cycles through ascending and descending
+  - [ ] SW-PDIS-TC005 — Single item: Verify sorting works with minimum boundary
+  - [ ] SW-PDIS-TC006 — Maximum page size: Verify sorting with 100 items across paginated view
+  - [ ] SW-PDIS-TC007 — Single row sort: no crash and value stable across clicks
+  - [ ] SW-PDIS-TC008 — Search + Sort: Verify combined filter and sort behavior
+  - [ ] SW-PDIS-TC009 — Status Filter + Sort: Verify combined behavior
+  - [ ] SW-PDIS-TC010 — Rapid clicks: Verify no race condition on quick successive sorts
+- [ ] **ProductDetailsStatsClickableTests.cy.js** — 4 cases `IncomingInventory/ProductDetailsStatsClickableTests.cy.js`
+  - [ ] SW_INC_PDSC_001 — initial badge counts match seeded baseline
+  - [ ] ${tcId} — clicking "${badgeLabel}" filters list to status=${status}
+  - [ ] SW_INC_PDSC_010 — clicking selected badge again clears the filter
+  - [ ] SW_INC_PDSC_011 — clicking zero-count "Sold" badge returns no rows
+- [ ] **ProductViewItemViewTabTests.cy.js** — 8 cases `IncomingInventory/ProductViewItemViewTabTests.cy.js`
+  - [ ] SW_INC_PVIV_TC01 – Default tab is Product View when a specific PO is selected
+  - [ ] SW_INC_PVIV_TC02 – Switching to Item View renders serial-number column
+  - [ ] SW_INC_PVIV_TC03 – Switching back to Product View hides serial-number column
+  - [ ] SW_INC_PVIV_TC04 – Tab strip remains visible when All POs is selected
+  - [ ] SW_INC_PVIV_TC05 – Item View renders at least one row for a PO with imported items
+  - [ ] SW_INC_PVIV_TC06 – Clicking a stat tile while in Item View keeps Item View active
+  - [ ] SW_INC_PVIV_TC07 – Tab strip persists across All POs and specific PO switch
+  - [ ] SW_INC_PVIV_TC08 – Product View table renders product rows with correct model data and Quantity column
+- [ ] **ScanAllItemTests.cy.js** — 9 cases `IncomingInventory/ScanAllItemTests.cy.js`
+  - [ ] SW_INC_017 - Scan All completes remaining items after partial scan (product-item)
+  - [ ] SW_INC_019 - Scan All error when all serial numbers already scanned (product-item)
+  - [ ] SW_INC_020 - Scan All on mixed PO: partial product-only stock-in, no items scanned
+  - [ ] SW_INC_021 - Scan All on mixed PO: no product-only stock-in, partial item scan
+  - [ ] SW_INC_022 - Scan All on mixed PO: partial stock-in on both product-only and items
+  - [ ] SW_INC_023 - Scan All error on mixed PO when all items fully stocked/scanned
+  - [ ] SW_INC_028 - Scan All with Sold item precondition
+  - [ ] SW_INC_029 - Scan All with Reserved item precondition
+  - [ ] SW_INC_030 - Scan All with mixed item statuses
+- [ ] **ScanAllProductTests.cy.js** — 12 cases `IncomingInventory/ScanAllProductTests.cy.js`
+  - [ ] SW_INC_013 - Scan All with enableScanAll ON marks all incoming items as scanned
+  - [ ] SW_INC_014 - Scan All button NOT visible when enableScanAll config is OFF
+  - [ ] SW_INC_015 - Scan All on a Closed PO returns an error
+  - [ ] SW_INC_016 - Scan All completes remaining qty after partial stock-in (product-only)
+  - [ ] SW_INC_018 - Scan All error when all items already stocked in (product-only)
+  - [ ] SW_INC_031 - Scan All with Missing quantity precondition
+  - [ ] SW_INC_032 - Scan All with Damaged quantity precondition
+  - [ ] SW_INC_033 - Scan All with Disputed quantity precondition
+  - [ ] SW_INC_034 - Scan All with Stocked Out quantity precondition
+  - [ ] SW_INC_035 - Scan All with Sold quantity precondition
+  - [ ] SW_INC_036 - Scan All with Reserved quantity precondition
+  - [ ] SW_INC_037 - Scan All with mixed quantity statuses
+- [ ] **ScanReportTests.cy.js** — 11 cases `IncomingInventory/ScanReportTests.cy.js`
+  - [ ] SW_INC_SR_001 — Scan Report menu item is enabled when a PO is selected
+  - [ ] SW_INC_SR_002 — Scan Report menu item is disabled when no PO is selected (All POs)
+  - [ ] SW_INC_SR_003 — Navigating via menu lands on /scan-report with correct poNumber in URL
+  - [ ] SW_INC_SR_004 — Summary panel renders all 10 stat tiles (quantities + statuses)
+  - [ ] SW_INC_SR_005 — All three tabs render and switching tabs calls /incoming-items/scanned-items
+  - [ ] SW_INC_SR_006 — Found Items tab displays scanned serial number in the table
+  - [ ] SW_INC_SR_007 — Not Scanned tab shows unscanned items with Disputed / Damaged row actions
+  - [ ] SW_INC_SR_008 — Not Found tab row action "Remove" calls /incoming-items/mark-status
+  - [ ] SW_INC_SR_009 — Not Scanned row action "Disputed" calls /incoming-items/mark-status
+  - [ ] SW_INC_SR_010 — Found Items tab is empty for a PO with no scanned serials
+  - [ ] SW_INC_SR_011 — Direct URL with non-existent PO shows zero stat tiles and empty table
+- [ ] **SerialAndPONavigationTests.cy.js** — 8 cases `IncomingInventory/SerialAndPONavigationTests.cy.js`
+  - [ ] SW_INC_NAV_TC01 – Serial number in Item View is rendered as an underlined clickable button
+  - [ ] SW_INC_NAV_TC02 – Clicking serial number in Item View navigates to asset-lifecycle search
+  - [ ] SW_INC_NAV_TC03 – PO Number in Item View is rendered as a clickable span link
+  - [ ] SW_INC_NAV_TC04 – Clicking PO number in Item View navigates to Purchase Orders detail
+  - [ ] SW_INC_NAV_TC05 – Clicking a product row in Product View navigates to product detail page
+  - [ ] SW_INC_NAV_TC06 – Browser back from product detail returns to Incoming Inventory
+  - [ ] SW_INC_NAV_TC07 – PO Number is plain text (no link) on the Purchase Orders detail page
+  - [ ] SW_INC_NAV_TC08 – Hyphenated serial number is preserved in asset-lifecycle URL
+- [ ] **SortingTests.cy.js** — 6 cases `IncomingInventory/SortingTests.cy.js`
+  - [ ] SW_INC_SORT_001 – Quantity sort label cycles through ascending, descending, and no-sort
+  - [ ] SW_INC_SORT_002 – Quantity column ascending sort renders rows in smallest-to-largest order
+  - [ ] SW_INC_SORT_003 – Quantity column descending sort renders rows in largest-to-smallest order
+  - [ ] SW_INC_SORT_004 – Memory Generation sort label cycles through ascending, descending, and no-sort
+  - [ ] SW_INC_SORT_005 – Memory Generation column ascending sort renders rows in A→Z order
+  - [ ] SW_INC_SORT_006 – Memory Generation column descending sort renders rows in Z→A order
+- [ ] **StockInBySerialNumbers.cy.js** — 12 cases `IncomingInventory/StockInBySerialNumbers.cy.js`
+  - [ ] SW_INC_001 – Scan a valid serial number and verify Available increases, Incoming decreases
+  - [ ] SW_INC_002 – Scanning the same serial number a second time returns an 'already scanned' error
+  - [ ] SW_INC_003 – Scanning a serial number that does not exist returns a 'not found' error
+  - [ ] SW_INC_009 – Scanning a Damaged serial number returns an error
+  - [ ] SW_INC_004 – Scanning a Missing serial number returns an error
+  - [ ] SW_INC_010 – Scanning a Disputed serial number returns an error
+  - [ ] SW_INC_005 – Scanning any serial number against a Closed PO returns an error
+  - [ ] SW_INC_006 – Partial serial number matching multiple items triggers Multiple Matches dialog
+  - [ ] SW_INC_007 – Trailing partial serial number matching multiple items triggers Multiple Matches dialog
+  - [ ] SW_INC_008 – Scanning a serial number that belongs to a different PO returns an error
+  - [ ] SW_INC_011 – Scanning a StockedOut (Sold) serial number returns an error
+  - [ ] SW_INC_012 – Scanning a StockedOut (Shipped) serial number returns an error
+- [ ] **StockInProductItemsByQty.cy.js** — 5 cases `IncomingInventory/StockInProductItemsByQty.cy.js`
+  - [ ] SW_INC_044 – Stock-In product-item Laptop using qty equal to expected (5). Received = 5, Available = 5, Incoming = 0
+  - [ ] SW_INC_045 – Stock-In product-item Laptop using qty less than expected (1 of 5). Received = 1, Available = 1, Incoming = 4
+  - [ ] SW_INC_046 – Stock-In product-item Laptop using qty more than expected (3 vs 2) shows 'exceeds expected quantity' error
+  - [ ] SW_INC_047 – Stock-In product-item Laptop using negative qty (-1) shows tooltip 'Value must be greater or equal to 1'
+  - [ ] SW_INC_048 – Stock-In product-item Laptop using qty 0 shows tooltip 'Value must be greater or equal to 1'
+- [ ] **StockInProductOnlyByQty.cy.js** — 6 cases `IncomingInventory/StockInProductOnlyByQty.cy.js`
+  - [ ] SW_INC_038 – Product Only Stock in full expected qty (5) for RAM and verify Received, Available = 5, Incoming = 0
+  - [ ] SW_INC_039 – Product Only Partially stock-in qty 2 of 5 for RAM and verify Received = 2, Available = 2, Incoming = 3
+  - [ ] SW_INC_040 – Product Only Entering qty 0 in Stock-In form shows tooltip validation error
+  - [ ] SW_INC_041 – Product Only Entering qty greater than expected (10 vs 5) shows 'exceeds expected quantity' error
+  - [ ] SW_INC_042 – Product Only Attempting Stock-In on a Closed PO returns 'PO is closed' error
+  - [ ] SW_INC_043 – Product Only Entering qty -1 in Stock-In form shows tooltip validation error
+- [ ] **UpdateCostPrice.cy.js** — 21 cases `IncomingInventory/UpdateCostPrice.cy.js`
+  - [ ] SW_INC_CP_001 – Product Only: Update both cost and price, verify new values in table row
+  - [ ] SW_INC_CP_002 – Product Only: Update cost only (price kept as pre-filled), verify cost changed price same
+  - [ ] SW_INC_CP_003 – Product Only: Update price only (cost kept as pre-filled), verify price changed cost same
+  - [ ] SW_INC_CP_004 – Product Only: Cancel dialog leaves cost and price unchanged
+  - [ ] SW_INC_CP_005 – Multiple Products in PO: Update one product cost/price; other product remains unchanged
+  - [ ] SW_INC_CP_006 – Product Item: Update item cost and price via item action menu, verify toast
+  - [ ] SW_INC_CP_007 – Product Item: Cancel dialog in item action menu leaves cost/price unchanged
+  - [ ] SW_INC_CP_008 – Mixed PO: Update RAM (Product Only) cost and price, verify RAM row updated
+  - [ ] SW_INC_CP_009 – Mixed PO: Laptop (Product Item) cost/price unaffected after RAM update
+  - [ ] SW_INC_CP_010 – Product Only: Negative cost + positive price shows cost validation error
+  - [ ] SW_INC_CP_011 – Product Only: Positive cost + negative price shows price validation error
+  - [ ] SW_INC_CP_012 – Product Only: Both negative shows both cost and price validation errors
+  - [ ] SW_INC_CP_013 – Product Item: Negative cost + positive price shows cost validation error
+  - [ ] SW_INC_CP_014 – Product Item: Positive cost + negative price shows price validation error
+  - [ ] SW_INC_CP_015 – Product Item: Both negative shows both cost and price validation errors
+  - [ ] SW_INC_CP_016 – Product Only: cost=0 + positive price saves successfully
+  - [ ] SW_INC_CP_017 – Product Only: positive cost + price=0 saves successfully
+  - [ ] SW_INC_CP_018 – Product Only: cost=0 + price=0 saves successfully
+  - [ ] SW_INC_CP_019 – Product Item: cost=0 + positive price saves successfully
+  - [ ] SW_INC_CP_020 – Product Item: positive cost + price=0 saves successfully
+  - [ ] SW_INC_CP_021 – Product Item: cost=0 + price=0 saves successfully
+- [ ] **UpdateExpectedQty.cy.js** — 0 cases `IncomingInventory/UpdateExpectedQty.cy.js`
+- [ ] **UploadAgainWarningTests.cy.js** — 4 cases `IncomingInventory/UploadAgainWarningTests.cy.js`
+  - [ ] SW_INC_UAGAIN_TC01 – No warning is shown for a fresh PO with no existing import
+  - [ ] SW_INC_UAGAIN_TC02 – Warning is shown when the selected PO already has an import file
+  - [ ] SW_INC_UAGAIN_TC03 – Upload button is disabled when PO has exactly one existing import file
+  - [ ] SW_INC_UAGAIN_TC04 – Existing-file alert uses severity warning (amber), not error
+- [ ] **ViewItemsAndDetailsTests.cy.js** — 4 cases `IncomingInventory/ViewItemsAndDetailsTests.cy.js`
+  - [ ] SW_INC_VIEW_001 – Click View Items for Product-Item shows serial numbers of selected product
+  - [ ] SW_INC_VIEW_002 – View Items option is disabled in long button menu for Product-Only
+  - [ ] SW_INC_VIEW_003 – Click View Details for Product-Only navigates to product details and shows all attributes
+  - [ ] SW_INC_VIEW_004 – View Details option is disabled in long button menu for Product-Item
+
+## Inventory `(22 specs / 293 cases)`
+
+- [ ] **InventoryAddProductTests.cy.js** — 11 cases `Inventory/InventoryAddProductTests.cy.js`
+  - [ ] SW-INV-AP-TC01 — Add RAM product: valid fields → product created and visible
+  - [ ] SW-INV-AP-TC02 — RAM: empty Memory Generation → form blocked
+  - [ ] SW-INV-AP-TC03 — RAM: missing required field → form blocked
+  - [ ] SW-INV-AP-TC04 — BVA: RAM product created with default qty (no qty input)
+  - [ ] SW-INV-AP-TC05 — BVA: RAM valid product (no qty input) → accepted
+  - [ ] SW-INV-AP-TC06 — BVA: RAM valid product (unique memGen) → accepted
+  - [ ] SW-INV-AP-TC07 — Decision Table: product-only form does NOT show Quantity, Cost, Price
+  - [ ] SW-INV-AP-TC08 — Error Guessing: duplicate RAM memoryGeneration → conflict or rejection
+  - [ ] SW-INV-AP-TC09 — Add Laptop product: valid fields → product created and visible
+  - [ ] SW-INV-AP-TC10 — Laptop: empty Model Number → form blocked
+  - [ ] SW-INV-AP-TC11 — Decision Table: product-items form does NOT show Quantity, Cost, Price
+- [ ] **InventoryAdvancedSearchTests.cy.js** — 22 cases `Inventory/InventoryAdvancedSearchTests.cy.js`
+  - [ ] SW-INV-AS-TC01 @smoke — Open Advanced Search dialog; searchable-fields loaded; accordion renders
+  - [ ] SW-INV-AS-TC02 @regression — Cancel closes dialog without firing POST /products/advanced-search
+  - [ ] SW-INV-AS-TC03 @regression — Escape key closes dialog without firing POST
+  - [ ] SW-INV-AS-TC04 @regression — EP field filter: typing "memory" shows memory fields, hides others
+  - [ ] SW-INV-AS-TC05 @smoke — [All cat / Common Product attr] Display Technology search returns seeded RAM product
+  - [ ] SW-INV-AS-TC06 @regression — [All cat / Common Item attr] Asset Security Code search returns Laptop item
+  - [ ] SW-INV-AS-TC07 @smoke — [RAM cat / Category Product attr] Memory Generation search returns seeded RAM product
+  - [ ] SW-INV-AS-TC08 @regression — [RAM cat] Item attribute accordion absent — allowItems=false gate
+  - [ ] SW-INV-AS-TC09 @regression — [RAM cat] Two product criteria AND — intersection returned
+  - [ ] SW-INV-AS-TC10 @smoke — [Laptop cat / Category Product attr] Model Number search returns seeded Laptop product
+  - [ ] SW-INV-AS-TC11 @smoke — [Laptop cat / Category Item attr] Asset Tag ID search returns Laptop item
+  - [ ] SW-INV-AS-TC12 @regression — [Laptop cat / Common Item attr] Asset Security Code search returns Laptop item
+  - [ ] SW-INV-AS-TC13 @regression — Toggle visible for "All" category; hidden for specific category; "Category" shows common fields only
+  - [ ] SW-INV-AS-TC14 @regression — Active tab context: POST includes productStatus=active
+  - [ ] SW-INV-AS-TC15 @regression — Inactive tab context: POST includes productStatus=inactive
+  - [ ] SW-INV-AS-TC16 @regression — State Transition: remove one chip → auto re-search with remaining criteria
+  - [ ] SW-INV-AS-TC17 @regression — State Transition: remove last chip → standard GET /products restores list
+  - [ ] SW-INV-AS-TC18 @regression — Use Case: Clear All removes all criteria and restores standard product list
+  - [ ] SW-INV-AS-TC19 @regression — State Transition: re-open after search → previous criteria hydrated in modal
+  - [ ] SW-INV-AS-TC20 @regression — State Transition: category change clears advanced search criteria
+  - [ ] SW-INV-AS-TC21 @regression — Error Guessing: uppercase query matches lowercase-stamped value (ILIKE)
+  - [ ] SW-INV-AS-TC22 @regression — EP no-match: non-existent value → empty table; no error toast
+- [ ] **InventoryAuditListTests.cy.js** — 13 cases `Inventory/InventoryAuditListTests.cy.js`
+  - [ ] SW-IAUD-TC01 — audit list renders header, filter and table
+  - [ ] SW-IAUD-TC02 — New Audit dialog opens and Cancel closes it (no create)
+  - [ ] SW-IAUD-TC03 — creating an audit posts the name and toasts success
+  - [ ] SW-IAUD-TC04 — Create button disabled until a name is entered
+  - [ ] SW-IAUD-TC05 — creating with a scope posts the scope
+  - [ ] SW-IAUD-TC06 — starting a Draft audit fires start and toasts
+  - [ ] SW-IAUD-TC07 — completing the active audit navigates to its report
+  - [ ] SW-IAUD-TC08 — cancelling the active audit fires cancel and toasts
+  - [ ] SW-IAUD-TC09 — an active audit disables New Audit and Draft Start
+  - [ ] SW-IAUD-TC10 — deleting a Draft audit confirms then fires delete
+  - [ ] SW-IAUD-TC11 — row actions are gated by audit status
+  - [ ] SW-IAUD-TC12 — status filter requests the chosen status
+  - [ ] SW-IAUD-TC13 — non-admin is blocked from the audit list
+- [ ] **InventoryAuditReportTests.cy.js** — 12 cases `Inventory/InventoryAuditReportTests.cy.js`
+  - [ ] SW-IAUD-RPT-TC03 — report summary equals the seeded scan oracle
+  - [ ] SW-IAUD-RPT-TC04 — scans?classification=NoMatch returns the seeded serials
+  - [ ] SW-IAUD-RPT-TC01 — report page renders header and Completed chip
+  - [ ] SW-IAUD-RPT-TC02 — Back navigates to the audit list
+  - [ ] SW-IAUD-RPT-TC09 — summary cards equal the seeded oracle
+  - [ ] SW-IAUD-RPT-TC05 — Not-in-StockWise tab lists the seeded serials with chip
+  - [ ] SW-IAUD-RPT-TC06 — In-StockWise tab is empty (No records)
+  - [ ] SW-IAUD-RPT-TC07 — Export Excel downloads the report (200, non-empty)
+  - [ ] SW-IAUD-RPT-TC08 — exported workbook contents include the scanned serials
+  - [ ] SW-IAUD-RPT-TC10 — export without a token is rejected
+  - [ ] SW-IAUD-RPT-TC11 — workerBreakdown reports per-worker counts for each scanner
+  - [ ] SW-IAUD-RPT-TC12 — Worker Breakdown table renders a row per scanner with counts
+- [ ] **InventoryAuditScanTests.cy.js** — 18 cases `Inventory/InventoryAuditScanTests.cy.js`
+  - [ ] SW-IAUD-SCAN-TC01 — no active audit shows empty state, scan UI hidden
+  - [ ] SW-IAUD-SCAN-TC02 — active audit renders header and focuses serial input
+  - [ ] SW-IAUD-SCAN-TC03 — scanning a Match serial shows the "In StockWise" chip
+  - [ ] SW-IAUD-SCAN-TC04 — scanning an unregistered serial shows "Not in StockWise"
+  - [ ] SW-IAUD-SCAN-TC05 — scanning a not-found serial shows "Not Scanned"
+  - [ ] SW-IAUD-SCAN-TC06 — consecutive scans append to the session list
+  - [ ] SW-IAUD-SCAN-TC07 — re-scanning a serial flags it as Duplicate
+  - [ ] SW-IAUD-SCAN-TC08 — live summary surfaces Duplicates without inflating Matched
+  - [ ] SW-IAUD-SCAN-TC09 — a status-mismatch scan shows the mismatch chip and status change
+  - [ ] SW-IAUD-SCAN-TC10 — live summary renders Scanned/Matched/Unregistered/Duplicates
+  - [ ] SW-IAUD-SCAN-TC11 — multiple matches opens the disambiguation dialog
+  - [ ] SW-IAUD-SCAN-TC12 — "Use as-is" re-scans with forceExact=true
+  - [ ] SW-IAUD-SCAN-TC13 — selecting a candidate re-scans that serial
+  - [ ] SW-IAUD-SCAN-TC14 — empty and whitespace-only input disable Scan
+  - [ ] SW-IAUD-SCAN-TC15 — a failed scan shows an error toast and recovers
+  - [ ] SW-IAUD-SCAN-TC16 — rapid double-click fires only one scan request
+  - [ ] SW-IAUD-SCAN-TC${tc} — a Match in "${status}" status shows the status caption
+  - [ ] SW-IAUD-SCAN-TC23 — a remapped Match shows the old → new status transition
+- [ ] **InventoryBulkStockOutTests.cy.js** — 4 cases `Inventory/InventoryBulkStockOutTests.cy.js`
+  - [ ] SW-INV-BSO-TC01 — submitting without a reason is blocked
+  - [ ] SW-INV-BSO-TC02 — mixed Available/StockedOut selection hides the action
+  - [ ] SW-INV-BSO-TC03 — closing the modal fires no stock-out
+  - [ ] SW-INV-BSO-TC04 — selecting Available serials stocks them all out and reduces product Available
+- [ ] **InventoryCategoryFilterTests.cy.js** — 73 cases `Inventory/InventoryCategoryFilterTests.cy.js`
+  - [ ] SW-ICF-TC01 — Category filter defaults to "All" on first load
+  - [ ] SW-ICF-TC02 — Selecting CatA shows only CatA products
+  - [ ] SW-ICF-TC03 — Switching category from CatA to "All" restores the full list
+  - [ ] SW-ICF-TC04 — CatA + Active tab shows only active CatA products
+  - [ ] SW-ICF-TC05 — CatA + Inactive tab shows only inactive CatA products
+  - [ ] SW-ICF-TC06 — Category with zero active products shows empty state on Active tab
+  - [ ] SW-ICF-TC07 — Category filter resets pagination to page 1 when changed
+  - [ ] SW-ICF-TC08 — Category selection is retained when switching between Active and Inactive tabs
+  - [ ] SW-ICF-TC09 — Default tab on fresh page load is Active Products
+  - [ ] SW-ICF-TC10 — Active tab lists only active products
+  - [ ] SW-ICF-TC11 — Inactive products are absent from the Active tab
+  - [ ] SW-ICF-TC12 — Newly deactivated product disappears from Active tab without refresh
+  - [ ] SW-ICF-TC13 — Active tab request includes productStatus=active
+  - [ ] SW-ICF-TC14 — Active tab with "All" category sends no categoryId param
+  - [ ] SW-ICF-TC15 — Clicking Inactive tab sends productStatus=inactive to the API
+  - [ ] SW-ICF-TC16 — Inactive tab lists only inactive products
+  - [ ] SW-ICF-TC17 — Active products are absent from the Inactive tab
+  - [ ] SW-ICF-TC18 — Inactive tab + specific category shows only inactive products of that category
+  - [ ] SW-ICF-TC19 — Reactivated product disappears from Inactive tab without refresh
+  - [ ] SW-ICF-TC20 — Inactive tab with zero inactive products shows empty state for CatB when no inactive products exist
+  - [ ] SW-ICF-TC21 — Low-stock badge shows count when product is below threshold
+  - [ ] SW-ICF-TC22 — Low-stock badge is hidden when no products are below threshold
+  - [ ] SW-ICF-TC23 — Clicking Low-Stock tab fetches from /notifications/low-stock-products
+  - [ ] SW-ICF-TC24 — Low-stock tab does NOT send categoryId — it is category-agnostic
+  - [ ] SW-ICF-TC25 — Products above their threshold are NOT shown in the Low-Stock tab
+  - [ ] SW-ICF-TC26 — Product with no threshold set does NOT appear in Low-Stock tab
+  - [ ] SW-ICF-TC27 — BVA: product appears when qty < threshold, absent when qty >= threshold
+  - [ ] SW-ICF-TC28 — Low-stock tab empty state when searching for a non-existent product
+  - [ ] SW-ICF-TC29 — Low-stock tab search narrows results within low-stock products only
+  - [ ] SW-ICF-TC30 — Inactive product with threshold does NOT appear in Low-Stock tab
+  - [ ] SW-ICF-TC31 — Selected tab is persisted in sessionStorage and restored on reload
+  - [ ] SW-ICF-TC32 — Switching tabs resets pagination to page 1
+  - [ ] SW-ICF-TC33 — Switching tabs clears row selection
+  - [ ] SW-ICF-TC34 — "Mark Inactive" visible on Active tab; "Mark Active" visible on Inactive tab only when rows selected
+  - [ ] SW-ICF-TC35 — Bulk deactivate selected active products (all with stock = 0)
+  - [ ] SW-ICF-TC36 — Bulk deactivate skips products with availableQuantity > 0
+  - [ ] SW-ICF-TC37 — Bulk activate selected inactive products
+  - [ ] SW-ICF-TC38 — Bulk action button is disabled when no rows are selected
+  - [ ] SW-ICF-TC39 — "Select All" selects all rows and bulk deactivate deactivates all
+  - [ ] SW-ICF-TC40 — Bulk deactivate updates the low-stock badge count
+  - [ ] SW-ICF-TC41 — Row action "Deactivate" moves product from Active to Inactive tab
+  - [ ] SW-ICF-TC42 — Row action "Activate" moves product from Inactive to Active tab
+  - [ ] SW-ICF-TC43 — Invalid state: single deactivate is rejected when availableQuantity > 0
+  - [ ] SW-ICF-TC44 — Deactivating a low-stock product removes it from the Low-Stock tab
+  - [ ] SW-ICF-TC45 — Activating an inactive product that is below threshold makes it appear in Low-Stock tab
+  - [ ] SW-ICF-TC46 — Table reflects deactivation done via API after a page reload
+  - [ ] SW-ICF-TC47 — Setting threshold on active product with qty=0 adds it to Low-Stock tab
+  - [ ] SW-ICF-TC48 — Clearing threshold (null) removes product from Low-Stock tab
+  - [ ] SW-ICF-TC49 — BVA: threshold = 0 is accepted by the API
+  - [ ] SW-ICF-TC50 — BVA: threshold = -1 is rejected by the API
+  - [ ] SW-ICF-TC51 — BVA: non-integer threshold is rejected by the API
+  - [ ] SW-ICF-TC52 — Threshold set on non-existent product returns 404
+  - [ ] SW-ICF-TC53 — Low-stock badge count updates after threshold is cleared
+  - [ ] SW-ICF-TC54 — Search on Active + category filter narrows results within both constraints
+  - [ ] SW-ICF-TC55 — Search on Inactive tab is scoped to inactive products only
+  - [ ] SW-ICF-TC56 — Clearing search restores all active products of that category
+  - [ ] SW-ICF-TC57 — Search with no matching results shows empty state (not error)
+  - [ ] SW-ICF-TC58 — Search on Low-Stock tab calls correct endpoint with search param
+  - [ ] SW-ICF-TC59 — Changing category resets pagination to page 1
+  - [ ] SW-ICF-TC60 — Switching tabs resets pagination to page 1
+  - [ ] SW-ICF-TC61 — BVA: page_size = 1 returns exactly 1 row
+  - [ ] SW-ICF-TC62 — Page navigation maintains filter state
+  - [ ] SW-ICF-TC63 — Sorting a column on Active tab includes sort params in API call
+  - [ ] SW-ICF-TC64 — Advanced search on Active tab sends productStatus=active
+  - [ ] SW-ICF-TC65 — Advanced search on Inactive tab sends productStatus=inactive
+  - [ ] SW-ICF-TC66 — Advanced search with empty criteria shows validation error
+  - [ ] SW-ICF-TC67 — Clearing advanced search restores the standard category + tab filter
+  - [ ] SW-ICF-TC68 — Inventory stat card request uses effectiveStatus=active when Low-Stock tab is selected
+  - [ ] SW-ICF-TC69 — Inventory stat card request uses productStatus=inactive on Inactive tab
+  - [ ] SW-ICF-TC70 — Stat card request includes categoryId when a specific category is selected
+  - [ ] SW-ICF-TC71 — Deactivate: absent from Active AND present in Inactive
+  - [ ] SW-ICF-TC72 — Activate: absent from Inactive AND present in Active
+  - [ ] SW-ICF-TC73 — Complete lifecycle: Active → Deactivate → Inactive → Activate → Active
+- [ ] **InventoryChangeStatusTests.cy.js** — 25 cases `Inventory/InventoryChangeStatusTests.cy.js`
+  - [ ] SW-INV-CS-TC01 — Item Available→Damaged: mark-status succeeds; item status updates
+  - [ ] SW-INV-CS-TC02 — Item Available→Missing: mark-status succeeds; item status updates
+  - [ ] SW-INV-CS-TC03 — Item Available→Disputed: mark-status succeeds; item status updates
+  - [ ] SW-INV-CS-TC04 — Item Damaged→Available: mark-available succeeds; status restored
+  - [ ] SW-INV-CS-TC05 — Item Missing→Available: mark-available succeeds; status restored
+  - [ ] SW-INV-CS-TC06 — Item Disputed→Available: mark-available succeeds; status restored
+  - [ ] SW-INV-CS-TC07 — Item Damaged→Missing: cross-transition allowed; status updates
+  - [ ] SW-INV-CS-TC08 — Item Missing→Damaged: cross-transition allowed; status updates
+  - [ ] SW-INV-CS-TC09 — StockedOut item: "Change Status" menu item is disabled in UI
+  - [ ] SW-INV-CS-TC10 — Same-to-same Damaged→Damaged: API rejects (success:false)
+  - [ ] SW-INV-CS-TC19 — Item Damaged→Disputed: cross-transition allowed; status updates
+  - [ ] SW-INV-CS-TC20 — Item Disputed→Damaged: cross-transition allowed; status updates
+  - [ ] SW-INV-CS-TC21 — Item Missing→Disputed: cross-transition allowed; status updates
+  - [ ] SW-INV-CS-TC22 — Item Disputed→Missing: cross-transition allowed; status updates
+  - [ ] SW-INV-CS-TC23 — Reserved item: "Change Status" menu item is enabled (unlike StockedOut)
+  - [ ] SW-INV-CS-TC24 — Reserved→Damaged via mark-status: BE rejects; error shown
+  - [ ] SW-INV-CS-TC25 — Reserved→Available via mark-available: BE rejects; error shown
+  - [ ] SW-INV-CS-TC11 — Product-Only Available→Damaged: qty-based; Damaged count updates
+  - [ ] SW-INV-CS-TC12 — Product-Only Damaged→Available: mark-available; Available count updates
+  - [ ] SW-INV-CS-TC13 — Product-Only Available→Missing: mark-status succeeds
+  - [ ] SW-INV-CS-TC14 — Product-Only Available→Disputed: mark-status succeeds
+  - [ ] SW-INV-CS-TC15 — Product-Only Missing→Damaged: mark-status succeeds
+  - [ ] SW-INV-CS-TC16 — Cancel dialog — no POST fired; item status unchanged
+  - [ ] SW-INV-CS-TC17 — Damaged selected → damage reason dropdown appears; submit with first reason succeeds
+  - [ ] SW-INV-CS-TC18 — Product-Only BVA: qty=0 in mark-status form rejected by FE validation
+- [ ] **InventoryCustomizeColumnsTests.cy.js** — 6 cases `Inventory/InventoryCustomizeColumnsTests.cy.js`
+  - [ ] SW-INV-CC-TC01 — Customize Columns opens and lists the category columns
+  - [ ] SW-INV-CC-TC02 — a visible column is included in the saved config
+  - [ ] SW-INV-CC-TC03 — the column config is fetched per selected category
+  - [ ] SW-INV-CC-TC04 — closing without saving fires no config write
+  - [ ] SW-INV-CC-TC05 — the picker lists columns from both categories and the common group
+  - [ ] SW-INV-CC-TC06 — unselecting a column hides it on the grid; re-selecting shows it again
+- [ ] **InventoryDeleteTests.cy.js** — 4 cases `Inventory/InventoryDeleteTests.cy.js`
+  - [ ] SW-INV-DEL-TC01 — confirm is disabled until "DELETE" is typed
+  - [ ] SW-INV-DEL-TC02 — wrong confirmation text keeps delete disabled
+  - [ ] SW-INV-DEL-TC03 — cancelling the dialog fires no delete
+  - [ ] SW-INV-DEL-TC04 — confirming deletes the product
+- [ ] **InventoryEditProductTests.cy.js** — 6 cases `Inventory/InventoryEditProductTests.cy.js`
+  - [ ] SW-INV-EP-TC13 — Edit RAM product: valid field change → product updated
+  - [ ] SW-INV-EP-TC14 — RAM: clear Memory Generation → form blocked
+  - [ ] SW-INV-EP-TC15 — RAM: partial edit (Support Contact only) → success
+  - [ ] SW-INV-EP-TC16 — Edit Laptop product: valid field change → product updated
+  - [ ] SW-INV-EP-TC17 — Edit item attribute (Asset Tag ID) → item attribute updated
+  - [ ] SW-INV-EP-TC18 — Error Guessing: serial number not editable in item edit form
+- [ ] **InventoryExcelExportTests.cy.js** — 8 cases `Inventory/InventoryExcelExportTests.cy.js`
+  - [ ] SW-INV-XL-TC01 — Export starts a products export and toasts
+  - [ ] SW-INV-XL-TC02 — export carries the active search term
+  - [ ] SW-INV-XL-TC03 — export carries the selected categoryId
+  - [ ] SW-INV-XL-TC04 — Items View export hits /items/export
+  - [ ] SW-INV-XL-TC05 — Sales export excludes cost/price columns
+  - [ ] SW-INV-XL-TC06 — Products export verifies quantity metrics in file content
+  - [ ] SW-INV-XL-TC07 — Items export file includes serialized item data
+  - [ ] SW-INV-XL-TC08 — invalid export ID returns 4xx error
+- [ ] **InventoryGroupByTests.cy.js** — 25 cases `Inventory/InventoryGroupByTests.cy.js`
+  - [ ] SW-INV-GB-TC01 @smoke — Group By Autocomplete renders with "Select fields" placeholder
+  - [ ] SW-INV-GB-TC02 @smoke — Select "Category" groupBy → GET /products/grouped fires; grouped rows shown; row-actions absent
+  - [ ] SW-INV-GB-TC03 @smoke — Select 2 fields (Laptop cat) → both in groupBy param
+  - [ ] SW-INV-GB-TC04 @regression — Deselect all groupBy chips → groupBy cleared; row-actions return
+  - [ ] SW-INV-GB-TC05 @regression — Quantity / Cost / Serial Number are NOT in groupBy dropdown options
+  - [ ] SW-INV-GB-TC06 @regression — Regular search clears groupBy chips; standard GET /products fires
+  - [ ] SW-INV-GB-TC07 @regression — Category change clears groupBy chips
+  - [ ] SW-INV-GB-TC08 @regression — Advanced search submit clears groupBy chips; GET /products/advanced-search fires
+  - [ ] SW-INV-GB-TC09 @smoke — [Available] grouped row for seeded product present; availableQty ≥ 1
+  - [ ] SW-INV-GB-TC10 @regression — [Incoming] incomingQty ≥ 1 for seeded model in grouped response
+  - [ ] SW-INV-GB-TC11 @regression — [Damaged/Missing/Disputed] non-available statuses do NOT inflate availableQty
+  - [ ] SW-INV-GB-TC12 @regression — [Reserved] reservedQty ≥ 1 in grouped response
+  - [ ] SW-INV-GB-TC13 @regression — [StockedOut] grouped row still exists after stock-out; availableQty not inflated
+  - [ ] SW-INV-GB-TC14 @regression — Category filter + GroupBy → categoryId and groupBy both in GET /products/grouped
+  - [ ] SW-INV-GB-TC15 @regression — Active Products tab + GroupBy → productStatus=active in GET /products/grouped
+  - [ ] SW-INV-GB-TC16 @regression — Inactive Products tab + GroupBy → productStatus=inactive in GET /products/grouped
+  - [ ] SW-INV-GB-TC17 @regression — 2+ fields → overflow "+1" chip → popover "All Grouping Fields (2)" → Clear All
+  - [ ] SW-INV-GB-TC18 @regression — Popover chip delete removes one field; remaining field still grouped
+  - [ ] SW-INV-GB-TC19 @regression — Tab switch preserves groupBy chip; grouped request reflects new tab productStatus
+  - [ ] SW-INV-GB-TC25 @regression — No-match search while GroupBy active → empty grouped table; no error toast
+  - [ ] SW-INV-GB-TC26 @regression — Category change clears localStorage groupBy key (state cleanup on clear)
+  - [ ] SW-INV-GB-TC20 @regression — Group by common product attribute "Brand" → bucket aggregates across products + identity by search
+  - [ ] SW-INV-GB-TC21 @regression — Group by RAM-category product attribute "Memory Generation" → bucket aggregates across rambrands + identity by search
+  - [ ] SW-INV-GB-TC22 @regression — Group by Laptop-category product attribute "Battery Cell Count" → bucket aggregates + identity by search
+  - [ ] SW-INV-GB-TC23 @regression — Group By dropdown only shows columns persisted via Column Customisation
+- [ ] **InventoryItemsViewTests.cy.js** — 5 cases `Inventory/InventoryItemsViewTests.cy.js`
+  - [ ] SW-INV-IV-TC01 — Items View renders the items table with a checkbox column
+  - [ ] SW-INV-IV-TC02 — selecting a row shows the count and enables bulk actions
+  - [ ] SW-INV-IV-TC03 — Select all is backed by the serial-numbers endpoint
+  - [ ] SW-INV-IV-TC04 — Clear resets the selection
+  - [ ] SW-INV-IV-TC05 — changing the search clears the selection
+- [ ] **InventoryPaginationTests.cy.js** — 3 cases `Inventory/InventoryPaginationTests.cy.js`
+  - [ ] SW-INV-PG-TC01 — changing rows-per-page updates page_size
+  - [ ] SW-INV-PG-TC02 — next page advances to page 2
+  - [ ] SW-INV-PG-TC03 — searching resets to page 1
+- [ ] **InventoryProductDetailTests.cy.js** — 6 cases `Inventory/InventoryProductDetailTests.cy.js`
+  - [ ] SW-INV-PD-TC01 — opening a product navigates to its detail page
+  - [ ] SW-INV-PD-TC02 — Product Details accordion reveals attributes
+  - [ ] SW-INV-PD-TC03 — Refresh re-fetches the product detail
+  - [ ] SW-INV-PD-TC04 — the serial table lists the product items
+  - [ ] SW-INV-PD-TC05 — a serial links to the asset-id search
+  - [ ] SW-INV-PD-TC06 — back navigation returns to the inventory list
+- [ ] **InventoryRefreshTests.cy.js** — 2 cases `Inventory/InventoryRefreshTests.cy.js`
+  - [ ] SW-INV-RF-TC01 — Refresh re-fetches the products list (no navigation)
+  - [ ] SW-INV-RF-TC02 — Refresh preserves the active search filter
+- [ ] **InventoryRestockTests.cy.js** — 6 cases `Inventory/InventoryRestockTests.cy.js`
+  - [ ] SW-INV-RS-TC01 — Restock increases Available, reduces StockedOut, leaves other buckets unchanged
+  - [ ] SW-INV-RS-TC02 — BVA: Restock qty=1 (lower valid boundary) accepted
+  - [ ] SW-INV-RS-TC03 — BVA: Restock qty=0 rejected (modal stays open)
+  - [ ] SW-INV-RS-TC04 — EP: negative Restock quantity rejected
+  - [ ] SW-INV-RS-TC05 — Restock is disabled for an item-bearing product
+  - [ ] SW-INV-RS-TC06 — restocking more than the stocked-out buffer is rejected; quantities unchanged
+- [ ] **InventorySortingTests.cy.js** — 5 cases `Inventory/InventorySortingTests.cy.js`
+  - [ ] SW-INV-SRT-TC01 — sorting a column ascends and refetches
+  - [ ] SW-INV-SRT-TC02 — a second click flips to descending
+  - [ ] SW-INV-SRT-TC03 — sorting keeps the active category filter
+  - [ ] SW-INV-SRT-TC04 — ascending sort renders rows in A→Z order
+  - [ ] SW-INV-SRT-TC05 — descending sort renders rows in Z→A order
+- [ ] **InventoryStatsClickableTests.cy.js** — 14 cases `Inventory/InventoryStatsClickableTests.cy.js`
+  - [ ] SW-INV-SC-TC01 @smoke — Stat card groups render on /inventory page load
+  - [ ] SW-INV-SC-TC02 @smoke — Click Available card fires GET /products status=Available
+  - [ ] SW-INV-SC-TC03 @smoke — Click Damaged badge filters list to Damaged items; seeded row visible
+  - [ ] SW-INV-SC-TC04 @regression — Click Missing badge filters list to Missing items; seeded row visible
+  - [ ] SW-INV-SC-TC05 @regression — Click Disputed badge filters list to Disputed items; seeded row visible
+  - [ ] SW-INV-SC-TC06 @regression — Click Reserved badge filters list to Reserved items; seeded row visible
+  - [ ] SW-INV-SC-TC07 @regression — Click Stocked Out badge filters list to StockedOut items; seeded row visible
+  - [ ] SW-INV-SC-TC08 @regression — Click Incoming badge filters list to Incoming items; seeded row visible
+  - [ ] SW-INV-SC-TC09 @regression — State Transition: click same badge twice toggles filter off
+  - [ ] SW-INV-SC-TC10 @regression — State Transition: switch from Damaged to Missing badge filters only Missing
+  - [ ] SW-INV-SC-TC11 @regression — State Transition: badge click switches productStatusTab sessionStorage to "items"
+  - [ ] SW-INV-SC-TC12 @regression — Error Guessing: zero-count badge shows empty table; no JS error
+  - [ ] SW-INV-SC-TC13 @regression — Use Case: stat count updates after API seed + reload
+  - [ ] SW-INV-SC-TC14 @regression — Decision Table: category filter + badge → both categoryId and status in GET /products
+- [ ] **InventoryStockOutTests.cy.js** — 21 cases `Inventory/InventoryStockOutTests.cy.js`
+  - [ ] SW-INV-SO-TC19 — Product-only stock-out qty=1 (Sold) → success toast
+  - [ ] SW-INV-SO-TC20 — Product-only: stock-out all available qty=3 → success
+  - [ ] SW-INV-SO-TC21 — BVA: product-only qty=0 → rejected (modal stays open)
+  - [ ] SW-INV-SO-TC22 — BVA: product-only qty=1 → accepted
+  - [ ] SW-INV-SO-TC23 — EP: product-only qty>available → BE error
+  - [ ] SW-INV-SO-TC24 — Use Case: product-only submit without reason → blocked
+  - [ ] SW-INV-SO-TC25 — Use Case: product-only Sold reason + description accepted
+  - [ ] SW-INV-SO-TC26 — Error Guessing: product-only available=0 → stock-out rejected
+  - [ ] SW-INV-SO-TC27 — State Transition: Available → StockedOut (valid)
+  - [ ] SW-INV-SO-TC28 — State Transition: Incoming item → stock-out rejected
+  - [ ] SW-INV-SO-TC29 — State Transition: Damaged item → stock-out rejected
+  - [ ] SW-INV-SO-TC30 — State Transition: Missing item → stock-out rejected
+  - [ ] SW-INV-SO-TC31 — State Transition: Disputed item → stock-out rejected
+  - [ ] SW-INV-SO-TC32 — State Transition: Reserved item → stock-out rejected
+  - [ ] SW-INV-SO-TC33 — State Transition: already StockedOut item → duplicate rejected
+  - [ ] SW-INV-SO-TC34 — EP: non-existent serial → BE error
+  - [ ] SW-INV-SO-TC35 — Use Case: product-items submit without reason → blocked
+  - [ ] SW-INV-SO-TC36 — Use Case: reason "Stockout from BTO" → accepted
+  - [ ] SW-INV-SO-TC37 — Use Case: reason "Lost" → accepted
+  - [ ] SW-INV-SO-TC38 — State Transition: Available → StockedOut status visible in items table after stock-out
+  - [ ] SW-INV-SO-TC39 — Use Case: close Stock-Out modal → no stock-out performed
+- [ ] **InventoryThresholdTests.cy.js** — 4 cases `Inventory/InventoryThresholdTests.cy.js`
+  - [ ] SW-INV-TH-TC01 — saving a threshold patches the product and toasts
+  - [ ] SW-INV-TH-TC02 — BVA: threshold 0 is accepted
+  - [ ] SW-INV-TH-TC03 — BVA: negative threshold is rejected with no request
+  - [ ] SW-INV-TH-TC04 — clearing the field saves a null threshold
+
+## InventoryActions `(24 specs / 220 cases)`
+
+- [ ] **01-LandingScreen.cy.js** — 28 cases `InventoryActions/01-LandingScreen.cy.js`
+  - [ ] SW-IA-TC01 — admin sees all 7 root tiles plus the Select Operation heading
+  - [ ] SW-IA-TC02 — C1 woFalse/poFalse: all 3 Stock-Out sub-tiles are enabled
+  - [ ] SW-IA-TC03 — C3 woTrue: all 3 Stock-Out sub-tiles are disabled (work-order required)
+  - [ ] SW-IA-TC04 — C2 woFalse/poTrue: "Stock Out Products" routes via the PO picker
+  - [ ] SW-IA-TC05 — C2 poDamageTrue: "Mark Damaged Products" routes via the PO picker
+  - [ ] SW-IA-TC06 — root → stockIn → back-to-menu round-trip preserves URL state
+  - [ ] SW-IA-TC07 — warehouse → assignment → back-to-warehouse → back-to-menu unwinds correctly
+  - [ ] SW-IA-TC08 — invalid menuGroup deep-link renders no group and no sub-tiles leak
+  - [ ] SW-IA-TC09 — deep-link ?menuGroup=stockIn lands directly on the Stock In sub-menu
+  - [ ] SW-IA-TC10 — hasActiveAudit=true reveals the Audit Scan tile
+  - [ ] SW-IA-TC11 — hasActiveAudit=false hides the Audit Scan tile
+  - [ ] SW-IA-TC12 — page refresh on a sub-menu preserves menuGroup via URL state
+  - [ ] ${nextTcId()} — Stock In → "${tileLabel}" → PO picker → routes to ${expectedUrlIncludes}
+  - [ ] ${nextTcId()} — Stock Out → "${tileLabel}" routes to ${expectedUrlIncludes}
+  - [ ] ${nextTcId()} — Inventory Management → "${tileLabel}" routes to ${expectedUrlIncludes}
+  - [ ] ${nextTcId()} — Product Operations → "${tileLabel}" routes to ${expectedUrlIncludes}
+  - [ ] ${nextTcId()} — Root → "${tileLabel}" routes to ${expectedUrlIncludes}
+  - [ ] ${nextTcId()} — Warehouse → "${tileLabel}" routes to ${expectedUrlIncludes}
+  - [ ] ${nextTcId()} — Warehouse → Assignment → "${tileLabel}" routes to ${expectedUrlIncludes}
+  - [ ] ${nextTcId()} — Warehouse → Unassignment → "${tileLabel}" routes to ${expectedUrlIncludes}
+  - [ ] ${nextTcId()} — Asset → "${tileLabel}" routes to ${expectedUrlIncludes}
+  - [ ] ${nextTcId()} — Active audit → "${tileLabel}" routes to ${expectedUrlIncludes}
+  - [ ] SW-IA-TC39 — clicking ← Back from the PO picker returns to the originating sub-menu and clears picker state
+  - [ ] SW-IA-TC40 — deep-link ?poId=PO-NAV-TEST mounts the PO picker directly (step 1)
+  - [ ] SW-IA-TC41 — C4 woTrue/poTrue: all 3 Stock-Out sub-tiles still disabled (workOrder dominates)
+  - [ ] SW-IA-TC42 — worker role filters the literal "default" PO out of the picker list
+  - [ ] SW-IA-TC43 — typing in the PO search field filters the list by case-insensitive substring
+  - [ ] SW-IA-TC44 — LinearProgress is visible while the PO list is refetching
+- [ ] **02-CheckItemStatus.cy.js** — 1 cases `InventoryActions/02-CheckItemStatus.cy.js`
+  - [ ] ${tcId} — scanning a serial with status ${status} renders the status correctly
+- [ ] **03-RestockBySerial.cy.js** — 2 cases `InventoryActions/03-RestockBySerial.cy.js`
+  - [ ] ${tcId} — restocking a serial in status ${sourceStatus} succeeds
+  - [ ] ${tcId} — restocking a serial in status ${sourceStatus} shows an error
+- [ ] **04-StockOutItems.cy.js** — 4 cases `InventoryActions/04-StockOutItems.cy.js`
+  - [ ] SW-IA-TC80 — configured reasons list appears in the Stock Out Items dropdown
+  - [ ] SW-IA-TC82 — description text is accepted and reflected in the textarea
+  - [ ] SW-IA-TC83 — reference number field accepts a numeric value
+  - [ ] SW-IA-TC84 — clicking Next without selecting a reason shows the validation error
+- [ ] **05-SmartStockIn.cy.js** — 12 cases `InventoryActions/05-SmartStockIn.cy.js`
+  - [ ] SW-IA-SSI-TC01 — opening Smart Stock In with a PO shows the heading, PO chip and scan field
+  - [ ] SW-IA-SSI-TC02 — opening Smart Stock In without a poId redirects to /MobileViewScreen
+  - [ ] SW-IA-SSI-TC03 — Browse Products lists the products on the PO
+  - [ ] SW-IA-SSI-TC04 — Search All Products opens the catalog with an Add-to-PO action
+  - [ ] SW-IA-SSI-TC05 — selecting a quantity-tracked product opens the Quantity card
+  - [ ] SW-IA-SSI-TC06 — selecting a serialized product opens the Serial card
+  - [ ] SW-IA-SSI-TC07 — submitting an empty scan shows the required-input error
+  - [ ] SW-IA-SSI-TC08 — the Quantity field strips non-numeric characters
+  - [ ] SW-IA-SSI-TC09 — enabling "Receive damaged" reveals the Damage Reason selector
+  - [ ] SW-IA-SSI-TC10 — stocking in a quantity for a product-only product succeeds
+  - [ ] SW-IA-SSI-TC11 — adding a new serial into a serialized product succeeds
+  - [ ] SW-IA-SSI-TC12 — scanning an existing Incoming serial at the top field stocks it in
+- [ ] **05-StockInProducts.cy.js** — 7 cases `InventoryActions/05-StockInProducts.cy.js`
+  - [ ] SW-IA-TC60 — selecting a PO with pure products lists the products
+  - [ ] SW-IA-TC61 — typing an attribute in Search Product filters the list
+  - [ ] SW-IA-TC62 — product list container is scrollable and renders all cards
+  - [ ] SW-IA-TC63 — each product card displays Expected and Available counts
+  - [ ] SW-IA-TC65 — typing a negative quantity in a product card is rejected
+  - [ ] SW-IA-TC66 — clicking Stock In increases Available count by the entered qty
+  - [ ] SW-IA-TC67 — opening any PO with eligible products shows products (not the empty-state)
+- [ ] **06-StockInItems.cy.js** — 3 cases `InventoryActions/06-StockInItems.cy.js`
+  - [ ] SW-IA-TC53 — PO\
+  - [ ] SW-IA-TC56 — PO list contains a PO with product-only category products
+  - [ ] SW-IA-TC58 — PO list contains a PO with both product-only and product-items category products
+- [ ] **07-WorkOrdersMobile.cy.js** — 3 cases `InventoryActions/07-WorkOrdersMobile.cy.js`
+  - [ ] SW-IA-TC117 — work orders list shows only Open work orders (worker view)
+  - [ ] SW-IA-TC121 — Scan button is enabled against each work order product
+  - [ ] SW-IA-TC122 — scanning a valid serial reserves it in a product-item product
+- [ ] **08-MarkDamagedProducts.cy.js** — 1 cases `InventoryActions/08-MarkDamagedProducts.cy.js`
+  - [ ] SW-IA-TC116 — user can mark a product as damaged with qty + reason
+- [ ] **09-RestockProducts.cy.js** — 2 cases `InventoryActions/09-RestockProducts.cy.js`
+  - [ ] SW-IA-TC99 — restocking with qty less than stocked-out quantity succeeds
+  - [ ] SW-IA-TC100 — restocking with qty more than stocked-out quantity shows error
+- [ ] **10-StockOutProductsMobile.cy.js** — 2 cases `InventoryActions/10-StockOutProductsMobile.cy.js`
+  - [ ] SW-IA-TC95 — stock out a product with valid qty, reason, and reference reduces available quantity
+  - [ ] SW-IA-TC95 (overflow) — quantity larger than available shows "cannot exceed available" error
+- [ ] **11-AddByProduct.cy.js** — 7 cases `InventoryActions/11-AddByProduct.cy.js`
+  - [ ] SW-IA-TC69 — multi-category PO shows all categories in Select Category
+  - [ ] SW-IA-TC70 — clicking a product-only category advances to attribute selection
+  - [ ] SW-IA-TC71 — clicking a product-item category advances to attribute selection
+  - [ ] SW-IA-TC72 — unique attributes list renders for the chosen product-only category
+  - [ ] SW-IA-TC73 — unique attributes list renders for the chosen product-item category
+  - [ ] SW-IA-TC74 — adding a product-only Incoming quantity through attribute combinations succeeds
+  - [ ] SW-IA-TC75 — selecting a product-item by attribute combination reaches the serial scan step
+- [ ] **12-StockOutByProductScanning.cy.js** — 2 cases `InventoryActions/12-StockOutByProductScanning.cy.js`
+  - [ ] SW-IA-TC130 — sku-stock-out route renders the Stock Out by <attr> heading
+  - [ ] SW-IA-TC131 — screen reaches step 0 (PO search) or step 1 (reason form)
+- [ ] **13-AssignItems.cy.js** — 19 cases `InventoryActions/13-AssignItems.cy.js`
+  - [ ] SW-IA-TC132 — assign-items route renders with the scan/select container input
+  - [ ] SW-IA-TC133 — initial mount renders the Scan QR / Select Container / Select Location tabs
+  - [ ] SW-WM-AI-TC01 — page opens with the target step from the Assignment menu
+  - [ ] SW-WM-AI-TC04 — unknown container/location code on target step is rejected
+  - [ ] SW-WM-AI-TC05 — special characters in target input are blocked by client validation
+  - [ ] SW-WM-AI-TC06 — submitting an empty target input does nothing
+  - [ ] SW-WM-AI-TC07 — Select Container toggle opens the container picker dialog
+  - [ ] SW-WM-AI-TC02 — scanning a valid container code on target step advances to the items step
+  - [ ] SW-WM-AI-TC18 — going Back from the items step returns to the target step
+  - [ ] SW-WM-AI-TC10 — scanning an unknown serial on the items step shows an error
+  - [ ] SW-WM-AI-TC19 — special characters in serial input are blocked by client validation
+  - [ ] SW-WM-AI-TC13 — confirming with one staged item assigns it successfully
+  - [ ] SW-WM-AI-TC21 — direct URL access without a token redirects to login
+  - [ ] SW-WM-AI-TC22 — graceful handling of network failure during assignment
+  - [ ] SW-WM-AI-TC23 — double-tapping Scan on slow network does not double-submit
+  - [ ] SW-WM-AI-TC09 — scanning the same serial twice is rejected as duplicate
+  - [ ] SW-WM-AI-TC11 — scanning a serial assigned to a different container surfaces a move dialog
+  - [ ] SW-WM-AI-TC12 — Damaged-status serial is rejected on the items step
+  - [ ] SW-WM-AI-TC20 — leading/trailing whitespace in serial input is trimmed and accepted
+- [ ] **14-AssignProducts.cy.js** — 16 cases `InventoryActions/14-AssignProducts.cy.js`
+  - [ ] SW-IA-TC134 — assign-products route renders with the container scan input
+  - [ ] SW-IA-TC135 — initial mount renders the Scan QR / Select Container / Select Location tabs
+  - [ ] SW-WM-AP-TC01 — page opens with the target step from the Assignment menu
+  - [ ] SW-WM-AP-TC05 — invalid target code is rejected on the target step
+  - [ ] SW-WM-AP-TC04 — Select Container picker opens after switching to that toggle
+  - [ ] SW-WM-AP-TC02 — scanning a valid container code advances to the products step
+  - [ ] SW-WM-AP-TC14 — Back from the products step returns to the target step and clears selection
+  - [ ] SW-WM-AP-TC06 — product search filters the list
+  - [ ] SW-WM-AP-TC15 — a no-match product search shows the empty state
+  - [ ] SW-WM-AP-TC08 — qty=0 is rejected by client validation
+  - [ ] SW-WM-AP-TC09 — a negative qty is rejected by client validation
+  - [ ] SW-WM-AP-TC10 — non-numeric qty input is rejected
+  - [ ] SW-WM-AP-TC18 — direct URL access without a token redirects to login
+  - [ ] SW-WM-AP-TC19 — graceful handling of network failure on submit
+  - [ ] SW-WM-AP-TC11 — qty greater than available stock is rejected
+  - [ ] SW-WM-AP-TC16 — scientific notation qty (5e9) is rejected
+- [ ] **15-UnassignItems.cy.js** — 12 cases `InventoryActions/15-UnassignItems.cy.js`
+  - [ ] SW-IA-TC136 — unassign-items route renders the Session History panel
+  - [ ] SW-WM-UI-TC01 — page opens from the Unassignment menu
+  - [ ] SW-WM-UI-TC07 — submitting an empty serial input does nothing
+  - [ ] SW-WM-UI-TC06 — special characters in serial input are blocked
+  - [ ] SW-WM-UI-TC13 — direct URL access without a token redirects to login
+  - [ ] SW-WM-UI-TC04 — scanning an unknown serial is rejected
+  - [ ] SW-WM-UI-TC03 — scanning a serial that is not currently assigned is rejected
+  - [ ] SW-WM-UI-TC02 — scanning a currently-assigned serial unassigns it successfully
+  - [ ] SW-WM-UI-TC05 — scanning the same serial twice in the session is rejected as duplicate
+  - [ ] SW-WM-UI-TC14 — graceful handling of network failure during Confirm
+  - [ ] SW-WM-UI-TC15 — double-tapping Scan on slow network does not double-fire
+  - [ ] SW-WM-UI-TC17 — leading/trailing whitespace in serial input is trimmed
+- [ ] **16-UnassignProducts.cy.js** — 17 cases `InventoryActions/16-UnassignProducts.cy.js`
+  - [ ] SW-IA-TC137 — unassign-products route renders the Search Products input
+  - [ ] SW-IA-TC138 — initial mount renders the "Select Product" header (step 1)
+  - [ ] SW-WM-UP-TC01 — page opens with the products step
+  - [ ] SW-WM-UP-TC02 — product search filters the list
+  - [ ] SW-WM-UP-TC20 — special characters in search input are blocked
+  - [ ] SW-WM-UP-TC16 — direct URL access without a token redirects to login
+  - [ ] SW-WM-UP-TC15 — re-entering the page resets to the products step
+  - [ ] SW-WM-UP-TC03 — picking a product with assignments advances to the assignment step
+  - [ ] SW-WM-UP-TC14 — Back from the assignment step returns to the products step
+  - [ ] SW-WM-UP-TC07 — tapping an assignment row advances to the quantity step
+  - [ ] SW-WM-UP-TC13 — Back from the quantity step returns to the assignment step
+  - [ ] SW-WM-UP-TC09 — qty=0 is rejected by validation
+  - [ ] SW-WM-UP-TC10 — a negative qty is rejected
+  - [ ] SW-WM-UP-TC11 — qty greater than available is rejected
+  - [ ] SW-WM-UP-TC12 — non-numeric qty input is rejected
+  - [ ] SW-WM-UP-TC17 — graceful handling of network failure on submit
+  - [ ] SW-WM-UP-TC04 — picking a product with no assignments shows empty/error state
+- [ ] **17-ContainerLocation.cy.js** — 24 cases `InventoryActions/17-ContainerLocation.cy.js`
+  - [ ] SW-IA-TC139 — container-location route renders the container scan input
+  - [ ] SW-WM-AC-TC01 — page opens with mode=assign/change
+  - [ ] SW-WM-AC-TC03 — Select From List opens the container picker
+  - [ ] SW-WM-AC-TC04 — an invalid container code is rejected on Step 1
+  - [ ] SW-WM-AC-TC17 — direct URL access without a token redirects to login
+  - [ ] SW-WM-AC-TC02 — scanning a valid container code advances to the location step
+  - [ ] SW-WM-AC-TC08 — an invalid/unknown location path is rejected on Step 2
+  - [ ] SW-WM-AC-TC13 — Back from Step 2 returns to Step 1 with the container cleared
+  - [ ] SW-WM-AC-TC15 — damaged container is rejected by client validation
+  - [ ] SW-WM-AC-TC09 — a non-leaf location (not a Bin) is rejected
+  - [ ] SW-WM-AC-TC18 — graceful handling of network failure on Confirm
+  - [ ] SW-WM-UC-TC01 — page opens with mode=unassign
+  - [ ] SW-WM-UC-TC04 — an invalid container code is rejected
+  - [ ] SW-WM-UC-TC05 — Select From List opens the container picker
+  - [ ] SW-WM-UC-TC13 — direct URL access without a token redirects to login
+  - [ ] SW-WM-UC-TC14 — switching mode=assign/change shows the 3-step assign flow on the same route
+  - [ ] SW-WM-UC-TC02 — scanning an assigned container advances directly to the confirm step
+  - [ ] SW-WM-UC-TC07 — the confirm step shows container code, type, and current location
+  - [ ] SW-WM-UC-TC12 — Back from confirm returns to Step 1 with the container cleared
+  - [ ] SW-WM-UC-TC03 — scanning an unassigned container is rejected
+  - [ ] SW-WM-UC-TC15 — graceful handling of network failure on Confirm
+  - [ ] SW-WM-AC-TC05 — special characters in container input are blocked (assign mode)
+  - [ ] SW-WM-UC-TC06 — special characters in container input are blocked (unassign mode)
+  - [ ] SW-WM-AC-TC06 — scanning a valid bin path on Step 2 enables Confirm
+- [ ] **18-BulkContentsMove.cy.js** — 12 cases `InventoryActions/18-BulkContentsMove.cy.js`
+  - [ ] SW-IA-TC140 — bulk-contents-move route loads without rendering an error state
+  - [ ] SW-WM-BCM-TC01 — page opens with the source step
+  - [ ] SW-WM-BCM-TC07 — an invalid source code is rejected
+  - [ ] SW-WM-BCM-TC19 — direct URL access without a token redirects to login
+  - [ ] SW-WM-BCM-TC02 — scanning a known container as source advances to the target step
+  - [ ] SW-WM-BCM-TC18 — Back from target returns to the source step with source cleared
+  - [ ] SW-WM-BCM-TC11 — an invalid target code is rejected on the target step
+  - [ ] SW-WM-BCM-TC10 — target equal to source is rejected
+  - [ ] SW-WM-BCM-TC06 — an empty container as source surfaces the empty-source preview
+  - [ ] SW-WM-BCM-TC20 — graceful handling of network failure on Confirm
+  - [ ] SW-WM-BCM-TC21 — double-tapping Confirm on slow network executes only one move
+  - [ ] SW-WM-BCM-TC03 — scanning a known location as source advances to the target step
+- [ ] **19-ViewContents.cy.js** — 23 cases `InventoryActions/19-ViewContents.cy.js`
+  - [ ] SW-IA-TC141 — view-contents route renders the View Contents heading
+  - [ ] SW-WM-VC-TC01 — page opens from the Warehouse Management menu
+  - [ ] SW-WM-VC-TC02 — Back on the root menu returns to the Warehouse Management menu
+  - [ ] SW-WM-VC-TC03 — direct URL access without a token redirects to login
+  - [ ] SW-WM-VC-TC04 — Back from a sub-flow returns to the View Contents inner menu
+  - [ ] SW-WM-VCI-TC01 — Search By Item opens with a serial input
+  - [ ] SW-WM-VCI-TC05 — submitting an empty serial input does nothing
+  - [ ] SW-WM-VCI-TC04 — special characters in the serial input are rejected
+  - [ ] SW-WM-VCI-TC03 — an unknown serial number shows an empty result
+  - [ ] SW-WM-VCI-TC07 — Back from Search By Item returns to the inner menu, not the parent menu
+  - [ ] SW-WM-VCI-TC02 — happy path: a valid serial returns item details
+  - [ ] SW-WM-VCI-TC08 — graceful handling of network failure during search
+  - [ ] SW-WM-VCP-TC01 — Search By Products opens with a search input and product list
+  - [ ] SW-WM-VCP-TC03 — the search filters the product list
+  - [ ] SW-WM-VCP-TC04 — a no-match search shows the empty state
+  - [ ] SW-WM-VCP-TC05 — clearing the search restores the full product list
+  - [ ] SW-WM-VCS-TC01 — Search By Storage shows the three-mode toggle group
+  - [ ] SW-WM-VCS-TC04 — an unknown code in Scan QR mode shows an error
+  - [ ] SW-WM-VCS-TC05 — special characters in Scan QR input are blocked
+  - [ ] SW-WM-VCS-TC06 — Select Container toggle automatically opens the container picker
+  - [ ] SW-WM-VCS-TC11 — switching the toggle clears the prior input and any error
+  - [ ] SW-WM-VCS-TC02 — Scan QR happy path with a valid container code
+  - [ ] SW-WM-VCS-TC03 — Scan QR happy path with a valid location path
+- [ ] **20-PrintLabels.cy.js** — 18 cases `InventoryActions/20-PrintLabels.cy.js`
+  - [ ] SW-IA-TC142 — print-asset route renders the Print Labels heading
+  - [ ] SW-WM-PL-TC01 — page opens with the Containers tab selected by default
+  - [ ] SW-WM-PL-TC03 — Back returns to the Warehouse Management menu
+  - [ ] SW-WM-PL-TC04 — direct URL access without a token redirects to login
+  - [ ] SW-WM-PL-TC07 — switching tabs clears the previous search input
+  - [ ] SW-WM-PL-TC05 — slow network shows a loader on either tab
+  - [ ] SW-WM-PL-TC06 — graceful handling of API failure on either tab
+  - [ ] SW-WM-PLC-TC01 — Containers tab renders the default container list
+  - [ ] SW-WM-PLC-TC02 — searching by container code filters the list
+  - [ ] SW-WM-PLC-TC05 — no-match empty state on the Containers tab
+  - [ ] SW-WM-PLC-TC06 — tapping a container card opens the QR dialog
+  - [ ] SW-WM-PLC-TC07 — closing the QR dialog preserves list and search state
+  - [ ] SW-WM-PLC-TC08 — Print button opens the browser print preview
+  - [ ] SW-WM-PLL-TC01 — Locations tab renders the default paginated bin list
+  - [ ] SW-WM-PLL-TC03 — searching by path filters the bin list (server-side)
+  - [ ] SW-WM-PLL-TC04 — no-match empty state on the Locations tab
+  - [ ] SW-WM-PLL-TC05 — tapping a bin card opens the QR dialog for that location
+  - [ ] SW-WM-PLC-TC03 — searching by container type filters the list
+- [ ] **21-AssetGeneration.cy.js** — 2 cases `InventoryActions/21-AssetGeneration.cy.js`
+  - [ ] SW-IA-TC143 — /asset-id route renders the Generate Asset IDs heading
+  - [ ] SW-IA-TC144 — Search PO and Search Product inputs are present
+- [ ] **22-Assembly.cy.js** — 2 cases `InventoryActions/22-Assembly.cy.js`
+  - [ ] SW-IA-TC145 — /asset-id/assembly route renders the Assembly heading
+  - [ ] SW-IA-TC146 — serial-number scan input is present
+- [ ] **23-Disassembly.cy.js** — 1 cases `InventoryActions/23-Disassembly.cy.js`
+  - [ ] SW-IA-TC147 — /asset-id/disassembly route renders the Scan Serial Number section
+
+## Notifications `(6 specs / 27 cases)`
+
+- [ ] **01-BellAndPopover.cy.js** — 3 cases `Notifications/01-BellAndPopover.cy.js`
+  - [ ] SW-NOT-TC01: Bell icon renders in admin header
+  - [ ] SW-NOT-TC05: Click bell opens popover with header
+  - [ ] SW-NOT-TC06: Pressing Escape closes the popover
+- [ ] **02-Badge.cy.js** — 7 cases `Notifications/02-Badge.cy.js`
+  - [ ] SW-NOT-TC02: Badge shows exact unread count from API
+  - [ ] SW-NOT-TC03a: Badge shows "99" at MUI max boundary
+  - [ ] SW-NOT-TC03b: Badge shows "99+" when unread = 100
+  - [ ] SW-NOT-TC03c: Badge shows "99+" when unread > 100
+  - [ ] SW-NOT-TC04: Badge is hidden when unread count = 0
+  - [ ] SW-NOT-TC27a: Popover header chip shows unread count when > 0
+  - [ ] SW-NOT-TC27b: Popover header chip is not rendered when unread = 0
+- [ ] **03-ListAndLoading.cy.js** — 6 cases `Notifications/03-ListAndLoading.cy.js`
+  - [ ] SW-NOT-TC07: Skeleton loaders render while notifications are loading
+  - [ ] SW-NOT-TC10: List item displays productName, current stock and threshold
+  - [ ] SW-NOT-TC11: Category chip renders when categoryName is present
+  - [ ] SW-NOT-TC12: Category chip is hidden when categoryName is null
+  - [ ] SW-NOT-TC13: Unread row has warning background; read row is transparent
+  - [ ] SW-NOT-TC20: List item secondary line shows relative time ("Nm ago")
+- [ ] **04-FilterAndEmptyState.cy.js** — 5 cases `Notifications/04-FilterAndEmptyState.cy.js`
+  - [ ] SW-NOT-TC08: Empty state "No unread alerts" — filter ON, only read items
+  - [ ] SW-NOT-TC09: Empty state "No low-stock alerts" — empty list, filter OFF
+  - [ ] SW-NOT-TC18: Toggling "Unread only" OFF reveals read items
+  - [ ] SW-NOT-TC19: Popover renders empty state when API returns malformed shape
+  - [ ] SW-NOT-TC26: Toggling "Unread only" re-anchors virtual scroll to top
+- [ ] **05-MarkAsRead.cy.js** — 5 cases `Notifications/05-MarkAsRead.cy.js`
+  - [ ] SW-NOT-TC14: "Mark as read" check appears only on unread rows
+  - [ ] SW-NOT-TC15: Click per-item check marks the row read and decrements the badge
+  - [ ] SW-NOT-TC16: "Mark all read" button is hidden when unread count = 0
+  - [ ] SW-NOT-TC17: "Mark all read" clears the badge and hides the button
+  - [ ] SW-NOT-TC25: "Mark all read" button disables and shows "Clearing…" while in flight
+- [ ] **06-VirtualScroll.cy.js** — 1 cases `Notifications/06-VirtualScroll.cy.js`
+  - [ ] SW-NOT-TC21: Renders only the visible window for a 100-item list
+
+## Chatbot `(11 specs / 22 cases)`
+
+- [ ] **01-FabAndRoleGate.cy.js** — 2 cases `Chatbot/01-FabAndRoleGate.cy.js`
+  - [ ] SW-CB-TC01: FAB renders for admin role on dashboard
+  - [ ] SW-CB-TC02: FAB is not rendered for worker role
+- [ ] **02-DrawerOpenClose.cy.js** — 3 cases `Chatbot/02-DrawerOpenClose.cy.js`
+  - [ ] SW-CB-TC03: Click FAB opens drawer with header "StockWise AI"
+  - [ ] SW-CB-TC04: Header close button closes the drawer
+  - [ ] SW-CB-TC05: Ctrl+/ shortcut toggles the drawer
+- [ ] **03-Suggestions.cy.js** — 2 cases `Chatbot/03-Suggestions.cy.js`
+  - [ ] SW-CB-TC06: Suggestion chips render before the first user message
+  - [ ] SW-CB-TC07: Clicking a suggestion chip sends it as a message
+- [ ] **04-SendFlow.cy.js** — 2 cases `Chatbot/04-SendFlow.cy.js`
+  - [ ] SW-CB-TC08: Type + Enter sends message; bubbles render in order
+  - [ ] SW-CB-TC09: Shift+Enter inserts a newline and does not submit
+- [ ] **05-SendButtonStates.cy.js** — 3 cases `Chatbot/05-SendButtonStates.cy.js`
+  - [ ] SW-CB-TC10: Send button is disabled when the input is empty
+  - [ ] SW-CB-TC11: Send button is disabled on whitespace-only input
+  - [ ] SW-CB-TC12: Long input (5 000 chars) sends without truncation
+- [ ] **06-LoadingState.cy.js** — 1 cases `Chatbot/06-LoadingState.cy.js`
+  - [ ] SW-CB-TC13: Thinking indicator renders while the request is in flight
+- [ ] **07-InlinePayloads.cy.js** — 3 cases `Chatbot/07-InlinePayloads.cy.js`
+  - [ ] SW-CB-TC14: Assistant payload with data renders an inline table
+  - [ ] SW-CB-TC15: Assistant payload with chartConfig renders an inline chart
+  - [ ] SW-CB-TC22: Streamed stockout prediction payload renders table and chart
+- [ ] **08-Feedback.cy.js** — 2 cases `Chatbot/08-Feedback.cy.js`
+  - [ ] SW-CB-TC16: Thumbs-up sends rating:"up" with the assistant messageId
+  - [ ] SW-CB-TC17: Thumbs-down sends rating:"down" with the assistant messageId
+- [ ] **09-ConversationReset.cy.js** — 1 cases `Chatbot/09-ConversationReset.cy.js`
+  - [ ] SW-CB-TC18: "New chat" clears messages and resets conversationId
+- [ ] **10-ErrorAndRetry.cy.js** — 1 cases `Chatbot/10-ErrorAndRetry.cy.js`
+  - [ ] SW-CB-TC19: 5xx surfaces error bubble + retry; retry re-sends successfully
+- [ ] **11-ErrorBoundary.cy.js** — 2 cases `Chatbot/11-ErrorBoundary.cy.js`
+  - [ ] SW-CB-TC20: Malformed assistant payload triggers the error boundary
+  - [ ] SW-CB-TC21: "Reset Chat" clears the error and restores the empty-conversation state
