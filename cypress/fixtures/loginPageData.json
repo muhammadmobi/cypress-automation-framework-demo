@@ -1,0 +1,13 @@
+{
+  "buttons": { "signIn": "Sign in" },
+  "errors": {
+    "usernameRequired": "Username is required",
+    "passwordRequired": "Password is required",
+    "invalidCredentials": "Invalid credentials",
+    "lockedOut": "locked out"
+  },
+  "routes": {
+    "inventory": "/inventory",
+    "login": "/index.html"
+  }
+}

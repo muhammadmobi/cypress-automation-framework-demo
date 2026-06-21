@@ -1,0 +1,15 @@
+{
+  "admin": {
+    "username": "user",
+    "password": "password",
+    "role": "admin"
+  },
+  "locked": {
+    "username": "locked_user",
+    "password": "password"
+  },
+  "invalid": {
+    "username": "not_a_user",
+    "password": "wrong_password"
+  }
+}
