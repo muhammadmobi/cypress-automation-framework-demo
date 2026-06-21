@@ -1,0 +1,93 @@
+name: CI
+
+# Quality-gated pipeline:
+#   lint-and-format  →  test (Cypress against the bundled app + mock API)  →  publish-report
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ── Quality gate 1: static analysis. Fails the build on lint/format issues. ──
+  lint-and-format:
+    name: Lint & format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: ESLint
+        run: npm run lint
+      - name: Prettier check
+        run: npm run format:check
+
+  # ── Quality gate 2: the test suite must pass against the bundled stack. ──
+  test:
+    name: Cypress E2E + API
+    needs: lint-and-format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+
+      # Boots the demo app + mock API, waits for both, runs Cypress, then
+      # merges the Mochawesome JSON into a single self-contained HTML report.
+      - name: Run tests + build report
+        run: npm run test:ci
+
+      - name: Upload HTML report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: mochawesome-report
+          path: mochawesome-report
+          if-no-files-found: warn
+
+      - name: Upload failure screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
+
+  # ── Publish the HTML report to GitHub Pages (main only). ──
+  publish-report:
+    name: Publish report to Pages
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download report artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mochawesome-report
+          path: mochawesome-report
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: mochawesome-report
+      - id: deployment
+        uses: actions/deploy-pages@v4
