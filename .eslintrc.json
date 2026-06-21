@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2022": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "plugins": ["cypress"],
+  "extends": ["eslint:recommended", "plugin:cypress/recommended"],
+  "rules": {
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-assigning-return-values": "error"
+  },
+  "overrides": [
+    {
+      "files": ["app/app.js"],
+      "env": { "browser": true, "node": false }
+    }
+  ]
+}

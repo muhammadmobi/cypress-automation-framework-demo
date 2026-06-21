@@ -1,0 +1,6 @@
+# Normalize line endings to LF so Prettier's endOfLine:lf check passes
+# consistently across Windows, macOS and Linux / CI.
+* text=auto eol=lf
+
+# Binary / generated
+package-lock.json -diff

@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets — never commit real URLs or credentials
+.env
+cypress.env.json
+*.local
+
+# Cypress artifacts
+cypress/results/
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Mochawesome reports
+mochawesome-report/
+mochawesome.json
+mochawesome.html
+
+# Editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
