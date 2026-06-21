@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShopWise — Sign in</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <form class="login-card" data-test="login-form" novalidate>
+        <h1>ShopWise</h1>
+        <p class="sub">Warehouse &amp; Inventory Demo Store</p>
+
+        <label for="username">Username</label>
+        <input id="username" data-test="username" type="text" autocomplete="username" />
+
+        <label for="password">Password</label>
+        <input id="password" data-test="password" type="password" autocomplete="current-password" />
+
+        <button class="btn" type="submit" data-test="login-button">Sign in</button>
+        <div class="error" data-test="login-error" role="alert"></div>
+        <p class="sub" style="margin-top: 18px">
+          Demo login: <code>user</code> / <code>password</code>
+        </p>
+      </form>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

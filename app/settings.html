@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShopWise — Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header data-test="app-header"></header>
+    <main>
+      <form class="login-card" data-test="settings-form" novalidate>
+        <h1 style="font-size: 22px">Settings</h1>
+        <label for="defsort">Default product sort</label>
+        <select id="defsort" data-test="setting-default-sort">
+          <option value="az">Name (A → Z)</option>
+          <option value="za">Name (Z → A)</option>
+          <option value="lohi">Price (low → high)</option>
+          <option value="hilo">Price (high → low)</option>
+        </select>
+        <button class="btn" type="submit" data-test="save-settings">Save settings</button>
+        <div class="muted" data-test="settings-saved" style="margin-top: 14px"></div>
+      </form>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShopWise — Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header data-test="app-header"></header>
+    <main>
+      <div data-test="dashboard">
+        <h2>Dashboard</h2>
+        <div class="grid">
+          <div class="card stat">
+            <span class="muted">Products</span>
+            <strong data-test="stat-products">—</strong>
+          </div>
+          <div class="card stat">
+            <span class="muted">Low stock</span>
+            <strong data-test="stat-lowstock">—</strong>
+          </div>
+          <div class="card stat">
+            <span class="muted">Orders</span>
+            <strong data-test="stat-orders">—</strong>
+          </div>
+          <div class="card stat">
+            <span class="muted">Revenue</span>
+            <strong data-test="stat-revenue">—</strong>
+          </div>
+        </div>
+        <div class="error" data-test="dashboard-error"></div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
