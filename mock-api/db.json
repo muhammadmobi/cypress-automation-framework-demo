@@ -94,5 +94,58 @@
       "category": "report",
       "read": true
     }
+  ],
+  "attributes": [
+    {
+      "id": 1,
+      "name": "Colour",
+      "type": "list",
+      "required": false,
+      "values": [
+        "Black",
+        "White",
+        "Silver"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Warranty",
+      "type": "text",
+      "required": false,
+      "values": []
+    },
+    {
+      "id": 3,
+      "name": "Weight",
+      "type": "number",
+      "required": true,
+      "values": []
+    }
+  ],
+  "workOrders": [
+    {
+      "id": 1,
+      "reference": "WO-1001",
+      "title": "Restock keyboards",
+      "status": "open",
+      "assignee": "dana",
+      "items": 12
+    },
+    {
+      "id": 2,
+      "reference": "WO-1002",
+      "title": "Audit shelf B",
+      "status": "in-progress",
+      "assignee": "ravi",
+      "items": 40
+    },
+    {
+      "id": 3,
+      "reference": "WO-1003",
+      "title": "Return damaged monitors",
+      "status": "closed",
+      "assignee": "dana",
+      "items": 3
+    }
   ]
 }
