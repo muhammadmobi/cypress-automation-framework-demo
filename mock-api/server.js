@@ -8,7 +8,9 @@
  *   4. GET  /stats              → computed dashboard KPIs (public)
  *   5. GET  /reports/summary    → computed category report (public)
  *   6. PATCH /notifications/read-all → bulk mark-as-read (bearer-guarded)
- *   7. A bearer-token guard on every write method (POST/PUT/PATCH/DELETE),
+ *   7. POST /chat                → canned assistant replies (stub, bearer-guarded)
+ *   8. POST /work-orders/:id/close → closes a work order (bearer-guarded)
+ *   9. A bearer-token guard on every write method (POST/PUT/PATCH/DELETE),
  *      so the API specs can assert 401-without-auth and authenticated CRUD.
  *
  * Deliberately tiny and dependency-light so the whole suite runs offline in CI
@@ -27,6 +29,15 @@ const DEMO_TOKEN = "shopwise-demo-access-token";
 const REFRESH_TOKEN = "shopwise-demo-refresh-token";
 const CREDENTIALS = { user: "password" };
 const LOW_STOCK_THRESHOLD = 15;
+
+// Canned assistant replies. The chatbot is a stub on purpose: the point of the
+// module is the drawer UX and its loading / error / retry states, so specs pin
+// the response with cy.intercept rather than relying on anything generative.
+const CHAT_REPLIES = [
+  { match: /low\s+(on\s+)?stock|restock|stock\s+level/i, reply: "3 products are below the low-stock threshold.", intent: "low-stock" },
+  { match: /order|revenue/i,     reply: "You have 1 order totalling $129.98.",           intent: "orders" },
+  { match: /help|what can you/i, reply: "Ask me about stock levels, orders or reports.", intent: "help" },
+];
 
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
@@ -105,6 +116,33 @@ server.patch("/notifications/read-all", (_req, res) => {
     .forEach((n) => (n.read = true))
     .write();
   res.json({ updated: db.get("notifications").value().length });
+});
+
+// Chatbot stub. Always answers; unknown questions get a fallback so the drawer
+// never renders an empty bubble.
+server.post("/chat", (req, res) => {
+  const message = (req.body && req.body.message) || "";
+  if (!message.trim()) {
+    return res.status(400).json({ message: "message is required" });
+  }
+  const hit = CHAT_REPLIES.find((c) => c.match.test(message));
+  return res.json({
+    reply: hit ? hit.reply : "I do not have an answer for that yet.",
+    intent: hit ? hit.intent : "unknown",
+    suggestions: ["What is low on stock?", "How many orders?", "Help"],
+  });
+});
+
+// Close a work order. Rejects a second close so specs can assert the guard.
+server.post("/work-orders/:id/close", (req, res) => {
+  const id = Number(req.params.id);
+  const wo = db.get("workOrders").find({ id }).value();
+  if (!wo) return res.status(404).json({ message: "Work order not found" });
+  if (wo.status === "closed") {
+    return res.status(409).json({ message: "Work order is already closed" });
+  }
+  db.get("workOrders").find({ id }).assign({ status: "closed" }).write();
+  return res.json(db.get("workOrders").find({ id }).value());
 });
 
 server.use(router);
