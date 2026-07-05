@@ -118,6 +118,8 @@ async function renderHeader() {
       <a class="cart-link" href="dashboard.html" data-test="nav-dashboard">Dashboard</a>
       <a class="cart-link" href="orders.html" data-test="nav-orders">Orders</a>
       <a class="cart-link" href="reports.html" data-test="nav-reports">Reports</a>
+      <a class="cart-link" href="attributes.html" data-test="nav-attributes">Attributes</a>
+      <a class="cart-link" href="work-orders.html" data-test="nav-work-orders">Work Orders</a>
       <a class="cart-link" href="settings.html" data-test="nav-settings">Settings</a>
       <button class="bell" data-test="notif-bell" aria-label="Notifications">
         🔔<span class="cart-badge" data-test="notif-badge" style="display:none">0</span>
