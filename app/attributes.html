@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShopWise — Attributes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header data-test="app-header"></header>
+    <main>
+      <div class="toolbar">
+        <h2>Attributes</h2>
+      </div>
+
+      <form class="panel" data-test="attr-form">
+        <label>Name <input data-test="attr-name" autocomplete="off" /></label>
+        <label>Type <select data-test="attr-type" aria-label="Attribute type"></select></label>
+        <label class="inline"><input type="checkbox" data-test="attr-required" /> Required</label>
+        <label>Values (comma separated) <input data-test="attr-values" autocomplete="off" /></label>
+        <p class="error" data-test="attr-error" style="display: none"></p>
+        <button class="btn" data-test="attr-submit">Add attribute</button>
+        <button class="btn ghost" data-test="attr-cancel" style="display: none">Cancel</button>
+      </form>
+
+      <div data-test="attr-table"></div>
+    </main>
+    <script src="app.js"></script>
+    <script src="attributes.js"></script>
+    <script src="chatbot.js"></script>
+  </body>
+</html>
