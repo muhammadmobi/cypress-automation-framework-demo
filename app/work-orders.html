@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShopWise — Work Orders</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header data-test="app-header"></header>
+    <main>
+      <div class="toolbar">
+        <h2>Work Orders</h2>
+        <select data-test="wo-status" aria-label="Filter by status">
+          <option value="all">All statuses</option>
+          <option value="open">Open</option>
+          <option value="in-progress">In progress</option>
+          <option value="closed">Closed</option>
+        </select>
+        <input data-test="wo-search" placeholder="Search title or reference" autocomplete="off" />
+      </div>
+      <p class="muted" data-test="wo-count"></p>
+      <p class="notice" data-test="wo-notice" style="display: none"></p>
+      <div class="grid" data-test="wo-list"></div>
+    </main>
+    <script src="app.js"></script>
+    <script src="work-orders.js"></script>
+    <script src="chatbot.js"></script>
+  </body>
+</html>
