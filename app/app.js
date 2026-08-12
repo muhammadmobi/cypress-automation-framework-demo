@@ -153,16 +153,31 @@ async function renderHeader() {
   await loadNotifications(host);
 }
 
-async function loadNotifications(host) {
+async function loadNotifications(host, category) {
   const badge = host.querySelector("[data-test='notif-badge']");
   const popover = host.querySelector("[data-test='notif-popover']");
+  const filter = category || "all";
+  popover.setAttribute("data-loading", "true");
   try {
     const res = await fetch(`${API_BASE}/notifications`);
-    const items = await res.json();
-    const unread = items.filter((i) => !i.read).length;
+    const all = await res.json();
+    popover.removeAttribute("data-loading");
+    // The badge always counts the whole inbox; the filter only narrows the list.
+    const items = filter === "all" ? all : all.filter((i) => i.category === filter);
+    const unread = all.filter((i) => !i.read).length;
     badge.textContent = unread > 99 ? "99+" : unread;
     badge.style.display = unread > 0 ? "inline-flex" : "none";
-    popover.innerHTML = items.length
+    const categories = ["all", ...new Set(all.map((i) => i.category).filter(Boolean))];
+    const filterBar =
+      `<div class="notif-filters" data-test="notif-filters">` +
+      categories
+        .map(
+          (c) =>
+            `<button type="button" class="chip${c === filter ? " active" : ""}" data-test="notif-filter" data-category="${c}" aria-pressed="${c === filter}">${c}</button>`
+        )
+        .join("") +
+      `</div>`;
+    popover.innerHTML = filterBar + (items.length
       ? `<button class="btn" data-test="notif-mark-all" style="margin-bottom:10px">Mark all read</button>` +
         items
           .map(
@@ -170,7 +185,10 @@ async function loadNotifications(host) {
               `<div class="notif ${i.read ? "read" : "unread"}" data-test="notif-item" data-read="${i.read}">${i.title}</div>`
           )
           .join("")
-      : `<p class="muted" data-test="notif-empty">No notifications</p>`;
+      : `<p class="muted" data-test="notif-empty">No notifications</p>`);
+    popover.querySelectorAll("[data-test='notif-filter']").forEach((chip) => {
+      chip.addEventListener("click", () => loadNotifications(host, chip.dataset.category));
+    });
     const markAll = popover.querySelector("[data-test='notif-mark-all']");
     if (markAll) {
       markAll.addEventListener("click", async () => {
@@ -178,10 +196,11 @@ async function loadNotifications(host) {
           method: "PATCH",
           headers: authHeaders(),
         });
-        await loadNotifications(host);
+        await loadNotifications(host, filter);
       });
     }
   } catch {
+    popover.removeAttribute("data-loading");
     badge.style.display = "none";
     popover.innerHTML = `<p class="muted" data-test="notif-error">Could not load notifications</p>`;
   }
