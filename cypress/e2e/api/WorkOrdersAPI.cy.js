@@ -72,9 +72,48 @@ describe("API — work orders", () => {
     });
   });
 
-  
-  
+  it("SW-API-WO-04: refuses to close the same order twice @regression", () => {
+    createOrder().then((created) => {
+      cy.request({
+        method: "POST",
+        url: `${API}/work-orders/${created.body.id}/close`,
+        headers: auth(),
+      })
+        .then(() =>
+          cy.request({
+            method: "POST",
+            url: `${API}/work-orders/${created.body.id}/close`,
+            headers: auth(),
+            failOnStatusCode: false,
+          })
+        )
+        .then((res) => {
+          expect(res.status).to.eq(409);
+          expect(res.body.message).to.contain("already closed");
+          remove(created.body.id);
+        });
+    });
+  });
+
+  it("SW-API-WO-05: returns 404 for a work order that does not exist @regression", () => {
+    cy.request({
+      method: "POST",
+      url: `${API}/work-orders/999999/close`,
+      headers: auth(),
+      failOnStatusCode: false,
+    }).then((res) => {
+      expect(res.status).to.eq(404);
+    });
+  });
+
   // Asserts the invariant this spec is responsible for — that it reverts its own
   // writes — rather than an absolute seed state, which anything touching the
   // mock beforehand would invalidate.
+  it("SW-API-WO-06: the spec leaves the collection as it found it", () => {
+    cy.request(`${API}/workOrders`).then((res) => {
+      const after = res.body.map((w) => `${w.reference}:${w.status}`).sort();
+      expect(after, "no throwaway rows survive").to.deep.eq(baseline);
+      expect(after.filter((r) => r.startsWith("WO-CY-"))).to.be.empty;
+    });
   });
+});
