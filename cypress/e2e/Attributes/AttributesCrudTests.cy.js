@@ -40,6 +40,36 @@ describe("Attributes — CRUD", () => {
       .and("contain", "Gloss");
     page.deleteByName(name);
   });
-  
-  
+
+  it("SW-ATTR-TC09: the required flag is stored @regression", () => {
+    const name = unique();
+    page.create({ name, type: "number", required: true });
+    attributesLocators
+      .rowByName(name)
+      .find("[data-test='attr-row-required']")
+      .should("have.text", "yes");
+    page.deleteByName(name);
   });
+
+  it("SW-ATTR-TC10: an attribute can be renamed @smoke", () => {
+    const name = unique();
+    // deliberately not a superstring of `name`, so "old name is gone" is a
+    // meaningful assertion rather than one that can never hold
+    const renamed = `Cy Renamed ${Date.now()}`;
+    page.create({ name, type: "text" });
+    page.editByName(name);
+    attributesLocators.submit().should("contain", "Save changes");
+    page.fill({ name: renamed }).submit();
+    page.verifyHasAttribute(renamed);
+    page.verifyNoAttribute(name);
+    page.deleteByName(renamed);
+  });
+
+  it("SW-ATTR-TC11: cancelling an edit restores the create form", () => {
+    page.editByName("Colour");
+    attributesLocators.submit().should("contain", "Save changes");
+    attributesLocators.cancel().click();
+    attributesLocators.submit().should("contain", "Add attribute");
+    attributesLocators.name().should("have.value", "");
+  });
+});
