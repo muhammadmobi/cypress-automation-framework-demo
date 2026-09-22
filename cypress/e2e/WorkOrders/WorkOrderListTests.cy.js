@@ -35,6 +35,18 @@ describe("Work Orders — list", () => {
     page.filterByStatus("closed").verifyRowCount(1);
     page.verifyStatusOf("WO-1003", "closed");
   });
-  
-  
+
+  it("SW-WO-TC04: search matches the title @regression", () => {
+    page.search("shelf").verifyRowCount(1);
+    workOrdersLocators.rows().should("contain", "WO-1002");
   });
+
+  it("SW-WO-TC05: search matches the reference @regression", () => {
+    page.search("WO-1003").verifyRowCount(1);
+  });
+
+  it("SW-WO-TC06: a search with no matches shows the empty state", () => {
+    page.search("nothing-matches-this").verifyEmptyState();
+    page.verifyCountLabel("0 work orders");
+  });
+});
