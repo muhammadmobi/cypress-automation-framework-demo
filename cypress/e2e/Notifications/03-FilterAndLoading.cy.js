@@ -50,5 +50,24 @@ describe("Notifications — filter and error state", () => {
     // the report category holds one read item, but two unread remain overall
     notificationsLocators.badge().should("have.text", "2");
   });
-  
+
+  it("SW-NOT-TC08: the chosen chip is marked as pressed @regression", () => {
+    stub();
+    cy.visit("/inventory.html");
+    cy.wait("@notifs");
+    notificationsLocators.bell().click();
+    notificationsLocators.filterBy("low-stock").click();
+    cy.wait("@notifs");
+    notificationsLocators.filterBy("low-stock").should("have.attr", "aria-pressed", "true");
+    notificationsLocators.filterBy("all").should("have.attr", "aria-pressed", "false");
   });
+
+  it("SW-NOT-TC09: a failed load shows the error state and hides the badge", () => {
+    cy.intercept("GET", "**/notifications", { statusCode: 500, body: {} }).as("notifs");
+    cy.visit("/inventory.html");
+    cy.wait("@notifs");
+    notificationsLocators.bell().click();
+    notificationsLocators.error().should("be.visible");
+    notificationsLocators.badge().should("not.be.visible");
+  });
+});
